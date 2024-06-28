@@ -39,7 +39,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-start gap-2">
           <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
             <h2 className="text-base font-semibold text-gray-600">About Me</h2>
-            <p className="text-sm text-gray-700 text text-justify">
+            <p className="text-sm text-gray-700 text text-left sm:text-justify">
               A Data-Driven UI/UX Designer with 3+ years of experience,
               leveraging user research and human-centered design principles to
               create intuitive and user-friendly interfaces through strong
@@ -51,7 +51,7 @@ export default function Home() {
               and learning.
             </p>
             <br></br>
-            <p className="text-sm text-gray-700 text text-justify font-semibold">
+            <p className="text-sm text-gray-700 text text-left sm:text-justify font-semibold">
               Trying to Make the World slightly Better with Better Designed
               &quot;Things&quot;
             </p>
@@ -93,6 +93,13 @@ export default function Home() {
                 href="https://github.com/shamimbinzahid-repliq"
               >
                 Github&nbsp;(Work)
+              </a>
+              <a
+                className="text-sm text-center font-semibold text-sky-600 transition-all px-4 py-2 rounded-full hover:bg-sky-50"
+                target="_blank"
+                href="https://leetcode.com/shamemezahid/"
+              >
+                LeetCode
               </a>
               <a
                 className="text-sm text-center font-semibold text-sky-600 transition-all px-4 py-2 rounded-full hover:bg-sky-50"
