@@ -1,11 +1,10 @@
 import './globals.css'
-import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google'
+import {Merriweather_Sans } from 'next/font/google'
 
-const font = Plus_Jakarta_Sans({ subsets: ['latin'] })
-// const font = JetBrains_Mono({ subsets: ['latin-ext'] })
+const font = Merriweather_Sans({ subsets: ['latin-ext'] })
 
 export const metadata = {
-  title: 'shamemezahid',
+  title: 'Shamim Bin Zahid',
   description: "Hi, I'm Shamim 👋",
 }
 
