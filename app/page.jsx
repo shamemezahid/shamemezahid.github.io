@@ -9,7 +9,7 @@ export default function Home() {
         width={1920}
         height={1080}
         alt=""
-        className="absolute inset-0 h-screen -z-50 opacity-75"
+        className="absolute inset-0 h-screen w-screen -z-50 opacity-75"
       ></Image>
       <main className="flex flex-col gap-4 w-full max-w-5xl p-4 sm:p-6 mx-auto">
         <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50">
@@ -38,6 +38,11 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-start gap-2">
           <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
+            <p className="text-sm text-gray-700 text text-left sm:text-justify font-semibold">
+              Trying to Make the World slightly Better with Better Designed
+              &quot;Things&quot;
+            </p>
+            <br></br>
             <h2 className="text-base font-semibold text-gray-600">About Me</h2>
             <p className="text-sm text-gray-700 text text-left sm:text-justify">
               A Data-Driven UI/UX Designer with 3+ years of experience,
@@ -49,11 +54,6 @@ export default function Home() {
               foundation in computer science engineering and a love for design
               that aims to make a positive impact. I am always open to feedback
               and learning.
-            </p>
-            <br></br>
-            <p className="text-sm text-gray-700 text text-left sm:text-justify font-semibold">
-              Trying to Make the World slightly Better with Better Designed
-              &quot;Things&quot;
             </p>
           </div>
           <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
