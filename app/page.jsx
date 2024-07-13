@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-start gap-2">
           <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
-            <p className="text-sm text-gray-700 text text-left sm:text-justify font-semibold">
+            <p className="text-base text-gray-700 text text-left sm:text-justify font-semibold">
               Trying to Make the World slightly Better with Better Designed
               &quot;Things&quot;
             </p>
