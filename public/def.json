@@ -1,0 +1,149 @@
+{
+    "meta-comment": "This JSON contains the default fallback data in case the API somehow fails",
+    "name": "Shamim Bin Zahid",
+    "greetings": "Hi I'm Shamim Bin Zahid 👋",
+    "tagline": "UI/UX & Product Designer, Software Engineer, Product Manager",
+    "location": "Based in Dhaka, Bangladesh",
+    "quote": "Trying to Make the World slightly Better with Better Designed \"Things\"",
+    "about": {
+      "label": "About Me",
+      "text": "A Data-Driven UI/UX Designer with 3+ years of experience, leveraging user research and human-centered design principles to create intuitive and user-friendly interfaces through strong teamwork, collaboration and clear communication. Passionate about empathizing and translating user needs into engaging and effective UIs that drive user engagement and business growth. With a strong foundation in computer science engineering and a love for design that aims to make a positive impact. I am always open to feedback and learning."
+    },
+    "links": {
+      "label": "Links",
+      "values": [
+        {
+          "label": "Email Me",
+          "url": "mailto:shamimbinzahid@gmail.com"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/shamemezahid/"
+        },
+        {
+          "label": "Behance",
+          "url": "https://www.behance.net/shamemezahid/"
+        },
+        {
+          "label": "GitHub (Personal)",
+          "url": "https://github.com/shamemezahid"
+        },
+        {
+          "label": "GitHub (Work)",
+          "url": "https://github.com/shamimbinzahid-repliq"
+        },
+        {
+          "label": "LeetCode",
+          "url": "https://leetcode.com/shamemezahid/"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/qwaccmaster69/"
+        }
+      ]
+    },
+    "skills": [
+      {
+        "label": "Design & Human Computer Interaction",
+        "skill": "Highly proficient in UI designing in Figma and/or similar tools, Design systems and brand identity design, Low and high fidelity wire-framing, Prototyping, Responsive web and native app design, Human-centered UX design, Information architecture design, Heuristic evaluation, Usability testing"
+      },
+      {
+        "label": "Software Development Life Cycle",
+        "skill": "Requirement analysis, System architecture design, Front-end development, Quality assurance, REST API architecture, Familiar with Agile methodologies & Scrum management"
+      },
+      {
+        "label": "Programming  / Languages",
+        "skill": " C++, Python, Java, JavaScript, HTML, CSS"
+      },
+      {
+        "label": "Frameworks / Library / Tools",
+        "skill": "ReactJs, NextJs, TailwindCSS, Android (Java), Firebase, DevTools, Git"
+      },
+      {
+        "label": "Soft Qualifications",
+        "skills": "Communication, Collaboration, Empathy, Critical Thinking, Problem Solving, Decision Making, Attention to Detail, Adaptability "
+      }
+    ],
+    "experiences": [
+      {
+        "workplace": "REPLIQ Limited",
+        "website": "https://repliq.dev",
+        "designation": "Software Designer (Junior Plus UI/UX Designer)",
+        "start": "Jan 2023",
+        "end": "Ongoing",
+        "duration": "1 yrs 8 mos as of Sep 2024",
+        "responsibilities": "Led and managed the UI/UX design team, conducting requirement analysis and collaborating on software design specifications. Worked on system and database model designs and developed information architecture. Designed user interfaces from wireframes and brand identities to prototypes. Conducted client demonstrations, usability testing, and manual QA testing, and collaborated with frontend development. Oversaw product management, making critical design decisions based on client requirements within an agile scrum environment. Played a key role in recruiting for the UI/UX and Frontend Development teams. Led the design and development of various B2B and B2C systems across industries, including pharmaceuticals, healthcare, e-commerce, delivery management, interior design, and recruitment management, for clients in Sweden and Bangladesh.",
+        "shift": "Full Time",
+        "nature": "Hybrid",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "workplace": "Crantech LLC",
+        "website": "https://crantechllc.com/",
+        "designation": "Product Designer",
+        "start": "Apr 2021",
+        "end": "Jun 2022",
+        "duration": "1 yrs 3 mos",
+        "responsibilities": "Responsibilities: Led the UI/UX design of products, Client requirement analysis, Collaboration in system design & database design process, Conducting user researches, User experience designing, User interface mockups and prototype designing, Setting design requirements for frontend teams, Collaborating in software testing, Client demonstrations, Documentation (Requirement analysis, Software design docs, User guidelines etc.), Worked on designing several web based and native applications including ecommerce, telemedicines, freelancing, communication, edtech platforms, management systems etc.",
+        "shift": "Full Time",
+        "nature": "Remote",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "workplace": "Crantech LLC",
+        "website": "https://crantechllc.com/",
+        "designation": "UI/UX Designer",
+        "start": "Aug 2020",
+        "end": "Mar 2021",
+        "duration": "8 mos",
+        "responsibilities": "Designing UI/UX of software products based on client requirements, re-iterate based on feedback. Collaboration in system design & database design process. Documenting software design documents.",
+        "shift": "Part Time",
+        "nature": "Remote",
+        "location": "Dhaka, Bangladesh"
+      }
+    ],
+    "educations": [
+      {
+        "institute": "University of Dhaka",
+        "degree": "BSc in Computer Science & Engineering",
+        "result": "CGPA 3.23 on a scale of 4.00",
+        "activities": "Served as Class Representative for four years, Lead management and volunteered in multiple departmental events as Vice President at CSEDU Student Club, Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)",
+        "start": "Jan 2018",
+        "end": "Dec 2022",
+        "year": "Session 2017-18",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "institute": "Dhaka City College",
+        "degree": "Higher Secondary Certificate (HSC) in Science",
+        "result": "GPA 5.00 on a scale of 5.00",
+        "volunteering": "Voluntary Activities: Served as Class Representative, Councilor at Dhaka City College Student Council, Volunteered in organizing college events as a council member.",
+        "start": "",
+        "end": "",
+        "year": "Exam of 2017",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "institute": "Dhanmondi Govt Boys' High School",
+        "degree": "Secondary School Certificate (SSC) in Science",
+        "result": "GPA 5.00 on a scale of 5.00",
+        "volunteering": "",
+        "start": "",
+        "end": "",
+        "year": "Exam of 2015",
+        "location": "Dhaka, Bangladesh"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Intra Department Programming Contest 2019: 14th out of 137 participants in DU",
+        "event": "CSEDU Battle of Brains",
+        "url": "https://algo.codemarshal.org/contests/bob19/standings"
+      },
+      {
+        "title": "Second Runners Up in Higher Secondary Category",
+        "event": "Bangladesh Mathematical Olympiad 2016 Dhaka Regional",
+        "url": "https://matholympiad.org.bd/articles/105-news/307-2016-01-31-08-41-58"
+      }
+    ]
+  }
