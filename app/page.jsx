@@ -54,8 +54,8 @@ export default function Home() {
         src="/images/pattern-dark.jpg"
         width={1920}
         height={1080}
-        alt=""
-        className="absolute inset-0 h-screen w-screen -z-50 blur-"
+        alt="background pattern"
+        className="absolute inset-0 h-screen w-screen -z-50"
       ></Image>
       <main className="animate-fadeIn flex flex-col gap-4 w-full max-w-5xl p-4 sm:p-6 mx-auto">
         <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50">
