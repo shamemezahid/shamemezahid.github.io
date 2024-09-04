@@ -57,7 +57,7 @@ export default function Home() {
         alt=""
         className="absolute inset-0 h-screen w-screen -z-50 blur-"
       ></Image>
-      <main className="animate-fadeIn flex flex-col gap-4 w-full max-w-5xl p-4 sm:p-6 mx-auto">
+      <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-4 sm:p-6 mx-auto">
         <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50">
           <Image
             alt="shamimbinzahid"
@@ -113,7 +113,7 @@ export default function Home() {
           </div>{" "}
         </div>
 
-        <h2 className="mx-auto text-sm text-center text-gray-900 mt-8">
+        <h2 className="mx-auto text-sm text-center text-gray-400 mt-8 pb-6">
           2024 ©️ {data.name || def.name}
         </h2>
       </main>
