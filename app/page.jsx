@@ -2,12 +2,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
-import def from "/public/def.json"
+import def from "/public/def.json";
+import { BottomDrawer } from "@/components/drawer";
+import EmailIcon from "@/public/icons/EmailIcon";
 
-function Loading(){
+function Loading() {
   return (
     <div className="grid w-full h-screen place-items-center">
-      <Image 
+      <Image
         src="/loaders/loading.svg"
         alt="Loading Animation"
         width={256}
@@ -43,7 +45,7 @@ export default function Home() {
     fetchData();
   }, []);
 
-  if (loading) return <Loading/>;
+  if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
 
   console.log(data);
@@ -51,17 +53,17 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-4 md:h-screen md:justify-center">
       <Image
-        src="/images/pattern-dark.jpg"
+        src="/images/pattern-diam.jpg"
         width={1920}
         height={1080}
         alt="background pattern"
-        className="absolute inset-0 h-screen w-screen -z-50"
+        className="absolute inset-0 h-screen -z-50 bg-repeat opacity-50"
       ></Image>
       <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-4 sm:p-6 mx-auto">
-        <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50">
+        <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50/25">
           <Image
             alt="shamimbinzahid"
-            src="/images/shameme.png"
+            src="/images/shameme.webp"
             id="shameme"
             height={512}
             width={512}
@@ -83,6 +85,25 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-start gap-2">
+          {data?.actions?.show && (
+            <div className="flex gap-3 px-4 py-2">
+              {data?.actions?.resume?.show && (
+                <BottomDrawer
+                  label={data?.actions?.resume?.label}
+                  src={data?.actions?.resume?.url}
+                />
+              )}
+              {data?.actions?.email?.show && (
+                <a
+                  href={data?.actions?.email?.url}
+                  title={data?.actions?.email?.address}
+                  className="flex items-center gap-3 p-2 pr-4 rounded-lg border border-gray-200 bg-white text-sm font-semibold text-teal-700 w-fit hover:bg-teal-50"
+                >
+                  <EmailIcon /> {data?.actions?.email?.label}
+                </a>
+              )}
+            </div>
+          )}
           <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
             <p className="text-base font-medium text-gray-700 text-left sm:text-justify">
               {data.intro.quote || def.intro.quote}
@@ -114,7 +135,7 @@ export default function Home() {
         </div>
 
         <h2 className="mx-auto text-sm text-center text-gray-400 mt-8 pb-6">
-          2024 ©️ {data.name || def.name}
+          2024 ©️ {data.intro.name || def.intro.name}
         </h2>
       </main>
     </div>
