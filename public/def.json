@@ -1,48 +1,56 @@
 {
-    "meta-comment": "This JSON contains the default fallback data in case the API somehow fails",
+  "intro": {
+    "label": "Intro",
     "name": "Shamim Bin Zahid",
     "greetings": "Hi I'm Shamim Bin Zahid 👋",
-    "tagline": "UI/UX & Product Designer, Software Engineer, Product Manager",
+    "tagline": "UI/UX & Product Designer, Software Engineer",
     "location": "Based in Dhaka, Bangladesh",
-    "quote": "Trying to Make the World slightly Better with Better Designed \"Things\"",
-    "about": {
-      "label": "About Me",
-      "text": "A Data-Driven UI/UX Designer with 3+ years of experience, leveraging user research and human-centered design principles to create intuitive and user-friendly interfaces through strong teamwork, collaboration and clear communication. Passionate about empathizing and translating user needs into engaging and effective UIs that drive user engagement and business growth. With a strong foundation in computer science engineering and a love for design that aims to make a positive impact. I am always open to feedback and learning."
-    },
-    "links": {
-      "label": "Links",
-      "values": [
-        {
-          "label": "Email Me",
-          "url": "mailto:shamimbinzahid@gmail.com"
-        },
-        {
-          "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/shamemezahid/"
-        },
-        {
-          "label": "Behance",
-          "url": "https://www.behance.net/shamemezahid/"
-        },
-        {
-          "label": "GitHub (Personal)",
-          "url": "https://github.com/shamemezahid"
-        },
-        {
-          "label": "GitHub (Work)",
-          "url": "https://github.com/shamimbinzahid-repliq"
-        },
-        {
-          "label": "LeetCode",
-          "url": "https://leetcode.com/shamemezahid/"
-        },
-        {
-          "label": "Instagram",
-          "url": "https://www.instagram.com/qwaccmaster69/"
-        }
-      ]
-    },
-    "skills": [
+    "quote": "Trying to Make the World slightly Better with Better Designed \"Things\""
+  },
+  "about": {
+    "label": "About",
+    "value": "A Data-Driven UI/UX Designer with 3+ years of experience, leveraging user research and human-centered design principles to create intuitive, extensible and user-friendly interfaces through strong teamwork, collaboration and clear communication. Passionate about empathizing and translating user needs into engaging and effective UIs that drive user engagement and business growth. With a strong foundation in computer science engineering and a love for design that aims to make a positive impact. I am always open to feedback and learning."
+  },
+  "links": {
+    "label": "Links",
+    "values": [
+      {
+        "label": "Resume",
+        "url": "https://drive.google.com/file/d/1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn/view?usp=sharing"
+      },
+      {
+        "label": "Email Me",
+        "url": "mailto:shamimbinzahid@gmail.com"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/shamemezahid/"
+      },
+      {
+        "label": "Behance",
+        "url": "https://www.behance.net/shamemezahid/"
+      },
+      {
+        "label": "GitHub (Personal)",
+        "url": "https://github.com/shamemezahid"
+      },
+      {
+        "label": "GitHub (Work)",
+        "url": "https://github.com/shamimbinzahid-repliq"
+      },
+      {
+        "label": "LeetCode",
+        "url": "https://leetcode.com/shamemezahid/"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/qwaccmaster69/"
+      }
+    ]
+  },
+  "skills": {
+    "label": "Skills",
+    "values": [
       {
         "label": "Design & Human Computer Interaction",
         "skill": "Highly proficient in UI designing in Figma and/or similar tools, Design systems and brand identity design, Low and high fidelity wire-framing, Prototyping, Responsive web and native app design, Human-centered UX design, Information architecture design, Heuristic evaluation, Usability testing"
@@ -63,8 +71,11 @@
         "label": "Soft Qualifications",
         "skills": "Communication, Collaboration, Empathy, Critical Thinking, Problem Solving, Decision Making, Attention to Detail, Adaptability "
       }
-    ],
-    "experiences": [
+    ]
+  },
+  "experiences": {
+    "label": "Experiences",
+    "values": [
       {
         "workplace": "REPLIQ Limited",
         "website": "https://repliq.dev",
@@ -101,8 +112,11 @@
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
       }
-    ],
-    "educations": [
+    ]
+  },
+  "education": {
+    "label": "Education",
+    "values": [
       {
         "institute": "University of Dhaka",
         "degree": "BSc in Computer Science & Engineering",
@@ -133,8 +147,11 @@
         "year": "Exam of 2015",
         "location": "Dhaka, Bangladesh"
       }
-    ],
-    "achievements": [
+    ]
+  },
+  "achievements": {
+    "label": "Achievements",
+    "values": [
       {
         "title": "Intra Department Programming Contest 2019: 14th out of 137 participants in DU",
         "event": "CSEDU Battle of Brains",
@@ -147,3 +164,4 @@
       }
     ]
   }
+}
