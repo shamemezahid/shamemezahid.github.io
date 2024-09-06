@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
-import def from "/public/def.json";
 import { BottomDrawer } from "@/components/drawer";
 import EmailIcon from "@/public/icons/EmailIcon";
+
+import Image from "next/image";
+import def from "/public/def.json";
 
 function Loading() {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-4 md:h-screen md:justify-center">
+      {/* Background Pattern */}
       <Image
         src="/images/pattern-diam.jpg"
         width={1920}
@@ -59,7 +61,10 @@ export default function Home() {
         alt="background pattern"
         className="absolute inset-0 h-screen -z-50 bg-repeat opacity-50"
       ></Image>
-      <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-4 sm:p-6 mx-auto">
+
+      {/* The main content */}
+      <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-2 sm:p-6 mx-auto">
+        {/* Intro section */}
         <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50/25">
           <Image
             alt="shamimbinzahid"
@@ -84,8 +89,11 @@ export default function Home() {
             </span>
           </div>
         </div>
+
+        {/* Rest of the content after the intro */}
         <div className="flex flex-col justify-center items-start gap-2">
-          {data?.actions?.show && (
+          {/* Conditional sections : View Resume Btn & Email Me Btn */}
+          {/* {data?.actions?.show && (
             <div className="flex gap-3 px-4 py-2">
               {data?.actions?.resume?.show && (
                 <BottomDrawer
@@ -103,12 +111,15 @@ export default function Home() {
                 </a>
               )}
             </div>
-          )}
+          )} */}
+
+          {/* Quote section */}
+          <p className="p-4 text-base font-medium text-gray-700 text-left sm:text-justify">
+            {data.intro.quote || def.intro.quote}
+          </p>
+
+          {/* About section */}
           <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
-            <p className="text-base font-medium text-gray-700 text-left sm:text-justify">
-              {data.intro.quote || def.intro.quote}
-            </p>
-            <br></br>
             <h2 className="text-base font-semibold text-gray-600">
               {data.about.label || def.about.label}
             </h2>
@@ -116,24 +127,40 @@ export default function Home() {
               {data.about.value || def.about.value}
             </p>
           </div>
-          <div className="w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-            <h2 className="text-base font-semibold text-gray-600">Links</h2>
-            <div className="w-full flex flex-col gap-2 sm:flex-row sm:flex-wrap items-start -mx-4">
-              {(data.links.values || def.links.values).map((link, index) => (
-                <a
-                  key={index}
-                  className="w-full sm:w-fit text-sm font-semibold text-teal-700 transition-all px-4 py-2 rounded-full hover:bg-teal-50"
-                  target="_blank"
-                  href={link.url}
-                  rel="noopener noreferrer"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>{" "}
         </div>
 
+        {/* Links section */}
+        <div className="w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
+          <h2 className="text-base font-semibold text-gray-600">Links</h2>
+          <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4">
+            {data?.actions?.resume?.show && (
+              <BottomDrawer
+                label={data?.actions?.resume?.label}
+                src={data?.actions?.resume?.url}
+              />
+            )}
+            {(data.links.values || def.links.values).map((link, index) => (
+              <a
+                key={index}
+                className="flex items-center gap-2 w-full sm:w-fit text-sm font-semibold text-teal-700 transition-all px-4 py-2 rounded-full hover:bg-teal-50"
+                target="_blank"
+                href={link.url}
+                rel="noopener noreferrer"
+              >
+                <Image
+                  width={20}
+                  height={20}
+                  alt="Link Icon"
+                  src={`/icons/${link.icon}.svg`}
+                  className="w-5 h-5 stroke-gray-400"
+                ></Image>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer section */}
         <h2 className="mx-auto text-sm text-center text-gray-400 mt-8 pb-6">
           2024 ©️ {data.intro.name || def.intro.name}
         </h2>
