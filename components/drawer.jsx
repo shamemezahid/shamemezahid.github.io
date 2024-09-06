@@ -10,7 +10,7 @@ export function BottomDrawer({ label, src }) {
         <button
           title="Click to open resume"
           // className="flex items-center gap-3 p-2 pr-4 rounded-lg border border-gray-200 bg-white text-sm font-semibold text-teal-700 w-fit hover:bg-teal-50"
-          className="flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold text-teal-700 transition-all px-4 py-2 rounded-full hover:bg-teal-50"
+          className="flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold text-teal-700 transition-all px-4 py-3 rounded-full hover:bg-teal-50"
         >
           <ResumeIcon />
           {label}
