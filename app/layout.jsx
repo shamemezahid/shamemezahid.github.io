@@ -6,8 +6,8 @@ import { Merriweather_Sans } from "next/font/google";
 const font = Merriweather_Sans({ subsets: ["latin-ext"] });
 
 export const metadata = {
-  title: "Shamim Bin Zahid",
-  description: "Hi, I'm Shamim 👋",
+  title: "I'm Shamim Bin Zahid",
+  description: "Hi, Welcome to my site 👋",
 };
 
 const GoogleAnalytics = () => {
