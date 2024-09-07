@@ -60,7 +60,6 @@ export default function Home() {
         alt="background pattern"
         className="absolute inset-0 h-screen -z-50 bg-repeat opacity-50 dark:none"
       ></Image>
-      <ThemeToggle />
       {/* The main content */}
       <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-2 sm:p-6 pt-6 mx-auto">
         {/* Intro section */}
