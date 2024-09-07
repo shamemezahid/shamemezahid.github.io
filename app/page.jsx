@@ -49,8 +49,6 @@ export default function Home() {
   if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
 
-  console.log(data);
-
   return (
     <div className="flex flex-col gap-4 md:h-screen md:justify-center">
       {/* Background Pattern */}
