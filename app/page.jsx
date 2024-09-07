@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { BottomDrawer } from "@/components/drawer";
-import EmailIcon from "@/public/icons/EmailIcon";
 
 import Image from "next/image";
 import def from "/public/def.json";
+import { ContactDrawer } from "@/components/contact";
 
 function Loading() {
   return (
@@ -90,27 +90,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Conditional sections : View Resume Btn & Email Me Btn */}
-        {/* {data?.actions?.show && (
-            <div className="flex gap-3 px-4 py-2">
-              {data?.actions?.resume?.show && (
-                <BottomDrawer
-                  label={data?.actions?.resume?.label}
-                  src={data?.actions?.resume?.url}
-                />
-              )}
-              {data?.actions?.email?.show && (
-                <a
-                  href={data?.actions?.email?.url}
-                  title={data?.actions?.email?.address}
-                  className="flex items-center gap-3 p-2 pr-4 rounded-lg border border-gray-200 bg-white text-sm font-semibold text-teal-700 w-fit hover:bg-teal-50"
-                >
-                  <EmailIcon /> {data?.actions?.email?.label}
-                </a>
-              )}
-            </div>
-          )} */}
-
         {/* Quote section */}
         <p className="p-4 text-sm font-medium text-gray-700 text-left sm:text-justify">
           {data.intro.quote || def.intro.quote}
@@ -130,12 +109,23 @@ export default function Home() {
         <div className="w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
           <h2 className="text-sm font-semibold text-gray-500">Links</h2>
           <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4">
-            {data?.actions?.resume?.show && (
+
+            {/* Conditional section : View Resume Btn */}
+              {(data?.actions?.show && data?.actions?.resume?.show) && (
               <BottomDrawer
                 label={data?.actions?.resume?.label}
                 src={data?.actions?.resume?.url}
               />
             )}
+
+            {/* Conditional section : Contact me Btn */}
+            {(data?.actions?.show && data?.actions?.contact?.show) && (
+              <ContactDrawer 
+                label={data?.actions?.contact?.label}
+                email={data?.actions?.contact?.address}/>
+            )}
+
+            {/* The rest of the buttons */}
             {(data.links.values || def.links.values).map((link, index) => (
               <a
                 key={index}
