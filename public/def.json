@@ -11,40 +11,41 @@
     "label": "About",
     "value": "A Data-Driven UI/UX Designer with 3+ years of experience, leveraging user research and human-centered design principles to create intuitive, extensible and user-friendly interfaces through strong teamwork, collaboration and clear communication. Passionate about empathizing and translating user needs into engaging and effective UIs that drive user engagement and business growth. With a strong foundation in computer science engineering and a love for design that aims to make a positive impact. I am always open to feedback and learning."
   },
+  "actions": {
+    "show": false
+  },
   "links": {
     "label": "Links",
     "values": [
       {
-        "label": "Resume",
-        "url": "https://drive.google.com/file/d/1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn/view?usp=sharing"
-      },
-      {
-        "label": "Email Me",
-        "url": "mailto:shamimbinzahid@gmail.com"
-      },
-      {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/shamemezahid/"
+        "url": "https://www.linkedin.com/in/shamemezahid/",
+        "icon": "in"
       },
       {
         "label": "Behance",
-        "url": "https://www.behance.net/shamemezahid/"
+        "url": "https://www.behance.net/shamemezahid/",
+        "icon": "be"
       },
       {
-        "label": "GitHub (Personal)",
-        "url": "https://github.com/shamemezahid"
+        "label": "GitHub",
+        "url": "https://github.com/shamemezahid",
+        "icon": "gh"
       },
       {
         "label": "GitHub (Work)",
-        "url": "https://github.com/shamimbinzahid-repliq"
+        "url": "https://github.com/shamimbinzahid-repliq",
+        "icon": "gh"
       },
       {
         "label": "LeetCode",
-        "url": "https://leetcode.com/shamemezahid/"
+        "url": "https://leetcode.com/shamemezahid/",
+        "icon": "lc"
       },
       {
         "label": "Instagram",
-        "url": "https://www.instagram.com/qwaccmaster69/"
+        "url": "https://www.instagram.com/qwaccmaster69/",
+        "icon": "ig"
       }
     ]
   },

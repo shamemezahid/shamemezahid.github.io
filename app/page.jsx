@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { BottomDrawer } from "@/components/drawer";
-import EmailIcon from "@/public/icons/EmailIcon";
 
 import Image from "next/image";
 import def from "/public/def.json";
+import { ContactDrawer } from "@/components/contact";
 
 function Loading() {
   return (
@@ -49,8 +49,6 @@ export default function Home() {
   if (loading) return <Loading />;
   if (error) return <p>Error: {error}</p>;
 
-  console.log(data);
-
   return (
     <div className="flex flex-col gap-4 md:h-screen md:justify-center">
       {/* Background Pattern */}
@@ -63,7 +61,7 @@ export default function Home() {
       ></Image>
 
       {/* The main content */}
-      <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-2 sm:p-6 mx-auto">
+      <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-2 sm:p-6 pt-6 mx-auto">
         {/* Intro section */}
         <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl md:bg-gray-50/25">
           <Image
@@ -90,59 +88,46 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Rest of the content after the intro */}
-        <div className="flex flex-col justify-center items-start gap-2">
-          {/* Conditional sections : View Resume Btn & Email Me Btn */}
-          {/* {data?.actions?.show && (
-            <div className="flex gap-3 px-4 py-2">
-              {data?.actions?.resume?.show && (
-                <BottomDrawer
-                  label={data?.actions?.resume?.label}
-                  src={data?.actions?.resume?.url}
-                />
-              )}
-              {data?.actions?.email?.show && (
-                <a
-                  href={data?.actions?.email?.url}
-                  title={data?.actions?.email?.address}
-                  className="flex items-center gap-3 p-2 pr-4 rounded-lg border border-gray-200 bg-white text-sm font-semibold text-teal-700 w-fit hover:bg-teal-50"
-                >
-                  <EmailIcon /> {data?.actions?.email?.label}
-                </a>
-              )}
-            </div>
-          )} */}
+        {/* Quote section */}
+        <p className="p-4 text-sm font-medium text-gray-700 text-left sm:text-justify">
+          {data.intro.quote || def.intro.quote}
+        </p>
 
-          {/* Quote section */}
-          <p className="p-4 text-base font-medium text-gray-700 text-left sm:text-justify">
-            {data.intro.quote || def.intro.quote}
+        {/* About section */}
+        <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
+          <h2 className="text-sm font-semibold text-gray-500">
+            {data.about.label || def.about.label}
+          </h2>
+          <p className="text-sm text-gray-700 text text-left sm:text-justify">
+            {data.about.value || def.about.value}
           </p>
-
-          {/* About section */}
-          <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
-            <h2 className="text-base font-semibold text-gray-600">
-              {data.about.label || def.about.label}
-            </h2>
-            <p className="text-sm text-gray-700 text text-left sm:text-justify">
-              {data.about.value || def.about.value}
-            </p>
-          </div>
         </div>
 
         {/* Links section */}
         <div className="w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-          <h2 className="text-base font-semibold text-gray-600">Links</h2>
+          <h2 className="text-sm font-semibold text-gray-500">Links</h2>
           <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4">
-            {data?.actions?.resume?.show && (
+
+            {/* Conditional section : View Resume Btn */}
+              {(data?.actions?.show && data?.actions?.resume?.show) && (
               <BottomDrawer
                 label={data?.actions?.resume?.label}
                 src={data?.actions?.resume?.url}
               />
             )}
+
+            {/* Conditional section : Contact me Btn */}
+            {(data?.actions?.show && data?.actions?.contact?.show) && (
+              <ContactDrawer 
+                label={data?.actions?.contact?.label}
+                email={data?.actions?.contact?.address}/>
+            )}
+
+            {/* The rest of the buttons */}
             {(data.links.values || def.links.values).map((link, index) => (
               <a
                 key={index}
-                className="flex items-center gap-2 w-full sm:w-fit text-sm font-semibold text-teal-700 transition-all px-4 py-2 rounded-full hover:bg-teal-50"
+                className="flex items-center gap-2 w-full sm:w-fit text-sm font-semibold text-teal-700 transition-all px-4 py-3 rounded-full hover:bg-teal-50"
                 target="_blank"
                 href={link.url}
                 rel="noopener noreferrer"
