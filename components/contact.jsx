@@ -31,10 +31,10 @@ export function ContactDrawer({ label, email }) {
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/50" />
         <Drawer.Content className="cursor-pointer bg-[#313131] flex flex-col items-center py-4 px-6 sm:px-12 gap-8 max-w-3xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0">
-          <div className="w-12 h-2 rounded-full bg-gray-500"></div>
-          <div className="w-full h-full flex flex-col gap-6 overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 scrollbar-thumb-neutral-700 scrollbar-track-transparent">
+          <div className="w-12 h-2 rounded-full bg-neutral-500"></div>
+          <div className="w-full h-full flex flex-col gap-6 text-sm overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 scrollbar-thumb-neutral-700 scrollbar-track-transparent">
             <div className="flex flex-col gap-3 w-full text-white">
-              <p className="text-2xl font-semibold">{label}</p>
+              <p className="text-xl font-semibold">{label}</p>
               <span className="flex flex-col gap-1">
                 <p className="font-normal">
                   Feel free to reach out using the form below. Or send me an
@@ -43,6 +43,7 @@ export function ContactDrawer({ label, email }) {
                 <ClickToReveal content={email} />
               </span>
             </div>
+            <div className="w-full h-[1px] rounded-full bg-neutral-600"></div>
             <FormComponent />
           </div>
         </Drawer.Content>
@@ -206,7 +207,6 @@ function LoadingBtn() {
 }
 
 function FormComponent() {
-  // State for form data
   const [formData, setFormData] = useState({
     "entry.673605360": "", // Name
     "entry.2073457343": "", // Email
@@ -312,7 +312,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="text-base text-teal-400 w-full p-4 rounded-lg text-center">
+          <p className="text-teal-400 w-full p-4 rounded-lg text-center">
             {success}
           </p>
         ) : loading ? (
