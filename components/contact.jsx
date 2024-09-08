@@ -15,7 +15,7 @@ export function ContactDrawer({ label, email }) {
     <Drawer.Root shouldScaleBackground>
       <Drawer.Trigger asChild>
         <button
-          title="Click to open resume"
+          title="Click to open contact form"
           className="flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
         >
           <Image
