@@ -5,6 +5,7 @@ import {
   EyeSlashIcon,
   CheckCircleIcon,
   DocumentDuplicateIcon,
+  DocumentArrowUpIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState } from "react";
@@ -15,27 +16,30 @@ export function ContactDrawer({ label, email }) {
     <Drawer.Root shouldScaleBackground>
       <Drawer.Trigger asChild>
         <button
-          title="Click to open resume"
-          className="flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
+          title="Click to open contact form"
+          className="group flex items-center w-full sm:w-fit text-sm text-left font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
         >
-          <Image
-            width={20}
-            height={20}
-            alt="Contact Icon"
-            src={`/icons/em.svg`}
-            className="w-5 h-5 stroke-gray-400"
-          ></Image>
-          {label}
+          <div className="flex flex-col">
+            <Image
+              width={20}
+              height={20}
+              alt="Contact Icon"
+              src={`/icons/em.svg`}
+              className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-gray-400"
+            ></Image>
+            <DocumentArrowUpIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
+          </div>
+          <p className="ml-2">{label}</p>
         </button>
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/50" />
-        <Drawer.Content className="cursor-pointer bg-white dark:bg-[#313131] flex flex-col items-center py-4 px-6 sm:px-12 gap-8 max-w-3xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0">
+        <Drawer.Content
+          onMouseDown={(e) => e.stopPropagation()}
+          className="cursor-pointer bg-white dark:bg-[#313131] flex flex-col items-center py-4 px-6 sm:px-12 gap-8 max-w-3xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0"
+        >
           <div className="w-12 h-2 rounded-full dark:bg-neutral-500 bg-neutral-300"></div>
-          <div
-            onMouseDown={(e) => e.stopPropagation()}
-            className="w-full h-full flex flex-col gap-6 text-sm overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent"
-          >
+          <div className="w-full h-full flex flex-col gap-6 text-sm overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
             <div className="flex flex-col gap-3 w-full dark:text-neutral-50 text-neutral-700">
               <p className="text-xl font-semibold">{label}</p>
               <span className="flex flex-col gap-1">
@@ -61,46 +65,37 @@ function ClickToReveal({ content }) {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200 rounded-lg overflow-hidden">
       <a
-        onClick={() => setIsRevealed(!isRevealed)}
-        className="w-full flex gap-3 items-center px-4 py-3 font-normal dark:text-teal-400 text-teal-700 hover:text-teal-500"
+        onClick={() => {setIsRevealed(!isRevealed); setIsCopied(false)}}
+        className="w-full flex items-center px-4 py-3 font-normal dark:text-teal-400 text-teal-700 hover:text-teal-500"
       >
-        {isRevealed ? (
+        <EyeIcon className={isRevealed ? "w-0 h-0 transition-all" : "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"} />
+        <EyeSlashIcon className={isRevealed ? "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all" : "w-0 h-0 transition-all"} />
+        
+        <p className={isRevealed ? "ml-3 transition-all duration-500" : "ml-0 w-0 h-0 opacity-0"}>{content}</p>
+        <p className={isRevealed ? "ml-0 w-0 h-0 opacity-0" : "ml-3 transition-all duration-500"}>Click to reveal email</p>
+        
+      </a>
+      <a
+        className={isRevealed ? "w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap transition-all duration-100" : "w-0 h-0 transition-all duration-100"}
+        onClick={() =>
+          navigator.clipboard
+            .writeText(content)
+            .then(setIsCopied(true))
+            .catch((err) => console.error("Error copying to clipboard", err))
+        }
+      >
+        {isCopied ? (
           <>
-            <EyeSlashIcon className="w-5 h-5 dark:text-neutral-400 text-neutral-500" />{" "}
-            <p>{content}</p>
+            <CheckCircleIcon className="w-5 h-5 text-neutral-400" />
+            <p>Copied</p>
           </>
         ) : (
           <>
-            <EyeIcon className="w-5 h-5 dark:text-neutral-400 text-neutral-500" />
-            <p>Click to reveal email</p>
+            <DocumentDuplicateIcon className="w-5 h-5 text-neutral-400" />
+            <p>Click to Copy</p>
           </>
         )}
       </a>
-      {isRevealed ? (
-        <a
-          className="w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap"
-          onClick={() =>
-            navigator.clipboard
-              .writeText(content)
-              .then(setIsCopied(true))
-              .catch((err) => console.error("Error copying to clipboard", err))
-          }
-        >
-          {isCopied ? (
-            <>
-              <CheckCircleIcon className="w-5 h-5 text-neutral-400" />
-              <p>Copied</p>
-            </>
-          ) : (
-            <>
-              <DocumentDuplicateIcon className="w-5 h-5 text-neutral-400" />
-              <p>Click to Copy</p>
-            </>
-          )}
-        </a>
-      ) : (
-        <></>
-      )}
     </div>
   );
 }

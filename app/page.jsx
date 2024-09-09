@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { BottomDrawer } from "@/components/drawer";
 
 import Image from "next/image";
@@ -10,13 +10,13 @@ import ThemeToggle from "@/components/toggler";
 
 function Loading() {
   return (
-    <div className="bg-[#313131] grid w-full h-screen place-items-center">
+    <div className="bg-[#313131] grid w-full h-screen place-items-center transition-all">
       <Image
         src="/loaders/loading.svg"
         alt="Loading Animation"
         width={256}
         height={256}
-        className="w-16"
+        className="w-16 animate-pulse"
       />
     </div>
   );
@@ -51,7 +51,7 @@ export default function Home() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="flex flex-col gap-4 md:h-screen md:justify-center dark:bg-neutral-900 transition-all ease-in">
+    <div className="flex flex-col gap-4 md:h-screen md:justify-center dark:bg-neutral-900 transition-all duration-200 ease-in">
       {/* Background Pattern */}
       <Image
         src="/images/pattern-diam.jpg"
@@ -60,19 +60,22 @@ export default function Home() {
         alt="background pattern"
         className="absolute inset-0 h-screen -z-50 bg-repeat opacity-50 dark:none"
       ></Image>
-      <ThemeToggle />
+
       {/* The main content */}
-      <main className="animate-fadeIn flex flex-col gap-4 w-full h-full lg:justify-center max-w-5xl p-2 sm:p-6 pt-6 mx-auto">
+      <main className="animate-fadeIn flex flex-col gap-2 w-full h-full lg:justify-center max-w-5xl p-2 sm:p-6 pt-6 mx-auto">
         {/* Intro section */}
-        <div className="flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl">
-          <Image
-            alt="shamimbinzahid"
-            src="/images/shameme.webp"
-            id="shameme"
-            height={512}
-            width={512}
-            className="w-32 aspect-1 rounded-full border border-gray-200 dark:border-neutral-700"
-          />
+        <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl">
+          <div className="flex w-full sm:w-fit justify-between items-start">
+            <Image
+              alt="shamimbinzahid"
+              src="/images/shameme.webp"
+              id="shameme"
+              height={512}
+              width={512}
+              className="w-32 aspect-1 rounded-full border border-gray-200 dark:border-neutral-700"
+            />
+            <ThemeToggle className="animate-pulse sm:hidden" />
+          </div>
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-neutral-100">
               {data.intro.greetings || def.intro.greetings}
@@ -87,6 +90,7 @@ export default function Home() {
               </span>
             </span>
           </div>
+          <ThemeToggle className="animate-pulse hidden sm:block absolute top-6 right-6" />
         </div>
 
         {/* Quote section */}
@@ -94,21 +98,9 @@ export default function Home() {
           {data.intro.quote || def.intro.quote}
         </p>
 
-        {/* About section */}
-        <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
-          <h2 className="text-sm font-semibold text-gray-500 dark:text-neutral-400">
-            {data.about.label || def.about.label}
-          </h2>
-          <p className="text-sm text-gray-700 dark:text-neutral-200 text text-left sm:text-justify">
-            {data.about.value || def.about.value}
-          </p>
-        </div>
-
         {/* Links section */}
         <div className="w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-          <h2 className="text-sm font-semibold text-gray-500 dark:text-neutral-400">
-            Links
-          </h2>
+          <h2 className="text-sm font-semibold text-gray-500 dark:text-neutral-400">Links </h2>
           <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4">
             {/* Conditional section : View Resume Btn */}
             {data?.actions?.show && data?.actions?.resume?.show && (
@@ -130,22 +122,36 @@ export default function Home() {
             {(data.links.values || def.links.values).map((link, index) => (
               <a
                 key={index}
-                className="flex items-center gap-2 w-full sm:w-fit text-sm font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
+                className="group flex items-center w-full sm:w-fit text-sm font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
                 target="_blank"
                 href={link.url}
                 rel="noopener noreferrer"
+                title={"Open "+link.label}
               >
+                <ArrowUpRightIcon
+                  className="w-0 h-0 group-hover:w-5 group-hover:h-5 transition-all duration-500"
+                />
                 <Image
                   width={20}
                   height={20}
                   alt="Link Icon"
                   src={`/icons/${link.icon}.svg`}
-                  className="w-5 h-5"
+                  className="w-5 h-5 group-hover:w-0 group-hover:h-0 transition-all duration-500"
                 ></Image>
-                {link.label}
+                <p className="ml-2">{link.label}</p>
               </a>
             ))}
           </div>
+        </div>
+
+        {/* About section */}
+        <div className="flex flex-col justify-start gap-2 p-4 rounded-xl">
+          <h2 className="text-sm font-semibold text-gray-500 dark:text-neutral-400">
+            {data.about.label || def.about.label}
+          </h2>
+          <p className="text-sm text-gray-700 dark:text-neutral-200 text text-left sm:text-justify">
+            {data.about.value || def.about.value}
+          </p>
         </div>
 
         {/* Footer section */}

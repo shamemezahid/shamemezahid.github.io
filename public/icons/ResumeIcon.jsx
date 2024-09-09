@@ -1,11 +1,11 @@
-export default function ResumeIcon() {
+export default function ResumeIcon({className}) {
   return (
     <svg
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      className="w-5 h-5"
+      className={className+`w-5 h-5`}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
