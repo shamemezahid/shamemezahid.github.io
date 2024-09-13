@@ -22,6 +22,59 @@ function Loading() {
   );
 }
 
+function ExperiencesSection({ data }) {
+  return (
+    <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
+      <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
+        {data?.experiences?.label || data?.experiences?.label}
+      </h2>
+      <div className="w-full flex flex-col gap-6 items-start text-gray-700 dark:text-neutral-200 text-left">
+        {(data?.experiences.values || def.experiences.values).map(
+          (experience, index) => (
+            <div key={index} className="w-full">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {experience.workplace}
+                </h3>
+                <a
+                  href={experience.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-600 dark:text-teal-400 hover:underline"
+                >
+                  {experience.website}
+                </a>
+              </div>
+              <div className="flex justify-between items-center mb-2">
+                <p className="font-medium text-gray-700 dark:text-neutral-200">
+                  {experience.designation}
+                </p>
+                <p className="text-sm text-gray-600 dark:text-neutral-400">
+                  {experience.start} - {experience.end}
+                </p>
+              </div>
+              <div className="flex gap-2 mb-2">
+                <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
+                  {experience.shift}
+                </span>
+                <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
+                  {experience.nature}
+                </span>
+                <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
+                  {experience.location}
+                </span>
+              </div>
+              <p className="text-gray-600 dark:text-neutral-300">
+                {experience.responsibilities}
+              </p>
+            </div>
+          )
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,19 +106,18 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
       {/* Background Pattern */}
-      <Image
+      {/* <Image
         src="/images/pattern-diam.jpg"
         width={1920}
         height={1080}
         alt="background pattern"
-        className="absolute inset-0 h-screen -z-50 bg-repeat opacity-50 dark:none"
-      />
+        className="absolute inset-0 h-screen -z-50 bg-repeat opacity-50 invisible"
+      /> */}
 
       {/* The main content */}
       <main className="animate-fadeIn flex flex-col gap-2 w-full h-full max-w-5xl p-2 sm:p-6 pt-6 sm:pt-24 mx-auto">
-        
         {/* Intro section */}
-        <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-l-full rounded-r-3xl">
+        <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
           <div className="flex w-full sm:w-fit justify-between items-start">
             <Image
               alt="shamimbinzahid"
@@ -131,9 +183,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 title={"Open " + link.label}
               >
-                <ArrowUpRightIcon
-                  className="w-0 h-0 group-hover:w-5 group-hover:h-5 transition-all duration-500"
-                />
+                <ArrowUpRightIcon className="w-0 h-0 group-hover:w-5 group-hover:h-5 transition-all duration-500" />
                 <Image
                   width={20}
                   height={20}
@@ -148,28 +198,7 @@ export default function Home() {
         </div>
 
         {/* Experiences section */}
-        {/* <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-          <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
-            {data?.experiences?.label || data?.experiences?.label}
-          </h2>
-          <div className="w-full flex flex-col gap-2 items-start text-gray-700 dark:text-neutral-200 text-left ">
-            {(data?.experiences.values || def.experiences.values).map(
-              (experience, index) => (
-                <div key={index}>
-                  <p className="">{experience.workplace}</p>
-                  <p className="">{experience.website}</p>
-                  <p className="">{experience.designation}</p>
-                  <p className="">{experience.start}</p>
-                  <p className="">{experience.end}</p>
-                  <p className="">{experience.shift}</p>
-                  <p className="">{experience.nature}</p>
-                  <p className="">{experience.location}</p>
-                  <p className="">{experience.responsibilities}</p>
-                </div>
-              )
-            )}
-          </div>
-        </div> */}
+        {/* <ExperiencesSection data={data} /> */}
 
         {/* About section */}
         <div className="text-sm flex flex-col justify-start gap-2 p-4 rounded-xl">
