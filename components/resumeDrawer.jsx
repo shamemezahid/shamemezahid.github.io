@@ -4,7 +4,7 @@ import ResumeIcon from "@/public/icons/ResumeIcon";
 import { DocumentArrowUpIcon } from "@heroicons/react/24/outline";
 import { Drawer } from "vaul";
 
-export function BottomDrawer({ label, src }) {
+export function ResumeDrawer({ label, src }) {
   return (
     <Drawer.Root shouldScaleBackground>
       <Drawer.Trigger asChild>

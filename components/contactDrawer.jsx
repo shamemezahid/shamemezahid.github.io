@@ -1,5 +1,4 @@
 "use client";
-import EmailIcon from "@/public/icons/EmailIcon";
 import {
   EyeIcon,
   EyeSlashIcon,

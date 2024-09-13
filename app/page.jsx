@@ -1,12 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { ArrowUpRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
-import { BottomDrawer } from "@/components/drawer";
+import { ResumeDrawer } from "@/components/resumeDrawer";
 
 import Image from "next/image";
 import def from "/public/def.json";
-import { ContactDrawer } from "@/components/contact";
-import ThemeToggle from "@/components/toggler";
+import { ContactDrawer } from "@/components/contactDrawer";
+import ThemeToggle from "@/components/themeToggler";
+import { TestResumeDrawer } from "@/components/testResumeDrawer";
+import { TestContactDrawer } from "@/components/testContactDrawer";
 
 function Loading() {
   return (
@@ -157,9 +159,10 @@ export default function Home() {
             {data?.links?.label || def?.links?.label}
           </h2>
           <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4">
+
             {/* Conditional section : View Resume Btn */}
             {data?.actions?.show && data?.actions?.resume?.show && (
-              <BottomDrawer
+              <TestResumeDrawer
                 label={data?.actions?.resume?.label}
                 src={data?.actions?.resume?.url}
               />
@@ -167,7 +170,7 @@ export default function Home() {
 
             {/* Conditional section : Contact me Btn */}
             {data?.actions?.show && data?.actions?.contact?.show && (
-              <ContactDrawer
+              <TestContactDrawer
                 label={data?.actions?.contact?.label}
                 email={data?.actions?.contact?.address}
               />
