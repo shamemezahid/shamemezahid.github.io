@@ -3,13 +3,13 @@
     "label": "Intro",
     "name": "Shamim Bin Zahid",
     "greetings": "Hi I'm Shamim Bin Zahid 👋",
-    "tagline": "UI/UX & Product Designer, Software Engineer",
+    "tagline": "UI/UX Designer, Product Manager & Software Engineer",
     "location": "Based in Dhaka, Bangladesh",
     "quote": "Trying to Make the World slightly Better with Better Designed \"Things\""
   },
   "about": {
-    "label": "About",
-    "value": "A Data-Driven UI/UX Designer with 3+ years of experience, leveraging user research and human-centered design principles to create intuitive, extensible and user-friendly interfaces through strong teamwork, collaboration and clear communication. Passionate about empathizing and translating user needs into engaging and effective UIs that drive user engagement and business growth. With a strong foundation in computer science engineering and a love for design that aims to make a positive impact. I am always open to feedback and learning."
+    "label": "About Me",
+    "value": "A data-driven product designer & manager with over 3 years of experience, specializing in UI/UX design, product management, and team leadership. With a strong foundation in computer science engineering, I have led and managed design teams, making critical design decisions while taking a hands-on approach to the design process. I excel in translating user research into engaging, user-friendly products that enhance user experience and drive business growth. I’m passionate about empathizing with user needs and working across B2B and B2C systems for both local and international clients. I am always open to feedback and learning. I’m always trying to contribute to making the world slightly better with better designed \"things\""
   },
   "actions": {
     "show": false
@@ -19,12 +19,12 @@
     "values": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/shamemezahid/",
+        "url": "https://www.linkedin.com/in/shamemezahid",
         "icon": "in"
       },
       {
         "label": "Behance",
-        "url": "https://www.behance.net/shamemezahid/",
+        "url": "https://www.behance.net/shamemezahid",
         "icon": "be"
       },
       {
@@ -39,12 +39,12 @@
       },
       {
         "label": "LeetCode",
-        "url": "https://leetcode.com/shamemezahid/",
+        "url": "https://leetcode.com/shamemezahid",
         "icon": "lc"
       },
       {
         "label": "Instagram",
-        "url": "https://www.instagram.com/qwaccmaster69/",
+        "url": "https://www.instagram.com/qwaccmaster69",
         "icon": "ig"
       }
     ]
@@ -75,6 +75,7 @@
     ]
   },
   "experiences": {
+    "show": true,
     "label": "Experiences",
     "values": [
       {
@@ -84,31 +85,52 @@
         "start": "Jan 2023",
         "end": "Ongoing",
         "duration": "1 yrs 8 mos as of Sep 2024",
-        "responsibilities": "Led and managed the UI/UX design team, conducting requirement analysis and collaborating on software design specifications. Worked on system and database model designs and developed information architecture. Designed user interfaces from wireframes and brand identities to prototypes. Conducted client demonstrations, usability testing, and manual QA testing, and collaborated with frontend development. Oversaw product management, making critical design decisions based on client requirements within an agile scrum environment. Played a key role in recruiting for the UI/UX and Frontend Development teams. Led the design and development of various B2B and B2C systems across industries, including pharmaceuticals, healthcare, e-commerce, delivery management, interior design, and recruitment management, for clients in Sweden and Bangladesh.",
+        "responsibilities": [
+          "Led, managed & trained the UI/UX design team, taking ownership of the design process from concept to execution.",
+          "Conducted requirement analysis and collaborated on software design specifications, ensuring smooth alignment between client needs and technical implementation.",
+          "Developed information architecture and partnered with backend teams to create system designs and database models.",
+          "Working closely with the frontend team including design guides, design reviews, code reviews & developing as well.",
+          "Designed UIs, handling the majority of design decisions, including creating wireframes, prototypes, and brand identities.",
+          "Led product management, ensuring alignment with client requirements within an Agile Scrum environment.",
+          "Conducted usability testing, and manual QA testing, providing detailed reports for continuous improvement.",
+          "Conducted client demonstrations & played an instrumental role in recruiting for the UI/UX and Frontend dev teams.",
+          "Managed and oversaw the design process of B2B and B2C systems across industries including pharmaceuticals, healthcare, e-commerce, and recruitment management."
+        ],
         "shift": "Full Time",
         "nature": "Hybrid",
         "location": "Dhaka, Bangladesh"
       },
       {
         "workplace": "Crantech LLC",
-        "website": "https://crantechllc.com/",
+        "website": "https://crantechllc.com",
         "designation": "Product Designer",
         "start": "Apr 2021",
         "end": "Jun 2022",
         "duration": "1 yrs 3 mos",
-        "responsibilities": "Responsibilities: Led the UI/UX design of products, Client requirement analysis, Collaboration in system design & database design process, Conducting user researches, User experience designing, User interface mockups and prototype designing, Setting design requirements for frontend teams, Collaborating in software testing, Client demonstrations, Documentation (Requirement analysis, Software design docs, User guidelines etc.), Worked on designing several web based and native applications including ecommerce, telemedicines, freelancing, communication, edtech platforms, management systems etc.",
+        "responsibilities": [
+          "Led the UI/UX design of the projects, managing end-to-end product design processes across multiple products.",
+          "Took a hands-on approach in designing responsive UIs and prototypes while leading product decisions.",
+          "Conducted user research to inform design strategy, translating insights into high-quality design solutions.",
+          "Defined requirements for frontend teams, collaborated on system design and development, and led product demonstrations for clients.",
+          "Managed design deliverables for B2C and B2B platforms in sectors like e-commerce, telemedicine, freelancing, and education.",
+          "Involved in software testing and documentation (requirement analysis, design documentation, user guides, etc.)"
+        ],
         "shift": "Full Time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
       },
       {
         "workplace": "Crantech LLC",
-        "website": "https://crantechllc.com/",
+        "website": "https://crantechllc.com",
         "designation": "UI/UX Designer",
         "start": "Aug 2020",
         "end": "Mar 2021",
         "duration": "8 mos",
-        "responsibilities": "Designing UI/UX of software products based on client requirements, re-iterate based on feedback. Collaboration in system design & database design process. Documenting software design documents.",
+        "responsibilities": [
+          "Designed UI/UX for software products, iterating based on client feedback and user research.",
+          "Managed design decisions from system wireframes to final interface designs for various applications.",
+          "Contributed to system design and collaborated on data models for client projects."
+        ],
         "shift": "Part Time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
@@ -122,30 +144,35 @@
         "institute": "University of Dhaka",
         "degree": "BSc in Computer Science & Engineering",
         "result": "CGPA 3.23 on a scale of 4.00",
-        "activities": "Served as Class Representative for four years, Lead management and volunteered in multiple departmental events as Vice President at CSEDU Student Club, Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)",
+        "activities": [
+          "Served as Class Representative for four years", "Lead management and volunteered in multiple departmental events", "Served as Executive Member leading up to the Vice President of the CSEDU Student Club", "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"],
         "start": "Jan 2018",
         "end": "Dec 2022",
         "year": "Session 2017-18",
+        "website": "https://www.du.ac.bd/body/CSE",
         "location": "Dhaka, Bangladesh"
       },
       {
         "institute": "Dhaka City College",
         "degree": "Higher Secondary Certificate (HSC) in Science",
         "result": "GPA 5.00 on a scale of 5.00",
-        "volunteering": "Voluntary Activities: Served as Class Representative, Councilor at Dhaka City College Student Council, Volunteered in organizing college events as a council member.",
+        "activities": [
+          "Served as Class Representative", "Councilor at Dhaka City College Student Council", "Volunteered in organizing college events as a council member"],
         "start": "",
         "end": "",
         "year": "Exam of 2017",
+        "website": "https://www.dhakacitycollege.edu.bd/",
         "location": "Dhaka, Bangladesh"
       },
       {
         "institute": "Dhanmondi Govt Boys' High School",
         "degree": "Secondary School Certificate (SSC) in Science",
         "result": "GPA 5.00 on a scale of 5.00",
-        "volunteering": "",
+        "activities": "",
         "start": "",
         "end": "",
         "year": "Exam of 2015",
+        "website": "http://www.dgbhs.edu.bd/",
         "location": "Dhaka, Bangladesh"
       }
     ]
