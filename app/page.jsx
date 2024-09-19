@@ -2,7 +2,11 @@
 import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRightIcon, Cog6ToothIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowUpRightIcon,
+  Cog6ToothIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 import def from "/public/def.json";
 
@@ -33,7 +37,10 @@ function IntroSection({ data }) {
   return (
     <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
       <div className="flex w-full sm:w-fit justify-between items-start">
-        <div className="relative w-32 rounded-full overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
+        <div
+          className="relative w-32 rounded-full overflow-hidden"
+          onContextMenu={(e) => e.preventDefault()}
+        >
           <Image
             alt="shamimbinzahid"
             src="/images/shameme.webp"
@@ -69,7 +76,10 @@ function AccessibilityAccordion() {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (accordionRef.current && !accordionRef.current.contains(event.target)) {
+      if (
+        accordionRef.current &&
+        !accordionRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     }
@@ -81,22 +91,39 @@ function AccessibilityAccordion() {
   }, []);
 
   return (
-    <div ref={accordionRef} className="w-fit flex flex-col items-end absolute z-[2] top-8 right-8">
+    <div
+      ref={accordionRef}
+      className="w-fit flex flex-col items-end absolute z-[2] top-8 right-8"
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-400 ${isOpen ? 'w-full' : 'w-11'}`}
+        className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-400 ${isOpen ? "w-full" : "w-11"}`}
       >
-        <span className={`text-sm overflow-hidden whitespace-nowrap ${isOpen ? 'w-32 opacity-100 mx-2' : 'w-0 opacity-0'} transition-all duration-500`}>Accessibility Menu</span>
-        <Cog6ToothIcon className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
+        <span
+          className={`text-sm overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} transition-all duration-500`}
+        >
+          Accessibility Menu
+        </span>
+        <Cog6ToothIcon
+          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+        />
       </button>
-      <div className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+      <div
+        className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+      >
         <div className="overflow-hidden">
           <div className="p-2 bg-white/95 dark:bg-neutral-900/95 rounded-3xl flex flex-col gap-2">
             <ThemeToggle />
             <TextSizeToggle />
             <AnimationToggle />
             <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">
-              Preferences will reset upon <button onClick={() => window.location.reload()} className="text-teal-700 dark:text-teal-500 hover:underline cursor-pointer">reload</button>
+              Preferences will reset upon{" "}
+              <button
+                onClick={() => window.location.reload()}
+                className="text-teal-700 dark:text-teal-500 hover:underline cursor-pointer"
+              >
+                reload
+              </button>
             </p>
           </div>
         </div>
@@ -148,7 +175,7 @@ function LinksSection({ data }) {
 
 function ActionsSection({ data }) {
   return (
-    (data?.actions?.show || def.actions.show) &&
+    (data?.actions?.show || def.actions.show) && (
       <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
         <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all">
           {(data?.actions?.resume?.show || def.actions.resume.show) && (
@@ -161,11 +188,14 @@ function ActionsSection({ data }) {
           {(data?.actions?.contact?.show || def.actions.contact.show) && (
             <ContactDrawer
               label={data?.actions?.contact?.label || def.actions.contact.label}
-              email={data?.actions?.contact?.address || def.actions.contact.address}
+              email={
+                data?.actions?.contact?.address || def.actions.contact.address
+              }
             />
           )}
 
-          {(data?.actions?.experiences?.show || def.actions.experiences.show) && (
+          {(data?.actions?.experiences?.show ||
+            def.actions.experiences.show) && (
             <ExperiencesDrawer label="Experiences" data={data || def} />
           )}
 
@@ -174,6 +204,7 @@ function ActionsSection({ data }) {
           )}
         </div>
       </div>
+    )
   );
 }
 
@@ -225,7 +256,8 @@ export default function Home() {
   }, []);
 
   if (loading) return <Loading />;
-  if (error) console.error(error, "Error loading data, loading default data instead");
+  if (error)
+    console.error(error, "Error loading data, loading default data instead");
 
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
