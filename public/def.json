@@ -145,7 +145,11 @@
         "degree": "BSc in Computer Science & Engineering",
         "result": "CGPA 3.23 on a scale of 4.00",
         "activities": [
-          "Served as Class Representative for four years", "Lead management and volunteered in multiple departmental events", "Served as Executive Member leading up to the Vice President of the CSEDU Student Club", "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"],
+          "Served as Class Representative for four years",
+          "Lead management and volunteered in multiple departmental events",
+          "Served as Executive Member leading up to the Vice President of the CSEDU Student Club",
+          "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"
+        ],
         "start": "Jan 2018",
         "end": "Dec 2022",
         "year": "Session 2017-18",
@@ -157,7 +161,10 @@
         "degree": "Higher Secondary Certificate (HSC) in Science",
         "result": "GPA 5.00 on a scale of 5.00",
         "activities": [
-          "Served as Class Representative", "Councilor at Dhaka City College Student Council", "Volunteered in organizing college events as a council member"],
+          "Served as Class Representative",
+          "Councilor at Dhaka City College Student Council",
+          "Volunteered in organizing college events as a council member"
+        ],
         "start": "",
         "end": "",
         "year": "Exam of 2017",
