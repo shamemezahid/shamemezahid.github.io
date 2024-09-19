@@ -29,7 +29,7 @@ function IntroSection({ data }) {
   return (
     <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
       <div className="flex w-full sm:w-fit justify-between items-start">
-        <div onContextMenu={(e) => e.preventDefault()}>
+        <div className="relative w-32 rounded-full overflow-hidden" onContextMenu={(e) => e.preventDefault()}>
           <Image
             alt="shamimbinzahid"
             src="/images/shameme.webp"
@@ -80,7 +80,7 @@ function AccessibilityAccordion() {
     <div ref={accordionRef} className="w-fit flex flex-col items-end absolute z-[2] top-8 right-8">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center p-2 bg-gray-100 dark:bg-neutral-800 text-gray-800 dark:text-neutral-100 rounded-full hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
+        className="flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
       >
         <span className={`text-sm overflow-hidden whitespace-nowrap ${isOpen ? 'w-32 opacity-100 mx-2' : 'w-0 opacity-0'} transition-all duration-500`}>Accessibility Menu</span>
         <Cog6ToothIcon className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
