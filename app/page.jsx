@@ -47,15 +47,15 @@ function IntroSection({ data }) {
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-neutral-100">
-          {data?.intro.greetings || def.intro.greetings}
+          {data?.intro?.greetings || def.intro.greetings}
         </h1>
         <span className="text-base font-normal text-gray-700 dark:text-neutral-200">
-          {data?.intro.tagline || def.intro.tagline}
+          {data?.intro?.tagline || def.intro.tagline}
         </span>
         <span className="flex gap-1">
           <MapPinIcon className="w-4 text-gray-500 dark:text-neutral-400" />
           <span className="text-sm font-light text-gray-500 dark:text-neutral-400">
-            {data?.intro.location || def.intro.location}
+            {data?.intro?.location || def.intro.location}
           </span>
         </span>
       </div>
@@ -108,19 +108,20 @@ function AccessibilityAccordion() {
 function QuoteSection({ data }) {
   return (
     <p className="p-4 text-sm font-medium text-gray-700 dark:text-neutral-200 text-left sm:text-justify">
-      {data?.intro.quote || def.intro.quote}
+      {data?.intro?.quote || def.intro.quote}
     </p>
   );
 }
 
 function LinksSection({ data }) {
+  const links = data?.links?.values || def.links.values;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
       <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
-        {data?.links?.label || def?.links?.label}
+        {data?.links?.label || def.links.label}
       </h2>
       <div className="w-full flex flex-wrap gap-3 items-start -mx-4 transition-all duration-500">
-        {(data?.links.values || def.links.values).map((link, index) => (
+        {links.map((link, index) => (
           <a
             key={index}
             className="group flex items-center w-fit font-semibold text-teal-700 dark:text-teal-500 transition-all duration-500 p-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
@@ -138,7 +139,6 @@ function LinksSection({ data }) {
               className="w-6 h-6 group-hover:w-0 group-hover:h-0 transition-all duration-500"
             />
             <p className="ml-2 whitespace-nowrap">{link.label}</p>
-            {/* <div className="overflow-hidden w-0 group-hover:w-full transition-all duration-500"></div> */}
           </a>
         ))}
       </div>
@@ -148,31 +148,32 @@ function LinksSection({ data }) {
 
 function ActionsSection({ data }) {
   return (
-    <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-      <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all">
-        {data?.actions?.show && data?.actions?.resume?.show && (
-          <ResumeDrawer
-            label={data?.actions?.resume?.label}
-            src={data?.actions?.resume?.url}
-          />
-        )}
+    (data?.actions?.show || def.actions.show) &&
+      <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
+        <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all">
+          {(data?.actions?.resume?.show || def.actions.resume.show) && (
+            <ResumeDrawer
+              label={data?.actions?.resume?.label || def.actions.resume.label}
+              src={data?.actions?.resume?.url || def.actions.resume.url}
+            />
+          )}
 
-        {data?.actions?.show && data?.actions?.contact?.show && (
-          <ContactDrawer
-            label={data?.actions?.contact?.label}
-            email={data?.actions?.contact?.address}
-          />
-        )}
+          {(data?.actions?.contact?.show || def.actions.contact.show) && (
+            <ContactDrawer
+              label={data?.actions?.contact?.label || def.actions.contact.label}
+              email={data?.actions?.contact?.address || def.actions.contact.address}
+            />
+          )}
 
-        {data?.actions?.show && data?.actions?.experiences?.show && (
-          <ExperiencesDrawer label="Experiences" data={data} />
-        )}
+          {(data?.actions?.experiences?.show || def.actions.experiences.show) && (
+            <ExperiencesDrawer label="Experiences" data={data || def} />
+          )}
 
-        {data?.actions?.show && data?.actions?.educations?.show && (
-          <EducationDrawer label="Education" data={data} />
-        )}
+          {(data?.actions?.educations?.show || def.actions.educations.show) && (
+            <EducationDrawer label="Education" data={data || def} />
+          )}
+        </div>
       </div>
-    </div>
   );
 }
 
@@ -180,10 +181,10 @@ function AboutSection({ data }) {
   return (
     <div className="text-sm flex flex-col justify-start gap-2 p-4 rounded-xl">
       <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
-        {data?.about.label || def.about.label}
+        {data?.about?.label || def.about.label}
       </h2>
       <p className="text-gray-700 dark:text-neutral-200 text text-left sm:text-justify">
-        {data?.about.value || def.about.value}
+        {data?.about?.value || def.about.value}
       </p>
     </div>
   );
@@ -192,13 +193,13 @@ function AboutSection({ data }) {
 function FooterSection({ data }) {
   return (
     <h2 className="mx-auto text-sm text-center text-gray-400 dark:text-neutral-400 mt-8 pb-6">
-      2024 ©️ {data?.intro.name || def.intro.name}
+      2024 ©️ {data?.intro?.name || def.intro.name}
     </h2>
   );
 }
 
 export default function Home() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(def);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -214,7 +215,8 @@ export default function Home() {
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
-        setError(error.message);
+        // If there's an error, we'll use the default data (already set in useState)
+        setError(error);
       } finally {
         setLoading(false);
       }
@@ -223,7 +225,7 @@ export default function Home() {
   }, []);
 
   if (loading) return <Loading />;
-  if (error) return <p>Error: {error}</p>;
+  if (error) console.error(error, "Error loading data, loading default data instead");
 
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
