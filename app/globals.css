@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html.large-text {
+  font-size: 115%; /* Increases base font size by 12.5% */
+}

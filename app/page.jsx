@@ -1,14 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
-import { ArrowUpRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { useEffect, useRef, useState } from "react";
+import { ArrowUpRightIcon, ChevronDownIcon, Cog6ToothIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { ResumeDrawer } from "@/components/resumeDrawer";
 
 import Image from "next/image";
 import def from "/public/def.json";
-import { ContactDrawer } from "@/components/contactDrawer";
 import ThemeToggle from "@/components/themeToggler";
-import { TestResumeDrawer } from "@/components/testResumeDrawer";
-import { TestContactDrawer } from "@/components/testContactDrawer";
+import { ContactDrawer } from "@/components/contactDrawer";
+import { ExperiencesDrawer } from "@/components/experiencesDrawer";
+import TextSizeToggle from "@/components/textsizeToggler";
+import { EducationDrawer } from "@/components/educationDrawer";
 
 function Loading() {
   return (
@@ -36,7 +37,6 @@ function IntroSection({ data }) {
           width={512}
           className="w-32 aspect-1 rounded-full border border-gray-200 dark:border-neutral-700"
         />
-        <ThemeToggle className="sm:hidden" />
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-neutral-100">
@@ -52,7 +52,44 @@ function IntroSection({ data }) {
           </span>
         </span>
       </div>
-      <ThemeToggle className="hidden sm:block absolute top-6 right-6" />
+    </div>
+  );
+}
+
+function AccessibilityAccordion() {
+  const [isOpen, setIsOpen] = useState(false);
+  const accordionRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (accordionRef.current && !accordionRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div ref={accordionRef} className="w-fit flex flex-col items-end absolute z-[2] top-8 right-8">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center p-2 bg-gray-100 dark:bg-neutral-800 text-gray-800 dark:text-neutral-100 rounded-full hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
+      >
+        <span className={`text-sm overflow-hidden whitespace-nowrap ${isOpen ? 'w-32 opacity-100 mx-2' : 'w-0 opacity-0'} transition-all duration-500`}>Accessibility Menu</span>
+        <Cog6ToothIcon className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
+      </button>
+      <div className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+        <div className="overflow-hidden">
+          <div className="p-2 bg-white/10 dark:bg-neutral-900/10 rounded-b-3xl rounded-t-lg flex flex-col gap-2">
+            <ThemeToggle />
+            <TextSizeToggle />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -71,37 +108,26 @@ function LinksSection({ data }) {
       <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
         {data?.links?.label || def?.links?.label}
       </h2>
-      <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4">
-        {data?.actions?.show && data?.actions?.resume?.show && (
-          <TestResumeDrawer
-            label={data?.actions?.resume?.label}
-            src={data?.actions?.resume?.url}
-          />
-        )}
-        {data?.actions?.show && data?.actions?.contact?.show && (
-          <TestContactDrawer
-            label={data?.actions?.contact?.label}
-            email={data?.actions?.contact?.address}
-          />
-        )}
+      <div className="w-full flex flex-wrap gap-3 items-start -mx-4 transition-all duration-500">
         {(data?.links.values || def.links.values).map((link, index) => (
           <a
             key={index}
-            className="group flex items-center w-full sm:w-fit font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
+            className="group flex items-center w-fit font-semibold text-teal-700 dark:text-teal-500 transition-all duration-500 p-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
             target="_blank"
             href={link.url}
             rel="noopener noreferrer"
             title={"Open " + link.label}
           >
-            <ArrowUpRightIcon className="w-0 h-0 group-hover:w-5 group-hover:h-5 transition-all duration-500" />
+            <ArrowUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" />
             <Image
               width={20}
               height={20}
               alt="Link Icon"
               src={`/icons/${link.icon}.svg`}
-              className="w-5 h-5 group-hover:w-0 group-hover:h-0 transition-all duration-500"
-            ></Image>
-            <p className="ml-2">{link.label}</p>
+              className="w-6 h-6 group-hover:w-0 group-hover:h-0 transition-all duration-500"
+            />
+            <p className="ml-2 whitespace-nowrap">{link.label}</p>
+            {/* <div className="overflow-hidden w-0 group-hover:w-full transition-all duration-500"></div> */}
           </a>
         ))}
       </div>
@@ -109,53 +135,30 @@ function LinksSection({ data }) {
   );
 }
 
-function ExperiencesSection({ data }) {
+function ActionsSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-      <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
-        {data?.experiences?.label || data?.experiences?.label}
-      </h2>
-      <div className="w-full flex flex-col gap-6 items-start text-gray-700 dark:text-neutral-200 text-left">
-        {(data?.experiences.values || def.experiences.values).map(
-          (experience, index) => (
-            <div key={index} className="w-full">
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  {experience.workplace}
-                </h3>
-                <a
-                  href={experience.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-teal-600 dark:text-teal-400 hover:underline"
-                >
-                  {experience.website}
-                </a>
-              </div>
-              <div className="flex justify-between items-center mb-2">
-                <p className="font-medium text-gray-700 dark:text-neutral-200">
-                  {experience.designation}
-                </p>
-                <p className="text-sm text-gray-600 dark:text-neutral-400">
-                  {experience.start} - {experience.end}
-                </p>
-              </div>
-              <div className="flex gap-2 mb-2">
-                <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
-                  {experience.shift}
-                </span>
-                <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
-                  {experience.nature}
-                </span>
-                <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
-                  {experience.location}
-                </span>
-              </div>
-              <p className="text-gray-600 dark:text-neutral-300">
-                {experience.responsibilities}
-              </p>
-            </div>
-          )
+      <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all">
+        {data?.actions?.show && data?.actions?.resume?.show && (
+          <ResumeDrawer
+            label={data?.actions?.resume?.label}
+            src={data?.actions?.resume?.url}
+          />
+        )}
+
+        {data?.actions?.show && data?.actions?.contact?.show && (
+          <ContactDrawer
+            label={data?.actions?.contact?.label}
+            email={data?.actions?.contact?.address}
+          />
+        )}
+
+        {data?.actions?.show && data?.actions?.experiences?.show && (
+          <ExperiencesDrawer label="Experiences" data={data} />
+        )}
+
+        {data?.actions?.show && data?.actions?.educations?.show && (
+          <EducationDrawer label="Education" data={data} />
         )}
       </div>
     </div>
@@ -213,12 +216,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
-      <main className="animate-fadeIn flex flex-col gap-2 w-full h-full max-w-5xl p-2 sm:p-6 pt-6 sm:pt-24 mx-auto">
+      <div className="absolute inset-0 h-screen w-full bg-[url('/images/noise.jpg')] bg-repeat opacity-80 dark:opacity-0 transition-all duration-200 ease-in z-0"></div>
+      <AccessibilityAccordion />
+      <main className="animate-fadeIn flex flex-col gap-2 w-full h-full max-w-5xl p-2 sm:p-6 pt-6 sm:pt-24 mx-auto relative z-[1]">
         <IntroSection data={data} />
         <QuoteSection data={data} />
-        <LinksSection data={data} />
-        <ExperiencesSection data={data} />
+        <ActionsSection data={data} />
         <AboutSection data={data} />
+        <LinksSection data={data} />
         <FooterSection data={data} />
       </main>
     </div>

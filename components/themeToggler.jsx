@@ -26,19 +26,22 @@ export default function ThemeToggle({className}) {
   return (
     <button
       onClick={toggleTheme}
-      className={className+` w-fit h-fit p-3 grid place-items-center bg-neutral-200 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
+      className={className+` w-full h-fit p-2 grid bg-neutral-200 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
+      aria-label={theme == "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      title={theme == "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
     >
       {theme === "dark" ? (
         <div className="flex items-center">
-          {/* <p className="text-sm mr-3">Light Mode</p> */}
           <MoonIcon className="transition-all duration-700 w-0 h-0" />
-          <SunIcon className="transition-all duration-700 w-8 h-8" />
+          <SunIcon className="transition-all duration-700 w-6 h-6" />
+          <p className="text-sm mx-2">Light Mode</p>
+          
         </div>
       ) : (
         <div className="flex items-center">
-          {/* <p className="text-sm mr-3">Dark Mode</p> */}
-          <MoonIcon className="transition-all duration-700 w-8 h-8" />
+          <MoonIcon className="transition-all duration-700 w-6 h-6" />
           <SunIcon className="transition-all duration-700 w-0 h-0" />
+          <p className="text-sm mx-2">Dark Mode</p>
         </div>
       )}
     </button>
