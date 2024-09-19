@@ -29,7 +29,7 @@ export function CommonDrawer({
   className
 }) {
   return (
-    <Drawer.Root shouldScaleBackground>
+    <Drawer.Root shouldScaleBackground={false}>
       <Drawer.Trigger>
         <TriggerButton 
           icon={triggerIcon} 

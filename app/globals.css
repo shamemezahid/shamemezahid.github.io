@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 html.large-text {
-  font-size: 115%; /* Increases base font size by 12.5% */
+  font-size: 115%; 
 }
+
+.reduce-animation * {
+    transition-duration: 100ms !important;
+    animation-duration: 100ms !important;
+    animation-iteration-count: 1 !important;
+  }

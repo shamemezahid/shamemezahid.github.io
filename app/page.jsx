@@ -1,15 +1,19 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { ArrowUpRightIcon, ChevronDownIcon, Cog6ToothIcon, MapPinIcon } from "@heroicons/react/24/outline";
-import { ResumeDrawer } from "@/components/resumeDrawer";
-
 import Image from "next/image";
+
+import { useEffect, useRef, useState } from "react";
+import { ArrowUpRightIcon, Cog6ToothIcon, MapPinIcon } from "@heroicons/react/24/outline";
+
 import def from "/public/def.json";
-import ThemeToggle from "@/components/themeToggler";
+
+import { ResumeDrawer } from "@/components/resumeDrawer";
 import { ContactDrawer } from "@/components/contactDrawer";
 import { ExperiencesDrawer } from "@/components/experiencesDrawer";
-import TextSizeToggle from "@/components/textsizeToggler";
 import { EducationDrawer } from "@/components/educationDrawer";
+
+import ThemeToggle from "@/components/themeToggler";
+import TextSizeToggle from "@/components/textsizeToggler";
+import AnimationToggle from "@/components/animationToggler";
 
 function Loading() {
   return (
@@ -87,9 +91,11 @@ function AccessibilityAccordion() {
       </button>
       <div className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
         <div className="overflow-hidden">
-          <div className="p-2 bg-white/10 dark:bg-neutral-900/10 rounded-b-3xl rounded-t-lg flex flex-col gap-2">
+          <div className="p-2 bg-white/95 dark:bg-neutral-900/95 rounded-3xl flex flex-col gap-2">
             <ThemeToggle />
             <TextSizeToggle />
+            <AnimationToggle />
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">Preferences will reset upon reload</p>
           </div>
         </div>
       </div>
@@ -221,7 +227,7 @@ export default function Home() {
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
       <div className="absolute inset-0 h-screen w-full bg-[url('/images/noise.jpg')] bg-repeat opacity-80 dark:opacity-0 transition-all duration-200 ease-in"></div>
       <AccessibilityAccordion />
-      <main className="animate-fadeIn flex flex-col gap-2 w-full h-full max-w-5xl p-2 sm:p-6 pt-6 sm:pt-24 mx-auto relative">
+      <main className="animate-fadeIn flex flex-col w-full h-full max-w-5xl p-2 sm:p-6 pt-6 mx-auto relative">
         <IntroSection data={data} />
         <QuoteSection data={data} />
         <ActionsSection data={data} />

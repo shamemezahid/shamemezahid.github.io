@@ -7,22 +7,22 @@ import {
 export default function TextSizeToggle({ className }) {
   const [isLargeText, setIsLargeText] = useState(false);
 
-  useEffect(() => {
-    const savedTextSize = localStorage.getItem("largeText");
-    if (savedTextSize === "true") {
-      setIsLargeText(true);
-      document.documentElement.classList.add("large-text");
-    }
-  }, []);
+//   useEffect(() => {
+//     const savedTextSize = sessionStorage.getItem("largeText");
+//     if (savedTextSize === "true") {
+//       setIsLargeText(true);
+//       document.documentElement.classList.add("large-text");
+//     }
+//   }, []);
 
   const toggleTextSize = () => {
     setIsLargeText(!isLargeText);
     if (!isLargeText) {
       document.documentElement.classList.add("large-text");
-      localStorage.setItem("largeText", "true");
+    //   sessionStorage.setItem("largeText", "true");
     } else {
       document.documentElement.classList.remove("large-text");
-      localStorage.setItem("largeText", "false");
+    //   sessionStorage.setItem("largeText", "false");
     }
   };
 
