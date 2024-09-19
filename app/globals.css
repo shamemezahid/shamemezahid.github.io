@@ -7,7 +7,7 @@ html.large-text {
 }
 
 .reduce-animation * {
-    transition-duration: 100ms !important;
-    animation-duration: 100ms !important;
+    transition-duration: 75ms !important;
+    animation-duration: 75ms !important;
     animation-iteration-count: 1 !important;
   }

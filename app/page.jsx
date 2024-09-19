@@ -84,7 +84,7 @@ function AccessibilityAccordion() {
     <div ref={accordionRef} className="w-fit flex flex-col items-end absolute z-[2] top-8 right-8">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+        className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-400 ${isOpen ? 'w-full' : 'w-11'}`}
       >
         <span className={`text-sm overflow-hidden whitespace-nowrap ${isOpen ? 'w-32 opacity-100 mx-2' : 'w-0 opacity-0'} transition-all duration-500`}>Accessibility Menu</span>
         <Cog6ToothIcon className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
@@ -95,7 +95,9 @@ function AccessibilityAccordion() {
             <ThemeToggle />
             <TextSizeToggle />
             <AnimationToggle />
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">Preferences will reset upon reload</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">
+              Preferences will reset upon <button onClick={() => window.location.reload()} className="text-teal-700 dark:text-teal-500 hover:underline cursor-pointer">reload</button>
+            </p>
           </div>
         </div>
       </div>
