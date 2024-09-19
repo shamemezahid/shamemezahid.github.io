@@ -4,59 +4,10 @@ import {
   EyeSlashIcon,
   CheckCircleIcon,
   DocumentDuplicateIcon,
-  DocumentArrowUpIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { useState } from "react";
-import { Drawer } from "vaul";
-
-export function ContactDrawer({ label, email }) {
-  return (
-    <Drawer.Root shouldScaleBackground>
-      <Drawer.Trigger asChild>
-        <button
-          title="Click to open contact form"
-          className="group flex items-center w-full sm:w-fit text-sm text-left font-semibold text-teal-700 dark:text-teal-500 transition-all px-4 py-3 rounded-full hover:bg-teal-50 dark:hover:bg-teal-950"
-        >
-          <div className="flex flex-col">
-            <Image
-              width={20}
-              height={20}
-              alt="Contact Icon"
-              src={`/icons/em.svg`}
-              className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-gray-400"
-            ></Image>
-            <DocumentArrowUpIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
-          </div>
-          <p className="ml-2">{label}</p>
-        </button>
-      </Drawer.Trigger>
-      <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/50" />
-        <Drawer.Content
-          onMouseDown={(e) => e.stopPropagation()}
-          className="cursor-pointer bg-white dark:bg-[#313131] flex flex-col items-center py-4 px-6 sm:px-12 gap-8 max-w-3xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0"
-        >
-          <div className="w-12 h-2 rounded-full dark:bg-neutral-500 bg-neutral-300"></div>
-          <div className="w-full h-full flex flex-col gap-6 text-sm overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
-            <div className="flex flex-col gap-3 w-full dark:text-neutral-50 text-neutral-700">
-              <p className="text-xl font-semibold">{label}</p>
-              <span className="flex flex-col gap-1">
-                <p className="font-normal">
-                  Feel free to reach out using the form below. Or send me an
-                  email!
-                </p>
-                <ClickToReveal content={email} />
-              </span>
-            </div>
-            <div className="w-full h-[1px] rounded-full dark:bg-neutral-600 bg-neutral-300"></div>
-            <FormComponent />
-          </div>
-        </Drawer.Content>
-      </Drawer.Portal>
-    </Drawer.Root>
-  );
-}
+import React, { useState } from "react";
+import { CommonDrawer } from "@/components/commonDrawer";
 
 function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -64,18 +15,52 @@ function ClickToReveal({ content }) {
   return (
     <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200 rounded-lg overflow-hidden">
       <a
-        onClick={() => {setIsRevealed(!isRevealed); setIsCopied(false)}}
+        onClick={() => {
+          setIsRevealed(!isRevealed);
+          setIsCopied(false);
+        }}
         className="w-full flex items-center px-4 py-3 font-normal dark:text-teal-400 text-teal-700 hover:text-teal-500"
       >
-        <EyeIcon className={isRevealed ? "w-0 h-0 transition-all" : "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"} />
-        <EyeSlashIcon className={isRevealed ? "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all" : "w-0 h-0 transition-all"} />
-        
-        <p className={isRevealed ? "ml-3 transition-all duration-500" : "ml-0 w-0 h-0 opacity-0"}>{content}</p>
-        <p className={isRevealed ? "ml-0 w-0 h-0 opacity-0" : "ml-3 transition-all duration-500"}>Click to reveal email</p>
-        
+        <EyeIcon
+          className={
+            isRevealed
+              ? "w-0 h-0 transition-all"
+              : "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"
+          }
+        />
+        <EyeSlashIcon
+          className={
+            isRevealed
+              ? "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"
+              : "w-0 h-0 transition-all"
+          }
+        />
+
+        <p
+          className={
+            isRevealed
+              ? "ml-3 transition-all duration-500"
+              : "ml-0 w-0 h-0 opacity-0"
+          }
+        >
+          {content}
+        </p>
+        <p
+          className={
+            isRevealed
+              ? "ml-0 w-0 h-0 opacity-0"
+              : "ml-3 transition-all duration-500"
+          }
+        >
+          Click to reveal email
+        </p>
       </a>
       <a
-        className={isRevealed ? "w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap transition-all duration-100" : "w-0 h-0 transition-all duration-100"}
+        className={
+          isRevealed
+            ? "w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap transition-all duration-100"
+            : "w-0 h-0 transition-all duration-100"
+        }
         onClick={() =>
           navigator.clipboard
             .writeText(content)
@@ -117,7 +102,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-100"
+          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-200"
           rows="3"
           value={value}
           onChange={onChange}
@@ -128,7 +113,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-100"
+          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-200"
           value={value}
           onChange={onChange}
           required={required}
@@ -309,7 +294,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="dark:text-teal-400 text-teal-600 w-full p-4 rounded-lg text-center">
+          <p className="dark:text-teal-400 text-teal-600 w-full my-4 p-4 rounded-lg text-center">
             {success}
           </p>
         ) : loading ? (
@@ -317,12 +302,53 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full mt-4 bg-teal-600 text-white py-4 px-4 rounded-lg cursor-pointer"
+            className="w-full my-4 bg-teal-600 text-white py-4 px-4 rounded-lg cursor-pointer"
           >
             Submit
           </button>
         )}
       </form>
     </div>
+  );
+}
+
+export function ContactDrawer({ label, email }) {
+  const ContactIcon = React.forwardRef((props, ref) => (
+    <Image
+      ref={ref}
+      width={20}
+      height={20}
+      alt="Contact Icon"
+      src={`/icons/em.svg`}
+      className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-gray-400"
+      {...props}
+    />
+  ));
+
+  ContactIcon.displayName = "ContactIcon";
+
+  const renderContactContent = () => (
+    <>
+      <div className="w-full h-full flex flex-col gap-4 overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
+        <span className="flex flex-col gap-1">
+          <p className="font-normal">
+            Feel free to reach out using the form below. Or send me an email!
+          </p>
+          <ClickToReveal content={email} />
+        </span>
+        <div aria-label="separator" className="w-full h-[2px] my-2 rounded-full dark:bg-neutral-700 bg-neutral-200"></div>
+        <FormComponent />
+      </div>
+    </>
+  );
+
+  return (
+    <CommonDrawer
+      triggerIcon={ContactIcon}
+      triggerLabel={label}
+      triggerTitle="Click to open contact form"
+      renderContent={renderContactContent}
+      drawerTitle={label}
+    />
   );
 }

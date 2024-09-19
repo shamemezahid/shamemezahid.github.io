@@ -34,7 +34,6 @@ const GoogleAnalytics = () => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
       <GoogleAnalytics/>
       <body className={font.className}>{children}</body>
     </html>

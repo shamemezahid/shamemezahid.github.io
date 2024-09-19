@@ -75,6 +75,7 @@
     ]
   },
   "experiences": {
+    "show": true,
     "label": "Experiences",
     "values": [
       {
@@ -84,14 +85,24 @@
         "start": "Jan 2023",
         "end": "Ongoing",
         "duration": "1 yrs 8 mos as of Sep 2024",
-        "responsibilities": "Led and managed the UI/UX design team, conducting requirement analysis and collaborating on software design specifications. Worked on system and database model designs and developed information architecture. Designed user interfaces from wireframes and brand identities to prototypes. Conducted client demonstrations, usability testing, and manual QA testing, and collaborated with frontend development. Oversaw product management, making critical design decisions based on client requirements within an agile scrum environment. Played a key role in recruiting for the UI/UX and Frontend Development teams. Led the design and development of various B2B and B2C systems across industries, including pharmaceuticals, healthcare, e-commerce, delivery management, interior design, and recruitment management, for clients in Sweden and Bangladesh.",
+        "responsibilities": [
+          "Led, managed & trained the UI/UX design team, taking ownership of the design process from concept to execution.",
+          "Conducted requirement analysis and collaborated on software design specifications, ensuring smooth alignment between client needs and technical implementation.",
+          "Developed information architecture and partnered with backend teams to create system designs and database models.",
+          "Working closely with the frontend team including design guides, design reviews, code reviews & developing as well.",
+          "Designed UIs, handling the majority of design decisions, including creating wireframes, prototypes, and brand identities.",
+          "Led product management, ensuring alignment with client requirements within an Agile Scrum environment.",
+          "Conducted usability testing, and manual QA testing, providing detailed reports for continuous improvement.",
+          "Conducted client demonstrations & played an instrumental role in recruiting for the UI/UX and Frontend dev teams.",
+          "Managed and oversaw the design process of B2B and B2C systems across industries including pharmaceuticals, healthcare, e-commerce, and recruitment management."
+        ],
         "shift": "Full Time",
         "nature": "Hybrid",
         "location": "Dhaka, Bangladesh"
       },
       {
         "workplace": "Crantech LLC",
-        "website": "https://crantechllc.com/",
+        "website": "https://crantechllc.com",
         "designation": "Product Designer",
         "start": "Apr 2021",
         "end": "Jun 2022",
@@ -103,7 +114,7 @@
       },
       {
         "workplace": "Crantech LLC",
-        "website": "https://crantechllc.com/",
+        "website": "https://crantechllc.com",
         "designation": "UI/UX Designer",
         "start": "Aug 2020",
         "end": "Mar 2021",
