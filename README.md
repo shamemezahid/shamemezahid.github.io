@@ -1,6 +1,8 @@
 # Personal Website - Shamim Bin Zahid
 
-This website showcases the work and skills of Mine. Built with Next.js, React, TailwindCSS, it emphasizes accessibility, user experience, and performance.
+This website showcases my personal & professional details. Built with Next.js, React, TailwindCSS, it emphasizes accessibility, user experience, and performance. 
+
+![image](https://github.com/user-attachments/assets/bf2e61fe-e810-40ab-bf3d-2e3bb5c6ce1e)
 
 ## Key Features and Considerations
 - **Accessibility menu** with toggles for dark/light mode, text size, and reduced motion
