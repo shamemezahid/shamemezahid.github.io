@@ -29,14 +29,17 @@ function IntroSection({ data }) {
   return (
     <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
       <div className="flex w-full sm:w-fit justify-between items-start">
-        <Image
-          alt="shamimbinzahid"
-          src="/images/shameme.webp"
-          id="shameme"
-          height={512}
-          width={512}
-          className="w-32 aspect-1 rounded-full border border-gray-200 dark:border-neutral-700"
-        />
+        <div onContextMenu={(e) => e.preventDefault()}>
+          <Image
+            alt="shamimbinzahid"
+            src="/images/shameme.webp"
+            id="shameme"
+            height={512}
+            width={512}
+            className="w-32 aspect-1 rounded-full border border-gray-200 dark:border-neutral-700"
+            draggable="false"
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-neutral-100">
