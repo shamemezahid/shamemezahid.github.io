@@ -216,9 +216,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
-      <div className="absolute inset-0 h-screen w-full bg-[url('/images/noise.jpg')] bg-repeat opacity-80 dark:opacity-0 transition-all duration-200 ease-in z-0"></div>
+      <div className="absolute inset-0 h-screen w-full bg-[url('/images/noise.jpg')] bg-repeat opacity-80 dark:opacity-0 transition-all duration-200 ease-in"></div>
       <AccessibilityAccordion />
-      <main className="animate-fadeIn flex flex-col gap-2 w-full h-full max-w-5xl p-2 sm:p-6 pt-6 sm:pt-24 mx-auto relative z-[1]">
+      <main className="animate-fadeIn flex flex-col gap-2 w-full h-full max-w-5xl p-2 sm:p-6 pt-6 sm:pt-24 mx-auto relative">
         <IntroSection data={data} />
         <QuoteSection data={data} />
         <ActionsSection data={data} />
