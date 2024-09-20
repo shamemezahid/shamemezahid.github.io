@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React, { useState } from "react";
-import { CommonDrawer } from "@/components/commonDrawer";
+import { CommonDrawer } from "@/components/drawers/commonDrawer";
 
 function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);

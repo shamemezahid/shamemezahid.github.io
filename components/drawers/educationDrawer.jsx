@@ -1,7 +1,7 @@
 import React from "react";
-import { CommonDrawer } from "@/components/commonDrawer";
+import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import { AcademicCapIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
-import SeparatorLine from "./separatorLine";
+import SeparatorLine from "../utils/separatorLine";
 
 function EducationSection({ data }) {
   return (

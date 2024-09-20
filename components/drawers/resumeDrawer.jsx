@@ -1,5 +1,5 @@
 import React from "react";
-import { CommonDrawer } from "@/components/commonDrawer";
+import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import ResumeIcon from "@/public/icons/ResumeIcon";
 
 export function ResumeDrawer({ label, src }) {
