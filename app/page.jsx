@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
 
+import def from "/public/def.json";
 import { useEffect, useRef, useState } from "react";
+
 import {
   ArrowUpRightIcon,
   Cog6ToothIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
-
-import def from "/public/def.json";
 
 import { ResumeDrawer } from "@/components/resumeDrawer";
 import { ContactDrawer } from "@/components/contactDrawer";
@@ -100,12 +100,12 @@ function AccessibilityAccordion() {
         className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-400 ${isOpen ? "w-full" : "w-11"}`}
       >
         <span
-          className={`text-sm overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} transition-all duration-500`}
+          className={`text-sm text-left overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} transition-all duration-400`}
         >
           Accessibility Menu
         </span>
         <Cog6ToothIcon
-          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+          className={`w-5 h-5 transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div
