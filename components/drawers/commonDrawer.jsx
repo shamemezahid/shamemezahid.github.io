@@ -1,7 +1,7 @@
 import React from "react";
 import { DocumentArrowUpIcon } from "@heroicons/react/24/outline";
 import { Drawer } from "vaul";
-import SeparatorLine from "./separatorLine";
+import SeparatorLine from "../utils/separatorLine";
 
 const TriggerButton = React.forwardRef(({ icon: Icon, label, title, ...props }, ref) => (
   <button
@@ -40,8 +40,8 @@ export function CommonDrawer({
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/50" />
         <Drawer.Content className={`cursor-pointer bg-neutral-50 dark:bg-neutral-800 flex flex-col items-center pt-4 pb-0 px-6 sm:px-10 gap-6 max-w-3xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0 ${className}`}>
-          <div className="w-12 h-2 rounded-full dark:bg-neutral-500 bg-neutral-300"></div>
-          <div className="w-full h-full flex flex-col gap-4 dark:text-neutral-50 text-neutral-700">
+          <div className="w-12 min-h-2 h-2 rounded-full dark:bg-neutral-500 bg-neutral-300"></div>
+          <div className="relative w-full h-full flex flex-col gap-4 dark:text-neutral-50 text-neutral-700">
             <p className="w-full dark:text-neutral-50 text-neutral-700 text-xl font-semibold">{drawerTitle}</p>
             <SeparatorLine />
             {renderContent()}

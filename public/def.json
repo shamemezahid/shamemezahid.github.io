@@ -53,24 +53,58 @@
     "label": "Skills",
     "values": [
       {
-        "label": "Design & Human Computer Interaction",
-        "skill": "Highly proficient in UI designing in Figma and/or similar tools, Design systems and brand identity design, Low and high fidelity wire-framing, Prototyping, Responsive web and native app design, Human-centered UX design, Information architecture design, Heuristic evaluation, Usability testing"
+        "category": "Design & Human Computer Interaction",
+        "skills": [
+          "Figma",
+          "wireframing",
+          "prototyping",
+          "design systems",
+          "responsive web design",
+          "Human-centered UX research",
+          "usability testing",
+          "heuristic evaluation"
+        ]
       },
       {
-        "label": "Software Development Life Cycle",
-        "skill": "Requirement analysis, System architecture design, Front-end development, Quality assurance, REST API architecture, Familiar with Agile methodologies & Scrum management"
+        "category": "Software Development Life Cycle",
+        "skills": [
+          "Requirement analysis",
+          "System architecture design",
+          "Front-end development",
+          "Quality assurance",
+          "REST API architecture",
+          "End-to-end product lifecycle management",
+          "Agile methodologies"
+        ]
       },
       {
-        "label": "Programming  / Languages",
-        "skill": " C++, Python, Java, JavaScript, HTML, CSS"
+        "category": "Programming Languages",
+        "skills": ["C++", "Python", "Java", "JavaScript", "HTML", "CSS"]
       },
       {
-        "label": "Frameworks / Library / Tools",
-        "skill": "ReactJs, NextJs, TailwindCSS, Android (Java), Firebase, DevTools, Git"
+        "category": "Frameworks & Tools",
+        "skills": [
+          "ReactJs",
+          "NextJs",
+          "Tailwind CSS",
+          "Android (Java)",
+          "Firebase",
+          "DevTools",
+          "Git"
+        ]
       },
       {
-        "label": "Soft Qualifications",
-        "skills": "Communication, Collaboration, Empathy, Critical Thinking, Problem Solving, Decision Making, Attention to Detail, Adaptability "
+        "category": "Soft Qualifications",
+        "skills": [
+          "Communication",
+          "Collaboration",
+          "Empathy",
+          "Critical Thinking",
+          "Problem Solving",
+          "Decision Making",
+          "Attention to Detail",
+          "Adaptability"
+        ]
       }
     ]
   },
@@ -145,7 +179,11 @@
         "degree": "BSc in Computer Science & Engineering",
         "result": "CGPA 3.23 on a scale of 4.00",
         "activities": [
-          "Served as Class Representative for four years", "Lead management and volunteered in multiple departmental events", "Served as Executive Member leading up to the Vice President of the CSEDU Student Club", "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"],
+          "Served as Class Representative for four years",
+          "Lead management and volunteered in multiple departmental events",
+          "Served as Executive Member leading up to the Vice President of the CSEDU Student Club",
+          "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"
+        ],
         "start": "Jan 2018",
         "end": "Dec 2022",
         "year": "Session 2017-18",
@@ -157,7 +195,10 @@
         "degree": "Higher Secondary Certificate (HSC) in Science",
         "result": "GPA 5.00 on a scale of 5.00",
         "activities": [
-          "Served as Class Representative", "Councilor at Dhaka City College Student Council", "Volunteered in organizing college events as a council member"],
+          "Served as Class Representative",
+          "Councilor at Dhaka City College Student Council",
+          "Volunteered in organizing college events as a council member"
+        ],
         "start": "",
         "end": "",
         "year": "Exam of 2017",

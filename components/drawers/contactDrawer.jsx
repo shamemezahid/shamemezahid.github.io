@@ -7,7 +7,8 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React, { useState } from "react";
-import { CommonDrawer } from "@/components/commonDrawer";
+import { CommonDrawer } from "@/components/drawers/commonDrawer";
+import SeparatorLine from "../utils/separatorLine";
 
 function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -329,14 +330,14 @@ export function ContactDrawer({ label, email }) {
 
   const renderContactContent = () => (
     <>
-      <div className="w-full h-full flex flex-col gap-4 overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
+      <div className="w-full h-full flex flex-col text-sm gap-4 overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
         <span className="flex flex-col gap-1">
           <p className="font-normal">
             Feel free to reach out using the form below. Or send me an email!
           </p>
           <ClickToReveal content={email} />
         </span>
-        <div aria-label="separator" className="w-full h-[2px] my-2 rounded-full dark:bg-neutral-700 bg-neutral-200"></div>
+        <SeparatorLine />
         <FormComponent />
       </div>
     </>
