@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
+import SeparatorLine from "../utils/separatorLine";
 
 function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -336,7 +337,7 @@ export function ContactDrawer({ label, email }) {
           </p>
           <ClickToReveal content={email} />
         </span>
-        <div aria-label="separator" className="w-full h-[2px] my-2 rounded-full dark:bg-neutral-700 bg-neutral-200"></div>
+        <SeparatorLine />
         <FormComponent />
       </div>
     </>
