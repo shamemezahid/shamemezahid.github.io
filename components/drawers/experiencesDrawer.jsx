@@ -7,11 +7,11 @@ function ExperiencesSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
       {/* <h2 className="font-semibold text-gray-500 dark:text-neutral-400">{data?.experiences?.label || data?.experiences?.label}</h2> */}
-      <div className="w-full flex flex-col gap-6 items-start text-gray-700 dark:text-neutral-200 text-left">
+      <div className="w-full flex flex-col gap-4 items-start text-gray-700 dark:text-neutral-200 text-left">
         {(data?.experiences.values || []).map((experience, index) => (
           <div key={index} className="w-full">
             <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+              <h3 className="font-bold text-base text-gray-900 dark:text-white">
                 {experience.workplace}
               </h3>
               <a

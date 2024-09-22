@@ -6,11 +6,11 @@ import SeparatorLine from "../utils/separatorLine";
 function EducationSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
-      <div className="w-full flex flex-col gap-6 items-start text-neutral-700 dark:text-neutral-200 text-left">
+      <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
         {(data?.education.values || []).map((education, index) => (
           <div key={index} className="w-full">
             <div className="flex flex-wrap justify-between items-center mb-2">
-              <h3 className="font-bold text-lg text-neutral-900 dark:text-white">
+              <h3 className="font-bold text-base text-neutral-900 dark:text-white">
                 {education.institute}
               </h3>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">

@@ -2,6 +2,7 @@ import { ResumeDrawer } from "@/components/drawers/resumeDrawer";
 import { ContactDrawer } from "@/components/drawers/contactDrawer";
 import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
 import { EducationDrawer } from "@/components/drawers/educationDrawer";
+import { SkillsDrawer } from "../drawers/skillsDrawer";
 
 export default function ActionsSection({ def, data }) {
   return (
@@ -26,8 +27,13 @@ export default function ActionsSection({ def, data }) {
 
           {(data?.actions?.experiences?.show ||
             def.actions.experiences.show) && (
-              <ExperiencesDrawer label="Experiences" data={data || def} />
-            )}
+            <ExperiencesDrawer label="Experiences" data={data || def} />
+          )}
+
+          {(data?.actions?.skills?.show ||
+            def.actions.skills.show) && (
+            <SkillsDrawer label="Skills" data={data || def} />
+          )}
 
           {(data?.actions?.educations?.show || def.actions.educations.show) && (
             <EducationDrawer label="Education" data={data || def} />

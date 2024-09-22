@@ -17,12 +17,12 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const API_URL = "https://api.npoint.io/26d72e7109e9b8d9abfc";
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://api.npoint.io/26d72e7109e9b8d9abfc"
-        );
+        const response = await fetch(API_URL);
         if (!response.ok) {
           throw new Error("Network error, Failed to load data");
         }
