@@ -31,7 +31,7 @@ export function ResumeDrawer({ label, src }) {
       triggerTitle="Click to open resume"
       renderContent={renderResumeContent}
       drawerTitle={label || "Resume"}
-      className="bg-neutral-50 dark:bg-[#313131]"
+      contentStyles="bg-neutral-50 dark:bg-[#313131]"
     />
   );
 }
