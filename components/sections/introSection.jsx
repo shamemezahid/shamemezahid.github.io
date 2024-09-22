@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 
-export default function IntroSection({ data }) {
+export default function IntroSection({ def, data }) {
   return (
     <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
       <div className="flex w-full sm:w-fit justify-between items-start">

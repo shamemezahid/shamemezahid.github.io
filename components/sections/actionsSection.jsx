@@ -3,7 +3,7 @@ import { ContactDrawer } from "@/components/drawers/contactDrawer";
 import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
 import { EducationDrawer } from "@/components/drawers/educationDrawer";
 
-export default function ActionsSection({ data }) {
+export default function ActionsSection({ def, data }) {
   return (
     (data?.actions?.show || def.actions.show) && (
       <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">

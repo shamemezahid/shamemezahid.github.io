@@ -1,4 +1,4 @@
-export default function AboutSection({ data }) {
+export default function AboutSection({ def, data }) {
   return (
     <div className="text-sm flex flex-col justify-start gap-2 p-4 rounded-xl">
       <h2 className="font-semibold text-gray-500 dark:text-neutral-400">

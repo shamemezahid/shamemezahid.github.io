@@ -48,12 +48,12 @@ export default function Home() {
       <div className="absolute inset-0 h-screen w-full bg-[url('/images/noise.jpg')] bg-repeat opacity-80 dark:opacity-0 transition-all duration-200 ease-in"></div>
       <AccessibilityAccordion />
       <main className="animate-fadeIn flex flex-col w-full h-full max-w-5xl p-2 sm:p-6 pt-6 mx-auto relative">
-        <IntroSection data={data} />
-        <QuoteSection data={data} />
-        <ActionsSection data={data} />
-        <AboutSection data={data} />
-        <LinksSection data={data} />
-        <FooterSection data={data} />
+        <IntroSection def={def} data={data} />
+        <QuoteSection def={def} data={data} />
+        <ActionsSection def={def} data={data} />
+        <AboutSection def={def} data={data} />
+        <LinksSection def={def} data={data} />
+        <FooterSection def={def} data={data} />
       </main>
     </div>
   );

@@ -1,7 +1,7 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-export default function LinksSection({ data }) {
+export default function LinksSection({ def, data }) {
   const links = data?.links?.values || def.links.values;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
