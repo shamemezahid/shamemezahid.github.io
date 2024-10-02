@@ -16,18 +16,22 @@ export default function Home() {
   const [data, setData] = useState(def);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  const API_URL = "https://api.npoint.io/26d72e7109e9b8d9abfc";
+  const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061e";
+  const READ_ACCESS_KEY = "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch(API_URL, {
+          headers: {
+            'X-Access-Key': READ_ACCESS_KEY,
+          },
+        });
         if (!response.ok) {
           throw new Error("Network error, Failed to load data");
         }
         const jsonData = await response.json();
-        setData(jsonData);
+        setData(jsonData.record);
       } catch (error) {
         // If there's an error, we'll use the default data (already set in useState)
         setError(error);
