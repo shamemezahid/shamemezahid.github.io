@@ -5,14 +5,35 @@
     "greetings": "Hi I'm Shamim Bin Zahid 👋",
     "tagline": "UI/UX Designer, Product Manager & Software Engineer",
     "location": "Based in Dhaka, Bangladesh",
-    "quote": "Trying to Make the World slightly Better with Better Designed \"Things\""
+    "quote": "Making the world slightly better with better designed \"Things\""
   },
   "about": {
     "label": "About Me",
-    "value": "A data-driven product designer & manager with over 3 years of experience, specializing in UI/UX design, product management, and team leadership. With a strong foundation in computer science engineering, I have led and managed design teams, making critical design decisions while taking a hands-on approach to the design process. I excel in translating user research into engaging, user-friendly products that enhance user experience and drive business growth. I’m passionate about empathizing with user needs and working across B2B and B2C systems for both local and international clients. I am always open to feedback and learning. I’m always trying to contribute to making the world slightly better with better designed \"things\""
+    "value": "I am a data-driven UI/UX designer with over 4 years of experience creating intuitive, functional, and user-focused design solutions that drive business growth. I've worked on and also led design and development teams across diverse industries, including e-commerce, recruitment, telco, telemedicine, edtech, freelancing, and logistics. I am always open to feedback and eager to learn."
   },
   "actions": {
-    "show": false
+    "show": true,
+    "resume": {
+      "show": true,
+      "label": "View Resume",
+      "url": "https://drive.google.com/file/d/1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn/preview",
+      "alt-url": "https://drive.usercontent.google.com/u/0/uc?id=1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn&export=download"
+    },
+    "contact": {
+      "show": true,
+      "label": "Contact Me",
+      "address": "shamimbinzahid@gmail.com",
+      "url": "mailto:shamimbinzahid@gmail.com"
+    },
+    "experiences": {
+      "show": true
+    },
+    "skills": {
+      "show": true
+    },
+    "educations": {
+      "show": true
+    }
   },
   "links": {
     "label": "Links",
@@ -46,6 +67,11 @@
         "label": "Instagram",
         "url": "https://www.instagram.com/qwaccmaster69",
         "icon": "ig"
+      },
+      {
+        "label": "Notion Blogs",
+        "url": "https://shamemezahid.notion.site/Written-by-Shamim-1bfb02c82e3241e49f14e85dc466bf75",
+        "icon": ""
       }
     ]
   },
@@ -56,13 +82,13 @@
         "category": "Design & Human Computer Interaction",
         "skills": [
           "Figma",
-          "wireframing",
-          "prototyping",
-          "design systems",
-          "responsive web design",
+          "Wireframing",
+          "Prototyping",
+          "Design systems",
+          "Responsive web design",
           "Human-centered UX research",
-          "usability testing",
-          "heuristic evaluation"
+          "Usability testing",
+          "Heuristic evaluation"
         ]
       },
       {
@@ -117,15 +143,15 @@
         "website": "https://repliq.dev",
         "designation": "Software Designer (Junior Plus UI/UX Designer)",
         "start": "Jan 2023",
-        "end": "Ongoing",
+        "end": "Ongoing (1yr 8mo)",
         "duration": "1 yrs 8 mos as of Sep 2024",
         "responsibilities": [
           "Led, managed & trained the UI/UX design team, taking ownership of the design process from concept to execution.",
           "Conducted requirement analysis and collaborated on software design specifications, ensuring smooth alignment between client needs and technical implementation.",
-          "Developed information architecture and partnered with backend teams to create system designs and database models.",
-          "Working closely with the frontend team including design guides, design reviews, code reviews & developing as well.",
-          "Designed UIs, handling the majority of design decisions, including creating wireframes, prototypes, and brand identities.",
           "Led product management, ensuring alignment with client requirements within an Agile Scrum environment.",
+          "Developed information architecture and partnered with backend teams to create system designs and database models.",
+          "Handling the majority of design decisions, Designing UIs, Including creating wireframes, prototypes, design systems for brand identities.",
+          "Working closely with the frontend team including creating design guides, design reviews, code reviews & developing as well.",
           "Conducted usability testing, and manual QA testing, providing detailed reports for continuous improvement.",
           "Conducted client demonstrations & played an instrumental role in recruiting for the UI/UX and Frontend dev teams.",
           "Managed and oversaw the design process of B2B and B2C systems across industries including pharmaceuticals, healthcare, e-commerce, and recruitment management."
@@ -139,7 +165,7 @@
         "website": "https://crantechllc.com",
         "designation": "Product Designer",
         "start": "Apr 2021",
-        "end": "Jun 2022",
+        "end": "Jun 2022 (1yr 3mo)",
         "duration": "1 yrs 3 mos",
         "responsibilities": [
           "Led the UI/UX design of the projects, managing end-to-end product design processes across multiple products.",
@@ -158,7 +184,7 @@
         "website": "https://crantechllc.com",
         "designation": "UI/UX Designer",
         "start": "Aug 2020",
-        "end": "Mar 2021",
+        "end": "Mar 2021 (8mo)",
         "duration": "8 mos",
         "responsibilities": [
           "Designed UI/UX for software products, iterating based on client feedback and user research.",
@@ -179,14 +205,10 @@
         "degree": "BSc in Computer Science & Engineering",
         "result": "CGPA 3.23 on a scale of 4.00",
         "activities": [
-          "Served as Class Representative for four years",
-          "Lead management and volunteered in multiple departmental events",
-          "Served as Executive Member leading up to the Vice President of the CSEDU Student Club",
-          "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"
-        ],
+          "Served as Class Representative for four years", "Lead management and volunteered in multiple departmental events", "Served as Executive Member leading up to the Vice President of the CSEDU Student Club", "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"],
         "start": "Jan 2018",
         "end": "Dec 2022",
-        "year": "Session 2017-18",
+        "year": "2018 to 2022",
         "website": "https://www.du.ac.bd/body/CSE",
         "location": "Dhaka, Bangladesh"
       },
@@ -195,10 +217,7 @@
         "degree": "Higher Secondary Certificate (HSC) in Science",
         "result": "GPA 5.00 on a scale of 5.00",
         "activities": [
-          "Served as Class Representative",
-          "Councilor at Dhaka City College Student Council",
-          "Volunteered in organizing college events as a council member"
-        ],
+          "Served as Class Representative", "Councilor at Dhaka City College Student Council", "Volunteered in organizing college events as a council member"],
         "start": "",
         "end": "",
         "year": "Exam of 2017",
