@@ -13,6 +13,9 @@ export default function ActionsSection({ def, data }) {
             <ResumeDrawer
               label={data?.actions?.resume?.label || def.actions.resume.label}
               src={data?.actions?.resume?.url || def.actions.resume.url}
+              download_url={
+                data?.actions?.resume?.download || def.actions.resume.download
+              }
             />
           )}
 
@@ -30,8 +33,7 @@ export default function ActionsSection({ def, data }) {
             <ExperiencesDrawer label="Experiences" data={data || def} />
           )}
 
-          {(data?.actions?.skills?.show ||
-            def.actions.skills.show) && (
+          {(data?.actions?.skills?.show || def.actions.skills.show) && (
             <SkillsDrawer label="Skills" data={data || def} />
           )}
 
