@@ -8,7 +8,7 @@ export default function LinksSection({ def, data }) {
       <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
         {data?.links?.label || def.links.label}
       </h2>
-      <div className="w-full flex flex-wrap gap-3 items-start -mx-4 transition-all duration-200">
+      <div className="w-full flex flex-wrap gap-3 items-start -mx-3 transition-all duration-200">
         {links.map((link, index) => (
           <a
             key={index}

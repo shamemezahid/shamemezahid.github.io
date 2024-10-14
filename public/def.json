@@ -17,7 +17,7 @@
       "show": true,
       "label": "View Resume",
       "url": "https://drive.google.com/file/d/1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn/preview",
-      "alt-url": "https://drive.usercontent.google.com/u/0/uc?id=1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn&export=download"
+      "download": "https://drive.usercontent.google.com/u/0/uc?id=1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn&export=download"
     },
     "contact": {
       "show": true,
@@ -71,7 +71,7 @@
       {
         "label": "Notion Blogs",
         "url": "https://shamemezahid.notion.site/Written-by-Shamim-1bfb02c82e3241e49f14e85dc466bf75",
-        "icon": ""
+        "icon": "no"
       }
     ]
   },
@@ -105,7 +105,14 @@
       },
       {
         "category": "Programming Languages",
-        "skills": ["C++", "Python", "Java", "JavaScript", "HTML", "CSS"]
+        "skills": [
+          "C++",
+          "Python",
+          "Java",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
       },
       {
         "category": "Frameworks & Tools",
@@ -205,7 +212,11 @@
         "degree": "BSc in Computer Science & Engineering",
         "result": "CGPA 3.23 on a scale of 4.00",
         "activities": [
-          "Served as Class Representative for four years", "Lead management and volunteered in multiple departmental events", "Served as Executive Member leading up to the Vice President of the CSEDU Student Club", "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"],
+          "Served as Class Representative for four years",
+          "Lead management and volunteered in multiple departmental events",
+          "Served as Executive Member leading up to the Vice President of the CSEDU Student Club",
+          "Volunteered as an Executive member at DU Science Society (DUSS) and DU IT Society (DUITS)"
+        ],
         "start": "Jan 2018",
         "end": "Dec 2022",
         "year": "2018 to 2022",
@@ -217,7 +228,10 @@
         "degree": "Higher Secondary Certificate (HSC) in Science",
         "result": "GPA 5.00 on a scale of 5.00",
         "activities": [
-          "Served as Class Representative", "Councilor at Dhaka City College Student Council", "Volunteered in organizing college events as a council member"],
+          "Served as Class Representative",
+          "Councilor at Dhaka City College Student Council",
+          "Volunteered in organizing college events as a council member"
+        ],
         "start": "",
         "end": "",
         "year": "Exam of 2017",

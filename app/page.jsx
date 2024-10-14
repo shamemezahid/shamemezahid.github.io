@@ -17,14 +17,15 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061e";
-  const READ_ACCESS_KEY = "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
+  const READ_ACCESS_KEY =
+    "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(API_URL, {
           headers: {
-            'X-Access-Key': READ_ACCESS_KEY,
+            "X-Access-Key": READ_ACCESS_KEY,
           },
         });
         if (!response.ok) {
