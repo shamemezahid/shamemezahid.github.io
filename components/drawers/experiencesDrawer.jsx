@@ -1,7 +1,6 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import { BriefcaseIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
-import SeparatorLine from "../utils/separatorLine";
 
 function ExperiencesSection({ data }) {
   return (
@@ -9,7 +8,10 @@ function ExperiencesSection({ data }) {
       {/* <h2 className="font-semibold text-gray-500 dark:text-neutral-400">{data?.experiences?.label || data?.experiences?.label}</h2> */}
       <div className="w-full flex flex-col gap-4 items-start text-gray-700 dark:text-neutral-200 text-left">
         {(data?.experiences.values || []).map((experience, index) => (
-          <div key={index} className="w-full">
+          <div
+            key={index}
+            className="w-full p-5 rounded-xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
+          >
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-bold text-base text-gray-900 dark:text-white">
                 {experience.workplace}
@@ -67,7 +69,6 @@ function ExperiencesSection({ data }) {
                 </li>
               )}
             </ul>
-            <SeparatorLine className="mt-8" />
           </div>
         ))}
       </div>

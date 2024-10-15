@@ -14,7 +14,7 @@ function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200 rounded-lg overflow-hidden">
+    <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-lg overflow-hidden">
       <a
         onClick={() => {
           setIsRevealed(!isRevealed);
@@ -103,7 +103,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-200"
+          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
           rows="3"
           value={value}
           onChange={onChange}
@@ -114,7 +114,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-200"
+          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
           value={value}
           onChange={onChange}
           required={required}
@@ -247,7 +247,7 @@ function FormComponent() {
     <div className="w-full">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 text-neutral-800 dark:text-neutral-50 w-full"
+        className="flex flex-col gap-3 text-neutral-800 dark:text-neutral-50 w-full"
       >
         <InputField
           label="Your Name"
