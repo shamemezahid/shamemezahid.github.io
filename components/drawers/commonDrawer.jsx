@@ -7,7 +7,7 @@ const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...p
   <button
     ref={ref}
     title={title}
-    className={`group flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold transition-all px-4 py-3 rounded-full text-teal-700 dark:text-teal-500 hover:bg-teal-50 dark:hover:bg-teal-950 ${styles}`}
+    className={`group flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold transition-all px-4 py-3 rounded-full text-emerald-700 dark:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950 ${styles}`}
     {...props}
   >
     <div className="flex flex-col">
@@ -41,10 +41,10 @@ export function CommonDrawer({
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/50" />
-        <Drawer.Content className={`cursor-pointer bg-neutral-50 dark:bg-neutral-800 flex flex-col items-center pt-12 pb-0 px-6 sm:px-10 gap-6 max-w-3xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0 ${contentStyles}`}>
+        <Drawer.Content className={`cursor-pointer bg-neutral-50 dark:bg-neutral-800 flex flex-col items-center pt-12 pb-0 px-4 sm:px-8 gap-6 max-w-6xl mx-auto rounded-t-3xl h-[90%] fixed bottom-0 left-0 right-0 ${contentStyles}`}>
           <div className="absolute top-4 w-10 min-h-2 h-2 rounded-full dark:bg-neutral-500 bg-neutral-300"></div>
           <div className="relative w-full h-full flex flex-col gap-4 dark:text-neutral-50 text-neutral-700">
-            <p className="w-full dark:text-neutral-50 text-neutral-700 text-xl font-semibold">{drawerTitle}</p>
+            <p className="w-full text-center dark:text-neutral-50 text-neutral-700 text-xl font-semibold">{drawerTitle}</p>
             <SeparatorLine />
             {renderContent()}
           </div>

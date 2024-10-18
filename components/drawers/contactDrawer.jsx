@@ -14,13 +14,13 @@ function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200 rounded-lg overflow-hidden">
+    <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-lg overflow-hidden">
       <a
         onClick={() => {
           setIsRevealed(!isRevealed);
           setIsCopied(false);
         }}
-        className="w-full flex items-center px-4 py-3 font-normal dark:text-teal-400 text-teal-700 hover:text-teal-500"
+        className="w-full flex items-center px-4 py-3 font-normal dark:text-emerald-400 text-emerald-700 hover:text-emerald-500"
       >
         <EyeIcon
           className={
@@ -103,7 +103,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-200"
+          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
           rows="3"
           value={value}
           onChange={onChange}
@@ -114,7 +114,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-2 rounded-lg dark:bg-neutral-600 bg-neutral-200"
+          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
           value={value}
           onChange={onChange}
           required={required}
@@ -247,7 +247,7 @@ function FormComponent() {
     <div className="w-full">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 text-neutral-800 dark:text-neutral-50 w-full"
+        className="flex flex-col gap-3 text-neutral-800 dark:text-neutral-50 w-full"
       >
         <InputField
           label="Your Name"
@@ -295,7 +295,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="dark:text-teal-400 text-teal-600 w-full my-4 p-4 rounded-lg text-center">
+          <p className="dark:text-emerald-400 text-emerald-600 w-full my-4 p-4 rounded-lg text-center">
             {success}
           </p>
         ) : loading ? (
@@ -303,7 +303,7 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full my-4 bg-teal-600 text-white py-4 px-4 rounded-lg cursor-pointer"
+            className="w-full my-4 bg-emerald-600 text-white py-4 px-4 rounded-lg cursor-pointer"
           >
             Submit
           </button>
