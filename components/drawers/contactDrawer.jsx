@@ -20,7 +20,7 @@ function ClickToReveal({ content }) {
           setIsRevealed(!isRevealed);
           setIsCopied(false);
         }}
-        className="w-full flex items-center px-4 py-3 font-normal dark:text-teal-400 text-teal-700 hover:text-teal-500"
+        className="w-full flex items-center px-4 py-3 font-normal dark:text-emerald-400 text-emerald-700 hover:text-emerald-500"
       >
         <EyeIcon
           className={
@@ -295,7 +295,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="dark:text-teal-400 text-teal-600 w-full my-4 p-4 rounded-lg text-center">
+          <p className="dark:text-emerald-400 text-emerald-600 w-full my-4 p-4 rounded-lg text-center">
             {success}
           </p>
         ) : loading ? (
@@ -303,7 +303,7 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full my-4 bg-teal-600 text-white py-4 px-4 rounded-lg cursor-pointer"
+            className="w-full my-4 bg-emerald-600 text-white py-4 px-4 rounded-lg cursor-pointer"
           >
             Submit
           </button>

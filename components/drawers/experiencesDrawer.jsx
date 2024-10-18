@@ -20,14 +20,14 @@ function ExperiencesSection({ data }) {
                 href={experience.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-teal-600 dark:text-teal-400 hover:underline"
+                className="text-emerald-600 dark:text-emerald-400 hover:underline"
               >
                 {experience.website && (
                   <a
                     href={experience.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal-600 dark:text-teal-400 hover:underline flex items-center"
+                    className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center"
                   >
                     <GlobeAltIcon className="w-4 h-4 mr-1" />
                     {experience.website

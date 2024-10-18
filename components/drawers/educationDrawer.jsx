@@ -12,13 +12,13 @@ function EducationSection({ data }) {
               <h3 className="font-bold text-base text-neutral-900 dark:text-white">
                 {education.institute}
               </h3>
-              <div className="flex items-start sm:items-center gap-2">
+              <div className="flex items-center gap-2">
                 {education.website && (
                   <a
                     href={education.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal-600 dark:text-teal-400 hover:underline flex items-center"
+                    className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center"
                   >
                     <GlobeAltIcon className="w-4 h-4 mr-1" />
                     {education.website

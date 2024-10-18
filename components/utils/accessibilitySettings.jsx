@@ -56,7 +56,7 @@ export default function AccessibilityAccordion() {
               Preferences will reset upon{" "}
               <button
                 onClick={() => window.location.reload()}
-                className="text-teal-700 dark:text-teal-500 hover:underline cursor-pointer"
+                className="text-emerald-700 dark:text-emerald-500 hover:underline cursor-pointer"
               >
                 reload
               </button>
