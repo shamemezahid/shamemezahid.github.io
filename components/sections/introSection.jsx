@@ -21,15 +21,15 @@ export default function IntroSection({ def, data }) {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-neutral-100">
+        <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
           {data?.intro?.greetings || def.intro.greetings}
         </h1>
-        <span className="text-base font-normal text-gray-700 dark:text-neutral-200">
+        <span className="text-base font-normal text-neutral-700 dark:text-neutral-200">
           {data?.intro?.tagline || def.intro.tagline}
         </span>
         <span className="flex gap-1">
-          <MapPinIcon className="w-4 text-gray-500 dark:text-neutral-400" />
-          <span className="text-sm font-light text-gray-500 dark:text-neutral-400">
+          <MapPinIcon className="w-4 text-neutral-500 dark:text-neutral-400" />
+          <span className="text-sm font-light text-neutral-500 dark:text-neutral-400">
             {data?.intro?.location || def.intro.location}
           </span>
         </span>

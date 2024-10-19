@@ -5,7 +5,7 @@ export default function LinksSection({ def, data }) {
   const links = data?.links?.values || def.links.values;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-      <h2 className="font-semibold text-gray-500 dark:text-neutral-400">
+      <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">
         {data?.links?.label || def.links.label}
       </h2>
       <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all duration-200">

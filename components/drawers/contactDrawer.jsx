@@ -321,7 +321,7 @@ export function ContactDrawer({ label, email }) {
       height={20}
       alt="Contact Icon"
       src={`/icons/em.svg`}
-      className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-gray-400"
+      className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-400"
       {...props}
     />
   ));

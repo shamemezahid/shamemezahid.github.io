@@ -5,15 +5,15 @@ import { BriefcaseIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 function ExperiencesSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
-      {/* <h2 className="font-semibold text-gray-500 dark:text-neutral-400">{data?.experiences?.label || data?.experiences?.label}</h2> */}
-      <div className="w-full flex flex-col gap-4 items-start text-gray-700 dark:text-neutral-200 text-left">
+      {/* <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">{data?.experiences?.label || data?.experiences?.label}</h2> */}
+      <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
         {(data?.experiences.values || []).map((experience, index) => (
           <div
             key={index}
             className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
           >
             <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-base text-gray-900 dark:text-white">
+              <h3 className="font-bold text-base text-neutral-900 dark:text-white">
                 {experience.workplace}
               </h3>
               <a
@@ -38,25 +38,25 @@ function ExperiencesSection({ data }) {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-              <p className="font-medium text-gray-700 dark:text-neutral-200">
+              <p className="font-medium text-neutral-700 dark:text-neutral-200">
                 {experience.designation}
               </p>
-              <p className="text-sm text-gray-600 dark:text-neutral-400">
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">
                 {experience.start} - {experience.end}
               </p>
             </div>
             <div className="flex gap-2 mb-2">
-              <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
+              <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
                 {experience.shift}
               </span>
-              <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
+              <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
                 {experience.nature}
               </span>
-              <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
+              <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
                 {experience.location}
               </span>
             </div>
-            <ul className="list-disc pl-5 text-gray-600 dark:text-neutral-300">
+            <ul className="list-disc pl-5 text-neutral-600 dark:text-neutral-300">
               {Array.isArray(experience.responsibilities) ? (
                 experience.responsibilities.map((responsibility, index) => (
                   <li key={index} className="text-sm leading-relaxed">
