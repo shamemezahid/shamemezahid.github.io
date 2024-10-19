@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 
-export default function IntroSection({ def, data }) {
+export default function IntroSection({ data }) {
   return (
     <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
       <div className="flex w-full sm:w-fit justify-between items-start">
@@ -22,15 +22,15 @@ export default function IntroSection({ def, data }) {
       </div>
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
-          {data?.intro?.greetings || def.intro.greetings}
+          {data?.intro?.greetings}
         </h1>
         <span className="text-base font-normal text-neutral-700 dark:text-neutral-200">
-          {data?.intro?.tagline || def.intro.tagline}
+          {data?.intro?.tagline}
         </span>
         <span className="flex gap-1">
           <MapPinIcon className="w-4 text-neutral-500 dark:text-neutral-400" />
           <span className="text-sm font-light text-neutral-500 dark:text-neutral-400">
-            {data?.intro?.location || def.intro.location}
+            {data?.intro?.location}
           </span>
         </span>
       </div>
