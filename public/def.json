@@ -85,13 +85,19 @@
         "category": "Design & Human Computer Interaction",
         "skills": [
           "Figma",
+          "Interaction design",
           "Wireframing",
           "Prototyping",
           "Design systems",
-          "Responsive web design",
-          "Human-centered UX research",
+          "Responsive design",
+          "UX research",
+          "Human-centered design",
+          "Information architecture",
+          "Journey mapping",
           "Usability testing",
-          "Heuristic evaluation"
+          "Heuristic evaluation",
+          "Surveying methodologies",
+          "Contextual inquiry"
         ]
       },
       {
@@ -102,20 +108,16 @@
           "Front-end development",
           "Quality assurance",
           "REST API architecture",
-          "End-to-end product lifecycle management",
-          "Agile methodologies"
+          "Product lifecycle management",
+          "Project management",
+          "Agile methodologies",
+          "Documentation",
+          "Client interaction"
         ]
       },
       {
         "category": "Programming Languages",
-        "skills": [
-          "C++",
-          "Python",
-          "Java",
-          "JavaScript",
-          "HTML",
-          "CSS"
-        ]
+        "skills": ["C++", "Python", "Java", "JavaScript", "HTML", "CSS"]
       },
       {
         "category": "Frameworks & Tools",
@@ -137,7 +139,6 @@
           "Empathy",
           "Critical Thinking",
           "Problem Solving",
-          "Decision Making",
           "Attention to Detail",
           "Adaptability"
         ]
@@ -254,17 +255,38 @@
       }
     ]
   },
-  "research":{
+  "research": {
     "label": "Research",
     "values": [
+      {
+        "title": "Making EULA Great Again: A Novel Nudge Mechanism to Improve Readability, User Attention and Awareness",
+        "authors": "Shamim Bin Zahid, Aishwarya Ghosh Bristy, Mushfiqur Hasan Oli, Md Fahim, Sarker T Ahmed Rumee, Moinul Islam Zaber",
+        "conference": "20th International Conference on Information Systems Security",
+        "year": "2024",
+        "abstract": "Accepted for Springer. ETA publication December 2024",
+        "URL": "https://iciss.isrdc.in/accepted-papers/",
+        "URL_label": "Conference Link",
+        "presentation": ""
+      },
       {
         "title": "Safeguarding User Privacy through Effective Information Disclosure Summary from the Software End-User License Agreements (EULAs)",
         "authors": "Shamim Bin Zahid, Aishwarya Ghosh Bristy, Sarker T Ahmed Rumee, Moinul Islam Zaber",
         "conference": "6th International Conference on Imaging, Vision & Pattern Recognition (IVPR) & the 11th International Conference on Informatics, Electronics & Vision (ICIEV)",
-        "year": "2024"
+        "year": "2023",
+        "abstract": "Abstract on Page 24",
+        "URL": "http://cennser.org/ICIEV23/proceedingsV23.pdf",
+        "URL_label": "Full Proceedings",
+        "presentation": "https://youtube.com/watch?v=example"
       },
       {
-
+        "title": "EULA Usability Project",
+        "authors": "Shamim Bin Zahid, Aishwarya Ghosh Bristy",
+        "conference": "Undergraduate Thesis, University of Dhaka",
+        "year": "2022",
+        "abstract": "A user research study investigating the usability of current privacy policy representations and how summarizing impacts on users' awareness of their online information privacy. Followed by development of a tool that summarizes the privacy policies for them.",
+        "URL": "https://www.dndlab.org/publications/",
+        "URL_label": "DND Labs, DU",
+        "presentation": ""
       }
     ]
   },

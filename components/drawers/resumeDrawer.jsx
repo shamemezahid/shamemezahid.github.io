@@ -14,12 +14,12 @@ export function ResumeDrawer({ label, src, download_url }) {
       >
         <div className="flex flex-col">
           <ArrowDownTrayIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
-          <ArrowDownIcon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-gray-400" />
+          <ArrowDownIcon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-400" />
         </div>
         Download
       </a>
       <div className="w-full h-full mx-auto sm:rounded-t-xl overflow-hidden">
-        <iframe className="w-full h-full" src={src} allow="autoplay" />
+        <iframe className="w-full h-full rounded-t-3xl" src={src} allow="autoplay" />
       </div>
     </>
   );

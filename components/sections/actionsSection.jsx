@@ -3,12 +3,13 @@ import { ContactDrawer } from "@/components/drawers/contactDrawer";
 import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
 import { EducationDrawer } from "@/components/drawers/educationDrawer";
 import { SkillsDrawer } from "../drawers/skillsDrawer";
-
+import { ResearchDrawer } from "@/components/drawers/researchDrawer";
 export default function ActionsSection({ def, data }) {
   return (
     (data?.actions?.show || def.actions.show) && (
       <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
         <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all">
+          
           {(data?.actions?.resume?.show || def.actions.resume.show) && (
             <ResumeDrawer
               label={data?.actions?.resume?.label || def.actions.resume.label}
@@ -39,6 +40,10 @@ export default function ActionsSection({ def, data }) {
 
           {(data?.actions?.educations?.show || def.actions.educations.show) && (
             <EducationDrawer label="Education" data={data || def} />
+          )}
+
+          {(data?.actions?.research?.show || def.actions.research.show) && (
+            <ResearchDrawer label="Research" data={data || def} />
           )}
         </div>
       </div>

@@ -321,7 +321,7 @@ export function ContactDrawer({ label, email }) {
       height={20}
       alt="Contact Icon"
       src={`/icons/em.svg`}
-      className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-gray-400"
+      className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-400"
       {...props}
     />
   ));
@@ -330,7 +330,7 @@ export function ContactDrawer({ label, email }) {
 
   const renderContactContent = () => (
     <>
-      <div className="w-full h-full flex flex-col text-sm gap-4 overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
+      <div className="w-full h-full flex flex-col text-sm gap-4 overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
         <span className="flex flex-col gap-1">
           <p className="font-normal">
             Feel free to reach out using the form below. Or send me an email!
