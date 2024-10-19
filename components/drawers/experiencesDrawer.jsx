@@ -1,6 +1,6 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import { BriefcaseIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+import { BriefcaseIcon, GlobeAltIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 function ExperiencesSection({ data }) {
   return (
@@ -27,12 +27,14 @@ function ExperiencesSection({ data }) {
                     href={experience.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center"
+                    className="group flex items-center h-8 font-medium text-emerald-700 dark:text-emerald-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-emerald-100 dark:hover:bg-emerald-900"
+                    title={`Open ${experience.workplace} website`}
                   >
-                    <GlobeAltIcon className="w-4 h-4 mr-1" />
-                    {experience.website
-                      .replace(/^https?:\/\/(www\.)?/, "")
-                      .replace(/\/.*$/, "")}
+                    <ArrowUpRightIcon className="w-0 h-0 group-hover:w-4 group-hover:h-4 transition-all duration-500" />
+                    <GlobeAltIcon className="w-4 h-4 group-hover:w-0 group-hover:h-0 transition-all duration-500" />
+                    <p className="ml-2 transition-all duration-500 overflow-hidden whitespace-nowrap">
+                      {experience.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "")}
+                    </p>
                   </a>
                 )}
               </a>

@@ -1,13 +1,16 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import { AcademicCapIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+import { AcademicCapIcon, GlobeAltIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 function EducationSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
       <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
         {(data?.education.values || []).map((education, index) => (
-          <div key={index} className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]">
+          <div
+            key={index}
+            className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
+          >
             <div className="flex sm:justify-between flex-col sm:flex-row items-start sm:items-center mb-2">
               <h3 className="font-bold text-base text-neutral-900 dark:text-white">
                 {education.institute}
@@ -18,12 +21,16 @@ function EducationSection({ data }) {
                     href={education.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center"
+                    className="group flex items-center h-8 font-medium text-emerald-700 dark:text-emerald-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-emerald-100 dark:hover:bg-emerald-900"
+                    title={`Open ${education.institute} website`}
                   >
-                    <GlobeAltIcon className="w-4 h-4 mr-1" />
-                    {education.website
-                      .replace(/^https?:\/\/www\./, "")
-                      .replace(/\/.*$/, "")}
+                    <ArrowUpRightIcon className="w-0 h-0 group-hover:w-4 group-hover:h-4 transition-all duration-500" />
+                    <GlobeAltIcon className="w-4 h-4 group-hover:w-0 group-hover:h-0 transition-all duration-500" />
+                    <p className="ml-2 transition-all duration-500 overflow-hidden whitespace-nowrap">
+                      {education.website
+                        .replace(/^https?:\/\/(www\.)?/, "")
+                        .replace(/\/.*$/, "")}
+                    </p>
                   </a>
                 )}
                 <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
