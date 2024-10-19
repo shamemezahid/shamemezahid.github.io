@@ -23,7 +23,7 @@ function SkillsSection({ def, data }) {
                 </span>
               ))}
             </div>
-            <SeparatorLine className="mt-8" />
+            <SeparatorLine className="mt-4" />
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ function EducationSection({ data }) {
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
       <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
         {(data?.education.values || []).map((education, index) => (
-          <div key={index} className="w-full p-5 rounded-xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]">
+          <div key={index} className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]">
             <div className="flex sm:justify-between flex-col sm:flex-row items-start sm:items-center mb-2">
               <h3 className="font-bold text-base text-neutral-900 dark:text-white">
                 {education.institute}

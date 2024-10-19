@@ -10,7 +10,7 @@ function ExperiencesSection({ data }) {
         {(data?.experiences.values || []).map((experience, index) => (
           <div
             key={index}
-            className="w-full p-5 rounded-xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
+            className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
           >
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-bold text-base text-gray-900 dark:text-white">
@@ -88,7 +88,7 @@ export function ExperiencesDrawer({ label, data }) {
   return (
     <CommonDrawer
       triggerIcon={BriefcaseIcon}
-      triggerLabel={label}
+      triggerLabel={label || "Experiences"}
       triggerTitle="Click to view experiences"
       renderContent={renderExperiencesContent}
       drawerTitle={label || "Experiences"}
