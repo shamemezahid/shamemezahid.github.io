@@ -14,7 +14,7 @@ import FooterSection from "@/components/sections/footerSection";
 export default function Home() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061";
+  const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061e";
   const READ_ACCESS_KEY =
     "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
 
