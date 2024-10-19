@@ -67,7 +67,7 @@ function ResearchSection({ data }) {
 
 export function ResearchDrawer({ label, data }) {
   const renderResearchContent = () => (
-    <div className="w-full h-full overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
+    <div className="w-full h-full overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
       <ResearchSection data={data} />
     </div>
   );

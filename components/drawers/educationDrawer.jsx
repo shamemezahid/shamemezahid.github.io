@@ -73,7 +73,7 @@ function EducationSection({ data }) {
 export function EducationDrawer({ label, data }) {
   const renderEducationContent = () => (
     <>
-      <div className="w-full h-full overflow-y-auto scrollbar-hide scrollbar-thin scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
+      <div className="w-full h-full overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
         <EducationSection data={data} />
       </div>
     </>
