@@ -5,7 +5,7 @@ import SeparatorLine from "../utils/separatorLine";
 
 const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...props }, ref) => (
   <button
-    ref={ref}
+    ref={ref} 
     title={title}
     className={`group flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold transition-all px-4 py-3 rounded-full text-emerald-700 dark:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950 ${styles}`}
     {...props}
@@ -31,7 +31,7 @@ export function CommonDrawer({
 }) {
   return (
     <Drawer.Root shouldScaleBackground={false}>
-      <Drawer.Trigger>
+      <Drawer.Trigger asChild>
         <TriggerButton 
           icon={triggerIcon} 
           label={triggerLabel} 

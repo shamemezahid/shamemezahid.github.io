@@ -11,3 +11,11 @@ html.large-text {
     animation-duration: 75ms !important;
     animation-iteration-count: 1 !important;
   }
+
+.high-contrast *:not(img) {
+  filter: contrast(110%);
+}
+
+.high-contrast a, .high-contrast button {
+  outline: 2px solid #888;
+}

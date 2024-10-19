@@ -1,6 +1,7 @@
 import ThemeToggle from "@/components/togglers/themeToggler";
 import TextSizeToggle from "@/components/togglers/textsizeToggler";
 import AnimationToggle from "@/components/togglers/animationToggler";
+import HighContrastToggle from "@/components/togglers/highContrastToggler";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -52,6 +53,7 @@ export default function AccessibilityAccordion() {
             <ThemeToggle />
             <TextSizeToggle />
             <AnimationToggle />
+            <HighContrastToggle />
             <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">
               Preferences will reset upon{" "}
               <button

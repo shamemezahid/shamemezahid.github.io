@@ -9,7 +9,7 @@ export default function IntroSection({ def, data }) {
           className="relative w-32 rounded-full overflow-hidden"
           onContextMenu={(e) => e.preventDefault()}
         >
-          <Image
+          <img
             alt="shamimbinzahid"
             src="/images/shameme.webp"
             id="shameme"
