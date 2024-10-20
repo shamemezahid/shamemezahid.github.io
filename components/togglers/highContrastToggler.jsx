@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { ViewfinderCircleIcon } from "@heroicons/react/24/outline";
 
 export default function HighContrastToggle({ className }) {
   const [isHighContrast, setIsHighContrast] = useState(false);
@@ -20,18 +20,12 @@ export default function HighContrastToggle({ className }) {
       aria-label={isHighContrast ? "Disable high contrast" : "Enable high contrast"}
       title={isHighContrast ? "Disable high contrast" : "Enable high contrast"}
     >
-      <div className="flex items-center">
-        {isHighContrast ? (
-          <>
-            <MoonIcon className="w-6 h-6" />
-            <p className="text-sm mx-2">Normal Contrast</p>
-          </>
-        ) : (
-          <>
-            <SunIcon className="w-6 h-6" />
-            <p className="text-sm mx-2">High Contrast</p>
-          </>
-        )}
+      <div className="relative flex items-center">
+        <div className="relative w-6 h-6">
+          <ViewfinderCircleIcon className={`absolute inset-0 transition-all ease-in duration-500 transform ${isHighContrast ? 'scale-0' : 'scale-100'} origin-center`} />
+          <ViewfinderCircleIcon className={`absolute inset-0 transition-all ease-out duration-500 transform ${isHighContrast ? 'scale-100' : 'scale-0'} origin-center`} />
+        </div>
+        <p className="text-sm mx-2">{isHighContrast ? "Normal Contrast" : "High Contrast"}</p>
       </div>
     </button>
   );

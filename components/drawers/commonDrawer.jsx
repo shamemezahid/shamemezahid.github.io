@@ -11,7 +11,7 @@ const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...p
     {...props}
   >
     <div className="flex flex-col">
-      <Icon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-400" />
+      <Icon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-500 dark:stroke-neutral-400" />
       <DocumentArrowUpIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
     </div>
     {label}

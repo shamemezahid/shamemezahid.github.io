@@ -12,8 +12,17 @@ html.large-text {
     animation-iteration-count: 1 !important;
   }
 
-.high-contrast *:not(img) {
+.high-contrast * {
   filter: contrast(110%);
+}
+
+
+.high-contrast #shameme {
+  filter: contrast(0.6);
+}
+
+.high-contrast svg, .high-contrast img {
+  filter: contrast(0.6);
 }
 
 .high-contrast a, .high-contrast button {
