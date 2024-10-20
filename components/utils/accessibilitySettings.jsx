@@ -55,12 +55,12 @@ export default function AccessibilityAccordion() {
             <AnimationToggle />
             <HighContrastToggle />
             <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">
-              Preferences will reset upon{" "}
+              Preferences will
               <button
                 onClick={() => window.location.reload()}
-                className="text-emerald-700 dark:text-emerald-500 hover:underline cursor-pointer"
+                className="text-emerald-700 dark:text-emerald-500 hover:underline cursor-pointer px-1 rounded-full"
               >
-                reload
+                reset upon reload
               </button>
             </p>
           </div>

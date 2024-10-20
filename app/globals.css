@@ -18,11 +18,11 @@ html.large-text {
 
 
 .high-contrast #shameme {
-  filter: contrast(0.6);
+  filter: contrast(0.5);
 }
 
 .high-contrast svg, .high-contrast img {
-  filter: contrast(0.6);
+  filter: contrast(0.1);
 }
 
 .high-contrast a, .high-contrast button {
