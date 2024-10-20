@@ -14,7 +14,7 @@ export function ResumeDrawer({ label, src, download_url }) {
       >
         <div className="flex flex-col">
           <ArrowDownTrayIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
-          <ArrowDownIcon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-400" />
+          <ArrowDownIcon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-500 dark:stroke-neutral-400" />
         </div>
         Download
       </a>
