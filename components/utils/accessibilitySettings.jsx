@@ -1,6 +1,7 @@
 import ThemeToggle from "@/components/togglers/themeToggler";
 import TextSizeToggle from "@/components/togglers/textsizeToggler";
 import AnimationToggle from "@/components/togglers/animationToggler";
+import HighContrastToggle from "@/components/togglers/highContrastToggler";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -52,13 +53,14 @@ export default function AccessibilityAccordion() {
             <ThemeToggle />
             <TextSizeToggle />
             <AnimationToggle />
+            <HighContrastToggle />
             <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">
-              Preferences will reset upon{" "}
+              Preferences will
               <button
                 onClick={() => window.location.reload()}
-                className="text-emerald-700 dark:text-emerald-500 hover:underline cursor-pointer"
+                className="text-emerald-700 dark:text-emerald-500 hover:underline cursor-pointer px-1 rounded-full"
               >
-                reload
+                reset upon reload
               </button>
             </p>
           </div>
