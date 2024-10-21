@@ -4,6 +4,9 @@ import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
 import { EducationDrawer } from "@/components/drawers/educationDrawer";
 import { SkillsDrawer } from "../drawers/skillsDrawer";
 import { ResearchDrawer } from "@/components/drawers/researchDrawer";
+import { ContactCardDrawer } from "@/components/drawers/contactCardDrawer";
+import { EmailMeDrawer } from "../drawers/emailMeDrawer";
+
 export default function ActionsSection({ def, data }) {
   return (
     (data?.actions?.show || def.actions.show) && (
@@ -45,6 +48,12 @@ export default function ActionsSection({ def, data }) {
           {(data?.actions?.research?.show || def.actions.research.show) && (
             <ResearchDrawer label="Research" data={data || def} />
           )}
+
+          {/* {(data?.actions?.contactCard?.show || def.actions.contactCard.show) && (
+            <ContactCardDrawer
+              label={data?.actions?.contactCard?.label || def.actions.contactCard.label}
+            />
+          )} */}
         </div>
       </div>
     )
