@@ -29,6 +29,8 @@ export default function ActionsSection({ def, data }) {
               email={
                 data?.actions?.contact?.address || def.actions.contact.address
               }
+              showEmailMe={data?.actions?.emailMe?.show || def.actions.emailMe.show}
+              showContactCard={data?.actions?.contactCard?.show || def.actions.contactCard.show}
             />
           )}
 
@@ -48,12 +50,6 @@ export default function ActionsSection({ def, data }) {
           {(data?.actions?.research?.show || def.actions.research.show) && (
             <ResearchDrawer label="Research" data={data || def} />
           )}
-
-          {/* {(data?.actions?.contactCard?.show || def.actions.contactCard.show) && (
-            <ContactCardDrawer
-              label={data?.actions?.contactCard?.label || def.actions.contactCard.label}
-            />
-          )} */}
         </div>
       </div>
     )

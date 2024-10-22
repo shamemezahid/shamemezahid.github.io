@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import SeparatorLine from "../utils/separatorLine";
+import { ContactCardDrawer } from "@/components/drawers/contactCardDrawer";
+import { EmailMeDrawer } from "@/components/drawers/emailMeDrawer";
 import { ClickToReveal } from "../utils/clickToReveal";
 
 function InputField({
@@ -16,13 +17,13 @@ function InputField({
 }) {
   return (
     <div className="flex flex-col gap-1 w-full">
-      <label>{label}</label>
+      <label className="ml-4">{label}</label>
       {textarea ? (
         <textarea
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
+          className="px-3 py-3 rounded-2xl dark:bg-neutral-700 bg-neutral-200/50"
           rows="3"
           value={value}
           onChange={onChange}
@@ -33,7 +34,7 @@ function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
+          className="px-4 py-3 rounded-2xl dark:bg-neutral-700 bg-neutral-200/50"
           value={value}
           onChange={onChange}
           required={required}
@@ -232,7 +233,7 @@ function FormComponent() {
   );
 }
 
-export function ContactDrawer({ label, email }) {
+export function ContactDrawer({ label, email, showEmailMe, showContactCard }) {
   const ContactIcon = React.forwardRef((props, ref) => (
     <Image
       ref={ref}
@@ -250,13 +251,13 @@ export function ContactDrawer({ label, email }) {
   const renderContactContent = () => (
     <>
       <div className="w-full h-full flex flex-col text-sm gap-4 overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
-        <span className="flex flex-col gap-1">
-          <p className="font-normal">
-            Feel free to reach out using the form below. Or send me an email!
-          </p>
-          <ClickToReveal content={email} />
-        </span>
-        <SeparatorLine />
+        {(
+          showEmailMe
+        ) && (
+          <div className="flex flex-row w-fit whitespace-nowrap gap-3 sm:absolute sm:top-1 right-0">
+            <ClickToReveal content={email} />
+          </div>
+        )}
         <FormComponent />
       </div>
     </>
@@ -269,6 +270,7 @@ export function ContactDrawer({ label, email }) {
       triggerTitle="Click to open contact form"
       renderContent={renderContactContent}
       drawerTitle={label}
+      drawerSubtitle="Feel free to reach out using the form below."
     />
   );
 }

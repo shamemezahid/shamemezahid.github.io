@@ -1,7 +1,7 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { ClickToReveal } from "./contactDrawer";
+import { ClickToReveal } from "../utils/clickToReveal";
 
 export function EmailMeDrawer({ label, email }) {
   const renderEmailContent = () => (

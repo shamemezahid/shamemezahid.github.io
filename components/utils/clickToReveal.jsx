@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   EyeIcon,
   EyeSlashIcon,
@@ -9,9 +9,24 @@ import {
 export function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setIsRevealed(false);
+        setIsCopied(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-lg overflow-hidden">
+    <div ref={containerRef} className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden">
       <a
         onClick={() => {
           setIsRevealed(!isRevealed);
@@ -81,4 +96,3 @@ export function ClickToReveal({ content }) {
     </div>
   );
 }
-
