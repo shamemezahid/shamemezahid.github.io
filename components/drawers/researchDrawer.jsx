@@ -7,7 +7,7 @@ import {
   ArrowUpRightIcon,
 } from "@heroicons/react/24/outline";
 
-function ResearchSection({ data }) {
+export function ResearchSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-4 rounded-xl mb-16">
       {(data?.research?.values || []).map((research, index) => (

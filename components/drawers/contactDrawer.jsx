@@ -109,7 +109,7 @@ function LoadingBtn() {
   </div>;
 }
 
-function FormComponent() {
+export function FormComponent() {
   const [formData, setFormData] = useState({
     "entry.673605360": "", // Name
     "entry.2073457343": "", // Email
