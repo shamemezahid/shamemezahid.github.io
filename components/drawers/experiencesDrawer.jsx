@@ -2,7 +2,7 @@ import React from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import { BriefcaseIcon, GlobeAltIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-function ExperiencesSection({ data }) {
+export function ExperiencesSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
       {/* <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">{data?.experiences?.label || data?.experiences?.label}</h2> */}

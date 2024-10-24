@@ -4,6 +4,9 @@ import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
 import { EducationDrawer } from "@/components/drawers/educationDrawer";
 import { SkillsDrawer } from "../drawers/skillsDrawer";
 import { ResearchDrawer } from "@/components/drawers/researchDrawer";
+import { ContactCardDrawer } from "@/components/drawers/contactCardDrawer";
+import { EmailMeDrawer } from "../drawers/emailMeDrawer";
+
 export default function ActionsSection({ def, data }) {
   return (
     (data?.actions?.show || def.actions.show) && (
@@ -26,6 +29,8 @@ export default function ActionsSection({ def, data }) {
               email={
                 data?.actions?.contact?.address || def.actions.contact.address
               }
+              showEmailMe={data?.actions?.emailMe?.show || def.actions.emailMe.show}
+              showContactCard={data?.actions?.contactCard?.show || def.actions.contactCard.show}
             />
           )}
 

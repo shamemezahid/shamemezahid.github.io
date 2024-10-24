@@ -3,7 +3,7 @@ import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import { WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 import SeparatorLine from "../utils/separatorLine";
 
-function SkillsSection({ def, data }) {
+export function SkillsSection({ def, data }) {
   const skillsData = data?.skills || def?.skills;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">

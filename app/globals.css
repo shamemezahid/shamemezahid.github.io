@@ -28,3 +28,15 @@ html.large-text {
 .high-contrast a, .high-contrast button {
   outline: 2px solid #888;
 }
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
