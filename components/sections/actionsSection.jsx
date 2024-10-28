@@ -4,8 +4,6 @@ import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
 import { EducationDrawer } from "@/components/drawers/educationDrawer";
 import { SkillsDrawer } from "../drawers/skillsDrawer";
 import { ResearchDrawer } from "@/components/drawers/researchDrawer";
-import { ContactCardDrawer } from "@/components/drawers/contactCardDrawer";
-import { EmailMeDrawer } from "../drawers/emailMeDrawer";
 
 export default function ActionsSection({ def, data }) {
   return (
