@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import { ContactCardDrawer } from "@/components/drawers/contactCardDrawer";
-import { EmailMeDrawer } from "@/components/drawers/emailMeDrawer";
 import { ClickToReveal } from "../utils/clickToReveal";
 import { CheckCircleIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
