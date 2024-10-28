@@ -49,24 +49,16 @@ export function ClickToReveal({ content }) {
           }
         />
 
-        <p
-          className={
-            isRevealed
-              ? "ml-3 transition-all duration-500"
-              : "ml-0 w-0 h-0 opacity-0"
-          }
-        >
-          {content}
-        </p>
-        <p
-          className={
-            isRevealed
-              ? "ml-0 w-0 h-0 opacity-0"
-              : "ml-3 transition-all duration-500"
-          }
-        >
-          Click to reveal email
-        </p>
+        {isRevealed && (
+          <p className="ml-3 transition-all duration-500">
+            {content}
+          </p>
+        )}
+        {!isRevealed && (
+          <p className="ml-3 transition-all duration-500">
+            Click to reveal email
+          </p>
+        )}
       </a>
       <a
         className={

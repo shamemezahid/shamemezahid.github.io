@@ -5,20 +5,30 @@ export default function ThemeToggle({className}) {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    const storedTheme = sessionStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+      if (storedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       document.documentElement.classList.add("dark");
+      sessionStorage.setItem("theme", "dark");
     } else {
       setTheme("light");
+      sessionStorage.setItem("theme", "light");
     }
   }, []);
 
   const toggleTheme = () => {
     if (theme === "dark") {
       document.documentElement.classList.remove("dark");
+      sessionStorage.setItem("theme", "light");
       setTheme("light");
     } else {
       document.documentElement.classList.add("dark");
+      sessionStorage.setItem("theme", "dark");
       setTheme("dark");
     }
   };

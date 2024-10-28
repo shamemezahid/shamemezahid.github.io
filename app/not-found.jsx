@@ -32,8 +32,8 @@ const NotFound = () => {
       // speed between -2 and 2 ([-0.5 to 0.5] * 4)
       speedX: (Math.random() - 0.5) * 8,
       speedY: (Math.random() - 0.5) * 8,
-      // opacity between 0.1 and 0.5 ([0 to 0.4] + 0.1)
-      opacity: Math.random() * 0.5 + 0.1
+      // opacity between 0.25 and 0.75 ([0 to 0.75] + 0.25)
+      opacity: Math.random() * 0.75 + 0.25
     }) 
     const handleClick = (event) => {
       const newParticle = createParticle(event.clientX, event.clientY)
@@ -75,13 +75,13 @@ const NotFound = () => {
     <div className={`relative flex flex-col items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900 overflow-hidden ${merriweatherSans.className}`}>
       <AccessibilityAccordion />
       <canvas ref={canvasRef} className="absolute inset-0" />
-      <div className="relative z-10 text-center bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-3xl p-6 sm:p-10 border border-neutral-200 dark:border-neutral-800">
+      <div className="relative z-10 text-center bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-3xl p-4 sm:p-6 border border-neutral-200 dark:border-neutral-800">
         <p className="text-xs sm:text-sm text-emerald-800 dark:text-emerald-200 mb-2 px-3 py-1 bg-emerald-100 dark:bg-emerald-900 border border-emerald-300 dark:border-emerald-700 rounded-full inline-block">404</p>
         <h2 className="text-lg sm:text-2xl font-bold text-neutral-600 dark:text-neutral-400 mb-2">There are no easter eggs here</h2>
-        <h4 className="text-sm sm:text-lg text-neutral-600 dark:text-neutral-400 mb-8">No need to click around</h4>
+        <h4 className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mb-8">No need to click around</h4>
         <Link href="/" className="group flex items-center justify-center h-12 font-semibold text-emerald-700 dark:text-emerald-500 transition-all duration-500 px-4 py-3 rounded-2xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-emerald-100 dark:hover:bg-emerald-900">
           <HomeIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-200" />
-          <span className="ml-2 texl-base sm:text-lg transition-all duration-500">Return to Home</span>
+          <span className="ml-2 texl-sm sm:text-base transition-all duration-500">Return to Home</span>
         </Link>
       </div>
     </div>
