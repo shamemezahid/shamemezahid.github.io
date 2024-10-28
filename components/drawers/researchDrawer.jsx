@@ -33,7 +33,7 @@ function ResearchSection({ data }) {
                 href={research.URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center h-12 font-semibold text-emerald-700 dark:text-emerald-500 transition-all duration-500 px-4 py-3 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-emerald-100 dark:hover:bg-emerald-900"
+                className="group flex items-center h-12 font-semibold text-cyan-700 dark:text-cyan-500 transition-all duration-500 px-4 py-3 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-cyan-100 dark:hover:bg-cyan-900"
                 title={`Open ${research.URL_label}`}
               >
                 <ArrowUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" />
@@ -48,7 +48,7 @@ function ResearchSection({ data }) {
                 href={research.presentation}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center h-12 font-semibold text-emerald-700 dark:text-emerald-500 transition-all duration-500 px-4 py-3 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-emerald-100 dark:hover:bg-emerald-900"
+                className="group flex items-center h-12 font-semibold text-cyan-700 dark:text-cyan-500 transition-all duration-500 px-4 py-3 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-cyan-100 dark:hover:bg-cyan-900"
                 title="Open Presentation"
               >
                 <ArrowUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" />
