@@ -18,11 +18,11 @@ function ResearchSection({ data }) {
           <h3 className="font-bold text-base text-neutral-900 dark:text-white mb-2">
             {research.title}
           </h3>
-          <p className="text-sm text-neutral-700 dark:text-neutral-200 mb-2">
-            {research.authors}
-          </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
             {research.conference} ({research.year})
+          </p>
+          <p className="text-sm text-neutral-700 dark:text-neutral-200 mb-2">
+            {research.authors}
           </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
             {research.abstract}
