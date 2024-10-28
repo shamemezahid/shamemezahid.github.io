@@ -1,8 +1,9 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+import { useAccessibility } from "../context/AccessibilityContext";
 
 export default function ThemeToggle({className}) {
-  const [theme, setTheme] = useState(null);
+  const { theme, setTheme } = useAccessibility();
 
   useEffect(() => {
     const storedTheme = sessionStorage.getItem("theme");

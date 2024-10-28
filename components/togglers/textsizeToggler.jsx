@@ -1,28 +1,20 @@
-import { useState, useEffect } from "react";
+import { useAccessibility } from "../context/AccessibilityContext";
 import {
   MagnifyingGlassMinusIcon,
   MagnifyingGlassPlusIcon,
 } from "@heroicons/react/24/outline";
 
 export default function TextSizeToggle({ className }) {
-  const [isLargeText, setIsLargeText] = useState(false);
-
-//   useEffect(() => {
-//     const savedTextSize = sessionStorage.getItem("largeText");
-//     if (savedTextSize === "true") {
-//       setIsLargeText(true);
-//       document.documentElement.classList.add("large-text");
-//     }
-//   }, []);
+  const { isLargeText, setIsLargeText } = useAccessibility();
 
   const toggleTextSize = () => {
     setIsLargeText(!isLargeText);
     if (!isLargeText) {
       document.documentElement.classList.add("large-text");
-    //   sessionStorage.setItem("largeText", "true");
+      sessionStorage.setItem("largeText", "true");
     } else {
       document.documentElement.classList.remove("large-text");
-    //   sessionStorage.setItem("largeText", "false");
+      sessionStorage.removeItem("largeText");
     }
   };
 
