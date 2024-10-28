@@ -1,89 +1,10 @@
-"use client";
-import {
-  EyeIcon,
-  EyeSlashIcon,
-  CheckCircleIcon,
-  DocumentDuplicateIcon,
-} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React, { useState } from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import SeparatorLine from "../utils/separatorLine";
-
-function ClickToReveal({ content }) {
-  const [isRevealed, setIsRevealed] = useState(false);
-  const [isCopied, setIsCopied] = useState(false);
-  return (
-    <div className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-lg overflow-hidden">
-      <a
-        onClick={() => {
-          setIsRevealed(!isRevealed);
-          setIsCopied(false);
-        }}
-        className="w-full flex items-center px-4 py-3 font-normal dark:text-emerald-400 text-emerald-700 hover:text-emerald-500"
-      >
-        <EyeIcon
-          className={
-            isRevealed
-              ? "w-0 h-0 transition-all"
-              : "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"
-          }
-        />
-        <EyeSlashIcon
-          className={
-            isRevealed
-              ? "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"
-              : "w-0 h-0 transition-all"
-          }
-        />
-
-        <p
-          className={
-            isRevealed
-              ? "ml-3 transition-all duration-500"
-              : "ml-0 w-0 h-0 opacity-0"
-          }
-        >
-          {content}
-        </p>
-        <p
-          className={
-            isRevealed
-              ? "ml-0 w-0 h-0 opacity-0"
-              : "ml-3 transition-all duration-500"
-          }
-        >
-          Click to reveal email
-        </p>
-      </a>
-      <a
-        className={
-          isRevealed
-            ? "w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap transition-all duration-100"
-            : "w-0 h-0 transition-all duration-100"
-        }
-        onClick={() =>
-          navigator.clipboard
-            .writeText(content)
-            .then(setIsCopied(true))
-            .catch((err) => console.error("Error copying to clipboard", err))
-        }
-      >
-        {isCopied ? (
-          <>
-            <CheckCircleIcon className="w-5 h-5 text-neutral-400" />
-            <p>Copied</p>
-          </>
-        ) : (
-          <>
-            <DocumentDuplicateIcon className="w-5 h-5 text-neutral-400" />
-            <p>Click to Copy</p>
-          </>
-        )}
-      </a>
-    </div>
-  );
-}
+import { ContactCardDrawer } from "@/components/drawers/contactCardDrawer";
+import { EmailMeDrawer } from "@/components/drawers/emailMeDrawer";
+import { ClickToReveal } from "../utils/clickToReveal";
+import { CheckCircleIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
 function InputField({
   label,
@@ -95,26 +16,36 @@ function InputField({
   required = false,
   textarea = false,
 }) {
+  const charCount = value.length;
+  const isOverLimit = charCount > 5000;
+
   return (
     <div className="flex flex-col gap-1 w-full">
-      <label>{label}</label>
+      <label className="ml-2">{label}</label>
       {textarea ? (
-        <textarea
-          type={type}
-          name={name}
-          placeholder={placeholder}
-          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
-          rows="3"
-          value={value}
-          onChange={onChange}
-          required={required}
-        />
+        <div className="relative">
+          <textarea
+            type={type}
+            name={name}
+            placeholder={placeholder}
+            className="px-3 py-3 rounded-xl border dark:border-neutral-600 border-neutral-400/50 dark:bg-neutral-700 bg-neutral-200/50 w-full"
+            rows="3"
+            value={value}
+            onChange={onChange}
+            required={required}
+          />
+          <div
+            className={`absolute -top-5 right-2 text-xs ${isOverLimit ? "text-red-500" : "text-neutral-500"}`}
+          >
+            {charCount} / 5000 characters
+          </div>
+        </div>
       ) : (
         <input
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-3 py-3 rounded-lg dark:bg-neutral-700 bg-neutral-200/50"
+          className="px-4 py-3 rounded-xl border dark:border-neutral-600 border-neutral-400/50 dark:bg-neutral-700 bg-neutral-200/50 w-full"
           value={value}
           onChange={onChange}
           required={required}
@@ -125,11 +56,12 @@ function InputField({
 }
 
 function LoadingBtn() {
-  <div className="flex items-center justify-center p-4 w-full mx-auto">
-    <svg
-      className="w-12 h-12"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 200 200"
+  return (
+    <div className="flex items-center justify-center py-4 px-8 w-full sm:w-fit">
+      <svg
+        className="w-12 h-12"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 200"
     >
       <circle
         fill="#2DD4BF"
@@ -185,8 +117,9 @@ function LoadingBtn() {
           begin="0"
         ></animate>
       </circle>
-    </svg>
-  </div>;
+      </svg>
+    </div>
+  );
 }
 
 function FormComponent() {
@@ -234,10 +167,10 @@ function FormComponent() {
         },
         body: urlEncodedData.toString(),
       });
-
       setSuccess("Form submitted successfully!");
       setLoading(false);
     } catch (err) {
+      // TODO: This is where engineering peaks
       setSuccess("Form submitted successfully!");
       setLoading(false);
     }
@@ -267,23 +200,25 @@ function FormComponent() {
           onChange={handleChange}
           required
         />
-        <InputField
-          label="Email"
-          type="email"
-          name="entry.146314014"
-          placeholder="Start typing"
-          value={formData["entry.146314014"]}
-          onChange={handleChange}
-          required
-        />
-        <InputField
-          label="Phone"
-          type="tel"
-          name="entry.429667022"
-          placeholder="Optional"
-          value={formData["entry.429667022"]}
-          onChange={handleChange}
-        />
+        <div className="flex flex-col sm:flex-row sm:gap-3">
+          <InputField
+            label="Email"
+            type="email"
+            name="entry.146314014"
+            placeholder="email@example.com"
+            value={formData["entry.146314014"]}
+            onChange={handleChange}
+            required
+          />
+          <InputField
+            label="Phone"
+            type="tel"
+            name="entry.429667022"
+            placeholder="Optional"
+            value={formData["entry.429667022"]}
+            onChange={handleChange}
+          />
+        </div>
         <InputField
           label="Message"
           type="text"
@@ -295,7 +230,8 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="dark:text-emerald-400 text-emerald-600 w-full my-4 p-4 rounded-lg text-center">
+          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-emerald-400 text-emerald-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
+            <CheckCircleIcon className="w-5 h-5 mr-2" />
             {success}
           </p>
         ) : loading ? (
@@ -303,8 +239,9 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full my-4 bg-emerald-600 text-white py-4 px-4 rounded-lg cursor-pointer"
+            className="w-full sm:w-fit flex items-center justify-center my-4 bg-emerald-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
           >
+            <PaperAirplaneIcon className="w-5 h-5 mr-2" />
             Submit
           </button>
         )}
@@ -313,7 +250,7 @@ function FormComponent() {
   );
 }
 
-export function ContactDrawer({ label, email }) {
+export function ContactDrawer({ label, email, showEmailMe, showContactCard }) {
   const ContactIcon = React.forwardRef((props, ref) => (
     <Image
       ref={ref}
@@ -330,14 +267,12 @@ export function ContactDrawer({ label, email }) {
 
   const renderContactContent = () => (
     <>
-      <div className="w-full h-full flex flex-col text-sm gap-4 overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
-        <span className="flex flex-col gap-1">
-          <p className="font-normal">
-            Feel free to reach out using the form below. Or send me an email!
-          </p>
+      {showEmailMe && (
+        <div className="flex flex-row w-fit whitespace-nowrap gap-3 sm:absolute sm:top-1 right-0">
           <ClickToReveal content={email} />
-        </span>
-        <SeparatorLine />
+        </div>
+      )}
+      <div className="w-full h-full flex flex-col text-sm gap-4 overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent mb-8">
         <FormComponent />
       </div>
     </>
@@ -350,6 +285,7 @@ export function ContactDrawer({ label, email }) {
       triggerTitle="Click to open contact form"
       renderContent={renderContactContent}
       drawerTitle={label}
+      drawerSubtitle="Feel free to reach out using the form below."
     />
   );
 }

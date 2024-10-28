@@ -9,7 +9,7 @@ function EducationSection({ data }) {
         {(data?.education.values || []).map((education, index) => (
           <div
             key={index}
-            className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
+            className="w-full p-5 rounded-3xl border dark:border-neutral-600/50 border-neutral-400/25 bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
           >
             <div className="flex sm:justify-between flex-col sm:flex-row items-start sm:items-center mb-2">
               <h3 className="font-bold text-base text-neutral-900 dark:text-white">

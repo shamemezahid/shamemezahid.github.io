@@ -39,6 +39,14 @@
     },
     "research": {
       "show": true
+    },
+    "contactCard": {
+      "show": true,
+      "label": "Contact Card"
+    },
+    "emailMe": {
+      "show": true,
+      "label": "Email Me"
     }
   },
   "links": {

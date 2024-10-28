@@ -13,16 +13,16 @@ function ResearchSection({ data }) {
       {(data?.research?.values || []).map((research, index) => (
         <div
           key={index}
-          className="w-full p-5 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
+          className="w-full p-5 border dark:border-neutral-600/50 border-neutral-400/25 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
         >
           <h3 className="font-bold text-base text-neutral-900 dark:text-white mb-2">
             {research.title}
           </h3>
-          <p className="text-sm text-neutral-700 dark:text-neutral-200 mb-2">
-            {research.authors}
-          </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
             {research.conference} ({research.year})
+          </p>
+          <p className="text-sm text-neutral-700 dark:text-neutral-200 mb-2">
+            {research.authors}
           </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
             {research.abstract}
