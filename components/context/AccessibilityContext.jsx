@@ -12,75 +12,71 @@ export function AccessibilityProvider({ children }) {
 
   useEffect(() => {
     setMounted(true);
-    // Load theme
-    const storedTheme = sessionStorage.getItem("theme");
-    if (storedTheme) {
-      setTheme(storedTheme);
-      if (storedTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
+    
+    // Only check system preference for theme
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (prefersDark) {
+      setTheme('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (prefersDark) {
-        setTheme('dark');
-        document.documentElement.classList.add("dark");
-        sessionStorage.setItem("theme", "dark");
-      } else {
-        sessionStorage.setItem("theme", "light");
-      }
+      setTheme('light');
     }
 
-    // Load text size
+    // Load other preferences from session storage
     const savedTextSize = sessionStorage.getItem("largeText");
     if (savedTextSize === "true") {
       setIsLargeText(true);
       document.documentElement.classList.add("large-text");
     }
 
-    // Load animation state
     const savedAnimationState = sessionStorage.getItem("isAnimated");
     if (savedAnimationState === "false") {
       setIsAnimated(false);
       document.documentElement.classList.add("reduce-animation");
     }
 
-    // Load contrast
     const savedHighContrast = sessionStorage.getItem("highContrast");
     if (savedHighContrast === "true") {
       setIsHighContrast(true);
       document.documentElement.classList.add("high-contrast");
     }
+
+    // Add system theme change listener
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e) => {
+      if (e.matches) {
+        document.documentElement.classList.add("dark");
+        setTheme("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        setTheme("light");
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
   
   const resetPreferences = () => {
     if (!mounted) return;
 
     try {
-      // Clear session storage
+      // Clear session storage except theme
+      const currentTheme = sessionStorage.getItem("theme");
       sessionStorage.clear();
+      if (currentTheme) {
+        sessionStorage.setItem("theme", currentTheme);
+      }
       
-      // Remove all classes
+      // Remove all classes except theme
       document.documentElement.classList.remove("large-text");
       document.documentElement.classList.remove("high-contrast");
       document.documentElement.classList.remove("reduce-animation");
-      document.documentElement.classList.remove("dark");
       
-      // Check system preference and set theme accordingly
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      
-      // Update states first
-      setTheme(prefersDark ? 'dark' : 'light');
+      // Update states
       setIsLargeText(false);
       setIsAnimated(true);
       setIsHighContrast(false);
-      
-      // Then update DOM and storage
-      if (prefersDark) {
-        document.documentElement.classList.add("dark");
-        sessionStorage.setItem("theme", "dark");
-      } else {
-        sessionStorage.setItem("theme", "light");
-      }
     } catch (error) {
       console.error("Error resetting preferences:", error);
     }
@@ -88,7 +84,6 @@ export function AccessibilityProvider({ children }) {
 
   const hasPreferencesSet = () => {
     return (
-      theme !== (window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light') ||
       isLargeText ||
       !isAnimated ||
       isHighContrast
