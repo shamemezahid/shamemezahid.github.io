@@ -26,13 +26,13 @@ export function ClickToReveal({ content }) {
   }, []);
 
   return (
-    <div ref={containerRef} className="flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden">
+    <div ref={containerRef} className="w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden">
       <a
         onClick={() => {
           setIsRevealed(!isRevealed);
           setIsCopied(false);
         }}
-        className="w-full flex items-center px-4 py-3 font-normal dark:text-emerald-400 text-emerald-700 hover:text-emerald-500"
+        className="w-full flex items-center px-4 py-3 font-normal dark:text-cyan-400 text-cyan-700 hover:text-cyan-500"
       >
         <EyeIcon
           className={

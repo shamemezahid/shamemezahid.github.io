@@ -62,8 +62,8 @@ function LoadingBtn() {
         viewBox="0 0 200 200"
     >
       <circle
-        fill="#2DD4BF"
-        stroke="#2DD4BF"
+        fill="#0e7490"
+        stroke="#0e7490"
         stroke-width="8"
         r="15"
         cx="40"
@@ -80,8 +80,8 @@ function LoadingBtn() {
         ></animate>
       </circle>
       <circle
-        fill="#2DD4BF"
-        stroke="#2DD4BF"
+        fill="#0e7490"
+        stroke="#0e7490"
         stroke-width="8"
         r="15"
         cx="100"
@@ -98,8 +98,8 @@ function LoadingBtn() {
         ></animate>
       </circle>
       <circle
-        fill="#2DD4BF"
-        stroke="#2DD4BF"
+        fill="#0e7490"
+        stroke="#0e7490"
         stroke-width="8"
         r="15"
         cx="160"
@@ -228,7 +228,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-emerald-400 text-emerald-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
+          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-cyan-400 text-cyan-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
             <CheckCircleIcon className="w-5 h-5 mr-2" />
             {success}
           </p>
@@ -237,7 +237,7 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full sm:w-fit flex items-center justify-center my-4 bg-emerald-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
+            className="w-full sm:w-fit flex items-center justify-center my-4 bg-cyan-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
           >
             <PaperAirplaneIcon className="w-5 h-5 mr-2" />
             Submit
@@ -266,7 +266,7 @@ export function ContactDrawer({ label, email, showEmailMe, showContactCard }) {
   const renderContactContent = () => (
     <>
       {showEmailMe && (
-        <div className="flex flex-row w-fit whitespace-nowrap gap-3 sm:absolute sm:top-1 right-0">
+        <div className="flex flex-row w-full sm:w-fit whitespace-nowrap gap-3 sm:absolute sm:top-1 right-0">
           <ClickToReveal content={email} />
         </div>
       )}

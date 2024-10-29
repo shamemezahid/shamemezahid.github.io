@@ -2,14 +2,15 @@ import ThemeToggle from "@/components/togglers/themeToggler";
 import TextSizeToggle from "@/components/togglers/textsizeToggler";
 import AnimationToggle from "@/components/togglers/animationToggler";
 import HighContrastToggle from "@/components/togglers/highContrastToggler";
-
+import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
-
-import { Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { ArrowPathIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
 
 export default function AccessibilityAccordion() {
   const [isOpen, setIsOpen] = useState(false);
   const accordionRef = useRef(null);
+  const { resetPreferences, hasPreferencesSet } = useAccessibility();
+  const [isResetting, setIsResetting] = useState(false);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -49,21 +50,30 @@ export default function AccessibilityAccordion() {
         className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
-          <div className="p-2 bg-white/95 dark:bg-neutral-900/95 rounded-3xl flex flex-col gap-2">
+          <div className="w-60 p-2 mt-1 bg-white/95 dark:bg-neutral-900/95 rounded-3xl flex flex-col gap-2">
             <ThemeToggle />
             <TextSizeToggle />
             <AnimationToggle />
             <HighContrastToggle />
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 whitespace-normal">
-              Preferences will
-              <button
-                onClick={() => window.location.reload()}
-                className="text-emerald-700 dark:text-emerald-500 hover:underline cursor-pointer px-1 rounded-full"
-              >
-                reset upon reload
-              </button>
-            </p>
           </div>
+            <div className={`w-full grid transition-all duration-300 ${hasPreferencesSet() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+              <div className="w-full overflow-hidden">
+                <button
+                  onClick={() => {
+                    setIsResetting(true);
+                    sessionStorage.clear();
+                    resetPreferences();
+                    setTimeout(() => setIsResetting(false), 1000);
+                  }}
+                  className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-cyan-700 dark:text-cyan-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
+                >
+                  <div className="w-fit flex items-center">
+                    <ArrowPathIcon className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`} />
+                    <p className="text-sm mx-2">Reset Preferences</p>
+                  </div>
+                </button>
+              </div>
+            </div>
         </div>
       </div>
     </div>

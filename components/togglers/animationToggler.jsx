@@ -1,25 +1,17 @@
-import { useState, useEffect } from "react";
+import { useAccessibility } from "../context/AccessibilityContext";
 import { PauseCircleIcon, PlayCircleIcon } from "@heroicons/react/24/outline";
 
 export default function AnimationToggle({ className }) {
-  const [isAnimated, setIsAnimated] = useState(true);
-
-//   useEffect(() => {
-//     const savedAnimationState = sessionStorage.getItem("isAnimated");
-//     if (savedAnimationState === "false") {
-//       setIsAnimated(false);
-//       document.documentElement.classList.add("reduce-animation");
-//     }
-//   }, []);
+  const { isAnimated, setIsAnimated } = useAccessibility();
 
   const toggleAnimation = () => {
     setIsAnimated(!isAnimated);
     if (isAnimated) {
       document.documentElement.classList.add("reduce-animation");
-    //   sessionStorage.setItem("isAnimated", "false");
+      sessionStorage.setItem("isAnimated", "false");
     } else {
       document.documentElement.classList.remove("reduce-animation");
-    //   sessionStorage.setItem("isAnimated", "true");
+      sessionStorage.removeItem("isAnimated");
     }
   };
 

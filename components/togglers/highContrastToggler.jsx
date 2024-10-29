@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useAccessibility } from "../context/AccessibilityContext";
 import { ViewfinderCircleIcon } from "@heroicons/react/24/outline";
 
 export default function HighContrastToggle({ className }) {
-  const [isHighContrast, setIsHighContrast] = useState(false);
+  const { isHighContrast, setIsHighContrast } = useAccessibility();
 
   const toggleHighContrast = () => {
     setIsHighContrast(!isHighContrast);
     if (!isHighContrast) {
       document.documentElement.classList.add("high-contrast");
+      sessionStorage.setItem("highContrast", "true");
     } else {
       document.documentElement.classList.remove("high-contrast");
+      sessionStorage.removeItem("highContrast");
     }
   };
 
