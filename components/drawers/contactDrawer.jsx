@@ -62,8 +62,8 @@ function LoadingBtn() {
         viewBox="0 0 200 200"
     >
       <circle
-        fill="#2DD4BF"
-        stroke="#2DD4BF"
+        fill="#0e7490"
+        stroke="#0e7490"
         stroke-width="8"
         r="15"
         cx="40"
@@ -80,8 +80,8 @@ function LoadingBtn() {
         ></animate>
       </circle>
       <circle
-        fill="#2DD4BF"
-        stroke="#2DD4BF"
+        fill="#0e7490"
+        stroke="#0e7490"
         stroke-width="8"
         r="15"
         cx="100"
@@ -98,8 +98,8 @@ function LoadingBtn() {
         ></animate>
       </circle>
       <circle
-        fill="#2DD4BF"
-        stroke="#2DD4BF"
+        fill="#0e7490"
+        stroke="#0e7490"
         stroke-width="8"
         r="15"
         cx="160"
