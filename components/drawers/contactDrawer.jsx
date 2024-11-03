@@ -62,8 +62,8 @@ function LoadingBtn() {
         viewBox="0 0 200 200"
     >
       <circle
-        fill="#0e7490"
-        stroke="#0e7490"
+        fill="#0d9488"
+        stroke="#0d9488"
         stroke-width="8"
         r="15"
         cx="40"
@@ -80,8 +80,8 @@ function LoadingBtn() {
         ></animate>
       </circle>
       <circle
-        fill="#0e7490"
-        stroke="#0e7490"
+        fill="#0d9488"
+        stroke="#0d9488"
         stroke-width="8"
         r="15"
         cx="100"
@@ -98,8 +98,8 @@ function LoadingBtn() {
         ></animate>
       </circle>
       <circle
-        fill="#0e7490"
-        stroke="#0e7490"
+        fill="#0d9488"
+        stroke="#0d9488"
         stroke-width="8"
         r="15"
         cx="160"
@@ -228,7 +228,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-cyan-400 text-cyan-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
+          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-teal-400 text-teal-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
             <CheckCircleIcon className="w-5 h-5 mr-2" />
             {success}
           </p>
@@ -237,7 +237,7 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full sm:w-fit flex items-center justify-center my-4 bg-cyan-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
+            className="w-full sm:w-fit flex items-center justify-center my-4 bg-teal-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
           >
             <PaperAirplaneIcon className="w-5 h-5 mr-2" />
             Submit

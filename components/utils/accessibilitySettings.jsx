@@ -65,7 +65,7 @@ export default function AccessibilityAccordion() {
                     resetPreferences();
                     setTimeout(() => setIsResetting(false), 1000);
                   }}
-                  className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-cyan-700 dark:text-cyan-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
+                  className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-teal-700 dark:text-teal-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
                 >
                   <div className="w-fit flex items-center">
                     <ArrowPathIcon className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`} />
