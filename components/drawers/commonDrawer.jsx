@@ -7,7 +7,7 @@ const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...p
   <button
     ref={ref} 
     title={title}
-    className={`group flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold transition-all px-4 py-3 rounded-full text-teal-700 dark:text-teal-500 hover:bg-teal-50 dark:hover:bg-teal-950 ${styles}`}
+    className={`group flex items-center gap-2 w-full sm:w-fit text-sm text-left font-semibold transition-all px-4 py-3 rounded-full text-primary-700 dark:text-primary-500 hover:bg-primary-50 dark:hover:bg-primary-950 ${styles}`}
     {...props}
   >
     <div className="flex flex-col">

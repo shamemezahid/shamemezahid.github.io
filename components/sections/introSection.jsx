@@ -15,7 +15,7 @@ export default function IntroSection({ def, data }) {
             id="shameme"
             height={512}
             width={512}
-            className="w-32 aspect-1 rounded-full border-2 border-teal-700 dark:border-teal-500"
+            className="w-32 aspect-1 rounded-full border-2 border-primary-700 dark:border-primary-500"
             draggable="false"
           />
         </div>

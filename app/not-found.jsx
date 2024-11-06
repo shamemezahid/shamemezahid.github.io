@@ -76,10 +76,10 @@ const NotFound = () => {
       <AccessibilityAccordion />
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="relative z-10 text-center bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-3xl p-4 sm:p-6 border border-neutral-200 dark:border-neutral-800">
-        <p className="text-xs sm:text-sm text-teal-800 dark:text-teal-200 mb-2 px-3 py-1 bg-teal-100 dark:bg-teal-900 border border-teal-300 dark:border-teal-700 rounded-full inline-block">404</p>
+        <p className="text-xs sm:text-sm text-primary-800 dark:text-primary-200 mb-2 px-3 py-1 bg-primary-100 dark:bg-primary-900 border border-primary-300 dark:border-primary-700 rounded-full inline-block">404</p>
         <h2 className="text-lg sm:text-2xl font-bold text-neutral-600 dark:text-neutral-400 mb-2">There are no easter eggs here</h2>
         <h4 className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mb-8">No need to click around</h4>
-        <Link href="/" className="group flex items-center justify-center h-12 font-semibold text-teal-700 dark:text-teal-500 transition-all duration-500 px-4 py-3 rounded-2xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-teal-100 dark:hover:bg-teal-900">
+        <Link href="/" className="group flex items-center justify-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-2xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900">
           <HomeIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-200" />
           <span className="ml-2 texl-sm sm:text-base transition-all duration-500">Return to Home</span>
         </Link>

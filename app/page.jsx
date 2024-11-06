@@ -50,7 +50,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
-      {/* <div className="absolute inset-0 w-full h-screen bg-[url('/images/noise.jpg')] bg-repeat opacity-80 dark:opacity-0 transition-all duration-200 ease-in"></div> */}
       <AccessibilityAccordion />
       <main className="animate-fadeIn flex flex-col w-full h-full max-w-6xl p-2 sm:p-6 pt-6 mx-auto relative">
         <IntroSection def={def} data={data} />

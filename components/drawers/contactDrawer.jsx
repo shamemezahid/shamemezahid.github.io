@@ -228,7 +228,7 @@ function FormComponent() {
           textarea
         />
         {success ? (
-          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-teal-400 text-teal-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
+          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-primary-400 text-primary-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
             <CheckCircleIcon className="w-5 h-5 mr-2" />
             {success}
           </p>
@@ -237,7 +237,7 @@ function FormComponent() {
         ) : (
           <button
             type="submit"
-            className="w-full sm:w-fit flex items-center justify-center my-4 bg-teal-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
+            className="w-full sm:w-fit flex items-center justify-center my-4 bg-primary-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
           >
             <PaperAirplaneIcon className="w-5 h-5 mr-2" />
             Submit

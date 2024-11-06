@@ -21,7 +21,7 @@ function EducationSection({ data }) {
                     href={education.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center h-8 font-medium text-teal-700 dark:text-teal-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-teal-100 dark:hover:bg-teal-900"
+                    className="group flex items-center h-8 font-medium text-primary-700 dark:text-primary-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
                     title={`Open ${education.institute} website`}
                   >
                     <ArrowUpRightIcon className="w-0 h-0 group-hover:w-4 group-hover:h-4 transition-all duration-500" />

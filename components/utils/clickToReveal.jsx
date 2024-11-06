@@ -32,7 +32,7 @@ export function ClickToReveal({ content }) {
           setIsRevealed(!isRevealed);
           setIsCopied(false);
         }}
-        className="w-full flex items-center px-4 py-3 font-normal dark:text-teal-400 text-teal-700 hover:text-teal-500"
+        className="w-full flex items-center px-4 py-3 font-normal dark:text-primary-400 text-primary-700 hover:text-primary-500"
       >
         <EyeIcon
           className={
