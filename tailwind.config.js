@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -23,6 +26,14 @@ module.exports = {
         fadeIn: 'fadeIn 0.5s ease-in forwards',
       },
     },
+    colors: {
+      primary: colors.emerald,
+      neutral: colors.neutral,
+      white: colors.white,
+      black: colors.black,
+      lime: colors.lime,
+      yellow: colors.yellow,
+    }
   },
   plugins: [
     require('tailwind-scrollbar')({ nocompatible: true }),

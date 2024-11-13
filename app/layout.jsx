@@ -34,7 +34,7 @@ const GoogleAnalytics = () => {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-gradient-to-br from-cyan-50/25 via-lime-50/25 to-neutral-50 dark:from-cyan-950/30 dark:via-cyan-950/20 dark:to-neutral-950">
+    <html lang="en" className="bg-gradient-to-br from-primary-50/25 via-lime-50/25 to-neutral-50 dark:from-primary-950/30 dark:via-primary-950/20 dark:to-neutral-950">
       <GoogleAnalytics/>
       <AccessibilityProvider>
         <body className={font.className}>{children}</body>

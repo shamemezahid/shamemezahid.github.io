@@ -39,14 +39,14 @@ function ContactCard() {
       <div className="mt-4 flex gap-4">
         <button
           onClick={flipCard}
-          className="flex items-center px-4 py-2 bg-cyan-600 text-white rounded-full hover:bg-cyan-700 transition-colors"
+          className="flex items-center px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
         >
           <ArrowPathIcon className="w-5 h-5 mr-2" />
           Flip Card
         </button>
         <button
           onClick={downloadCard}
-          className="flex items-center px-4 py-2 bg-cyan-600 text-white rounded-full hover:bg-cyan-700 transition-colors"
+          className="flex items-center px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
         >
           <ArrowDownTrayIcon className="w-5 h-5 mr-2" />
           Download

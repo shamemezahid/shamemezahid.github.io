@@ -12,7 +12,7 @@ export default function LinksSection({ def, data }) {
         {links.map((link, index) => (
           <a
             key={index}
-            className="group flex items-center h-12 font-semibold text-cyan-700 dark:text-cyan-500 transition-all duration-500 px-4 py-3 rounded-full hover:bg-cyan-50 dark:hover:bg-cyan-950"
+            className="group flex items-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-full hover:bg-primary-50 dark:hover:bg-primary-950"
             target="_blank"
             href={link.url}
             rel="noopener noreferrer"
