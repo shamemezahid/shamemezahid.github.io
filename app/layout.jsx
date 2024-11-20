@@ -32,10 +32,19 @@ const GoogleAnalytics = () => {
   );
 };
 
+export const Head = () => {
+  return (
+    <head>
+      <meta name="google-site-verification" content="LBVaADvhEAQ71RT5noFGfqymwq9No4ZYCQNRUMZ-KcA" />
+    </head>
+  );
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-gradient-to-br from-primary-50/25 via-lime-50/25 to-neutral-50 dark:from-primary-950/30 dark:via-primary-950/20 dark:to-neutral-950">
-      <GoogleAnalytics/>
+      <Head />
+      <GoogleAnalytics />
       <AccessibilityProvider>
         <body className={font.className}>{children}</body>
       </AccessibilityProvider>
