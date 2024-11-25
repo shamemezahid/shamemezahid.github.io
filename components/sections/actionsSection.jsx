@@ -9,7 +9,7 @@ export default function ActionsSection({ def, data }) {
   return (
     (data?.actions?.show || def.actions.show) && (
       <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-        <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 items-start -mx-4 transition-all">
+        <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-1 sm:gap-2 items-start -mx-4 transition-all">
           
           {(data?.actions?.resume?.show || def.actions.resume.show) && (
             <ResumeDrawer

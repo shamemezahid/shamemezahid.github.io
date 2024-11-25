@@ -1,14 +1,15 @@
 import React from "react";
 import Script from "next/script";
 import "./globals.css";
-import { Merriweather_Sans } from "next/font/google";
+import { Merriweather_Sans, Figtree } from "next/font/google";
 import { AccessibilityProvider } from "@/components/context/AccessibilityContext";
 
-const font = Merriweather_Sans({ subsets: ["latin-ext"] });
+// const font = Figtree({ subsets: ["latin"] });
+const font = Merriweather_Sans({ subsets: ["latin-ext"]});
 
 export const metadata = {
-  title: "I'm Shamim Bin Zahid",
-  description: "Hi, Welcome to my site 👋",
+  title: "Shamim Bin Zahid",
+  description: "Hi, I am a data-driven UI/UX designer with over 4 years of experience creating intuitive, functional, and user-focused design solutions that drive business growth. I've worked on and also led design and development teams across diverse industries, including e-commerce, recruitment, telco, telemedicine, edtech, freelancing, and logistics. I am always open to feedback and eager to learn.",
 };
 
 const GoogleAnalytics = () => {
@@ -35,6 +36,7 @@ const GoogleAnalytics = () => {
 export const Head = () => {
   return (
     <head>
+      <link rel="icon" href="/favicon.ico" />
       <meta name="google-site-verification" content="LBVaADvhEAQ71RT5noFGfqymwq9No4ZYCQNRUMZ-KcA" />
     </head>
   );
