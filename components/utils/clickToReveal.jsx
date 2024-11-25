@@ -26,7 +26,7 @@ export function ClickToReveal({ content }) {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden">
+    <div ref={containerRef} className="text-sm w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden">
       <a
         onClick={() => {
           setIsRevealed(!isRevealed);
