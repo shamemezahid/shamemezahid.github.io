@@ -10,9 +10,10 @@ export default function IntroSection({ def, data }) {
           onContextMenu={(e) => e.preventDefault()}
         >
           <img
-            alt="shamimbinzahid"
+            alt="Shamim Bin Zahid"
             src="/images/shameme.webp"
-            id="shameme"
+            id="shamemezahid"
+            aria-label="Picture of Shamim Bin Zahid"
             height={512}
             width={512}
             className="w-32 aspect-1 rounded-full border-2 border-primary-700 dark:border-primary-500"

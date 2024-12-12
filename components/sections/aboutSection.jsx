@@ -1,6 +1,6 @@
 export default function AboutSection({ def, data }) {
   return (
-    <div className="text-sm flex flex-col justify-start gap-2 p-4 rounded-xl">
+    <div className="text-sm flex flex-col justify-start gap-2 p-4 rounded-xl" aria-label="About Shamim Bin Zahid">
       <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">
         {data?.about?.label || def.about.label}
       </h2>
