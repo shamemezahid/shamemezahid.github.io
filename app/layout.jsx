@@ -9,7 +9,7 @@ const font = Merriweather_Sans({ subsets: ["latin-ext"]});
 
 export const metadata = {
   title: "Shamim Bin Zahid",
-  description: "I am Shamim Bin Zahid, A UI/UX Designer from Bangladesh with over 4 years of experience. I specialize in sofware product design, UI/UX, Software Engineering and more. I am also known as shamimbinzahid & shamemezahid in other paltforms.",
+  description: "I'm Shamim Bin Zahid, A UI/UX Designer from Bangladesh with over 4 years of experience. I specialize in Software Product Design, UI/UX, Software Engineering and more. I am also known as shamimbinzahid & shamemezahid in other platforms.",
 };
 
 const GoogleAnalytics = () => {
