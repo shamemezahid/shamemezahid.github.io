@@ -5,7 +5,7 @@
   "intro": {
     "label": "Intro",
     "name": "Shamim Bin Zahid",
-    "greetings": "Hi I'm Shamim Bin Zahid 👋",
+    "greetings": "Hi I'm Shememe Bin Zahid 👋",
     "tagline": "UI/UX Designer, Product Manager & Software Engineer",
     "location": "Based in Dhaka, Bangladesh",
     "quote": "Making the world slightly better with better designed \"Things\""
@@ -19,8 +19,9 @@
     "resume": {
       "show": true,
       "label": "View Resume",
-      "url": "https://drive.google.com/file/d/1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn/preview",
-      "download": "https://drive.usercontent.google.com/u/0/uc?id=1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn&export=download"
+      "url": "https://drive.google.com/file/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview",
+      "download": "https://drive.google.com/file/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview",
+      "download_old": "https://drive.usercontent.google.com/u/0/uc?id=1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn&export=download"
     },
     "contact": {
       "show": true,
@@ -50,7 +51,7 @@
     }
   },
   "links": {
-    "label": "Links",
+    "label": "Social & Portfolio Links",
     "values": [
       {
         "label": "LinkedIn",
@@ -61,6 +62,11 @@
         "label": "Behance",
         "url": "https://www.behance.net/shamemezahid",
         "icon": "be"
+      },
+      {
+        "label": "Notion Blogs",
+        "url": "https://shamemezahid.notion.site/Written-by-Shamim-1bfb02c82e3241e49f14e85dc466bf75",
+        "icon": "no"
       },
       {
         "label": "GitHub",
@@ -81,11 +87,6 @@
         "label": "Instagram",
         "url": "https://www.instagram.com/qwaccmaster69",
         "icon": "ig"
-      },
-      {
-        "label": "Notion Blogs",
-        "url": "https://shamemezahid.notion.site/Written-by-Shamim-1bfb02c82e3241e49f14e85dc466bf75",
-        "icon": "no"
       }
     ]
   },
@@ -128,7 +129,14 @@
       },
       {
         "category": "Programming Languages",
-        "skills": ["C++", "Python", "Java", "JavaScript", "HTML", "CSS"]
+        "skills": [
+          "C++",
+          "Python",
+          "Java",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
       },
       {
         "category": "Frameworks & Tools",
@@ -169,14 +177,13 @@
         "duration": "1 yrs 8 mos as of Sep 2024",
         "responsibilities": [
           "Led, managed & trained the UI/UX design team, taking ownership of the design process from concept to execution.",
-          "Conducted requirement analysis and collaborated on software design specifications, ensuring smooth alignment between client needs and technical implementation.",
-          "Led product management, ensuring alignment with client requirements within an Agile Scrum environment.",
+          "Performed requirement analysis, prepared software design specifications and ensured alignment between client needs and technical implementations in an agile scrum environment.",
           "Developed information architecture and partnered with backend teams to create system designs and database models.",
-          "Handling the majority of design decisions, Designing UIs, Including creating wireframes, prototypes, design systems for brand identities.",
-          "Working closely with the frontend team including creating design guides, design reviews, code reviews & developing as well.",
-          "Conducted usability testing, and manual QA testing, providing detailed reports for continuous improvement.",
-          "Conducted client demonstrations & played an instrumental role in recruiting for the UI/UX and Frontend dev teams.",
-          "Managed and oversaw the design process of B2B and B2C systems across industries including pharmaceuticals, healthcare, e-commerce, and recruitment management."
+          "Handled the majority of design decisions, designing UIs, including wireframes, prototypes, and design systems for brands.",
+          "Worked closely with the frontend team, including creating design guides, design reviews, and code reviews.",
+          "Conducted usability testing and manual QA testing, providing detailed reports for continuous improvement.",
+          "Conducted client demonstrations and played an instrumental role in recruiting for the UI/UX and Frontend development teams.",
+          "Managed and oversaw the design process of B2B and B2C systems across industries, including pharmaceuticals, healthcare, e-commerce, and recruitment management."
         ],
         "shift": "Full Time",
         "nature": "Hybrid",
@@ -274,9 +281,9 @@
         "authors": "Shamim Bin Zahid, Aishwarya Ghosh Bristy, Mushfiqur Hasan Oli, Md Fahim, Sarker T Ahmed Rumee, Moinul Islam Zaber",
         "conference": "20th International Conference on Information Systems Security",
         "year": "2024",
-        "abstract": "Accepted for Springer. ETA publication December 2024",
-        "URL": "https://iciss.isrdc.in/accepted-papers/",
-        "URL_label": "Conference Link",
+        "abstract": "Published in Springer’s LNCS Volume 15416",
+        "URL": "https://doi.org/10.1007/978-3-031-80020-7_20",
+        "URL_label": "Paper Link",
         "presentation": ""
       },
       {
@@ -285,18 +292,18 @@
         "conference": "6th International Conference on Imaging, Vision & Pattern Recognition (IVPR) & the 11th International Conference on Informatics, Electronics & Vision (ICIEV)",
         "year": "2023",
         "abstract": "Abstract on Page 24",
-        "URL": "http://cennser.org/ICIEV23/proceedingsV23.pdf",
-        "URL_label": "Full Proceedings",
+        "URL": "https://ahadvisionlab.com/cennser/ICIEV23/proceedingsV23.pdf",
+        "URL_label": "Proceedings",
         "presentation": "https://www.youtube.com/watch?v=wE7H8KZ98G4"
       },
       {
         "title": "EULA Usability Project",
         "authors": "Shamim Bin Zahid, Aishwarya Ghosh Bristy",
-        "conference": "Undergraduate Thesis, University of Dhaka",
+        "conference": "Undergraduate Thesis at University of Dhaka",
         "year": "2022",
         "abstract": "A user research study investigating the usability of current privacy policy representations and how summarizing impacts on users' awareness of their online information privacy. Followed by development of a tool that summarizes the privacy policies for them.",
         "URL": "https://www.dndlab.org/publications/",
-        "URL_label": "DND Labs, DU",
+        "URL_label": "DND Lab, DU",
         "presentation": ""
       }
     ]

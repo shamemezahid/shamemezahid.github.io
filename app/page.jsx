@@ -4,7 +4,6 @@ import def from "/public/def.json";
 import { useEffect, useState } from "react";
 
 import AccessibilityAccordion from "@/components/utils/accessibilitySettings";
-import LoadingScreen from "@/components/utils/loadingScreen";
 import IntroSection from "@/components/sections/introSection";
 import QuoteSection from "@/components/sections/quoteSection";
 import ActionsSection from "@/components/sections/actionsSection";
@@ -13,8 +12,8 @@ import LinksSection from "@/components/sections/linksSection";
 import FooterSection from "@/components/sections/footerSection";
 
 export default function Home() {
-  const [data, setData] = useState(def);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(def); // Initialize with default data
+  const [loading, setLoading] = useState(false); // Start with false since we have default data
   const [error, setError] = useState(null);
   const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061e";
   const READ_ACCESS_KEY =
@@ -23,30 +22,31 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // App is already rendered with default data, so we can start API fetch
+        setLoading(true);
         const response = await fetch(API_URL, {
           headers: {
             "X-Access-Key": READ_ACCESS_KEY,
           },
         });
+
         if (!response.ok) {
           throw new Error("Network error, Failed to load data");
         }
+
         const jsonData = await response.json();
+        // Update state with API data
         setData(jsonData.record);
       } catch (error) {
-        // If there's an error, we'll use the default data (already set in useState)
         setError(error);
+        console.error("Error loading API data, keeping default data:", error);
       } finally {
         setLoading(false);
       }
     };
+
     fetchData();
   }, []);
-
-  if (loading) return <LoadingScreen />;
-
-  if (error)
-    console.error(error, "Error loading data, loading default data instead");
 
   return (
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
