@@ -1,12 +1,12 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-export default function LinksSection({ def, data }) {
-  const links = data?.links?.values || def.links.values;
+export default function LinksSection({ data }) {
+  const links = data?.links?.values;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl" aria-label="Social Links of Shamim Bin Zahid">
       <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">
-        {data?.links?.label || def.links.label}
+        {data?.links?.label}
       </h2>
       <div className="w-full grid grid-cols-2 sm:flex sm:flex-wrap gap-1 sm:gap-2 items-start -mx-4 transition-all duration-200">
         {links.map((link, index) => (

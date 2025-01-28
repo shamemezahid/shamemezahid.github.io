@@ -248,7 +248,7 @@ function FormComponent() {
   );
 }
 
-export function ContactDrawer({ label, email, showEmailMe, showContactCard }) {
+export function ContactDrawer({ label, email, showEmail }) {
   const ContactIcon = React.forwardRef((props, ref) => (
     <Image
       ref={ref}
@@ -265,7 +265,7 @@ export function ContactDrawer({ label, email, showEmailMe, showContactCard }) {
 
   const renderContactContent = () => (
     <>
-      {showEmailMe && (
+      {showEmail && (
         <div className="flex flex-row w-full sm:w-fit whitespace-nowrap gap-3 sm:absolute sm:top-1 right-0">
           <ClickToReveal content={email} />
         </div>

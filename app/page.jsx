@@ -11,19 +11,19 @@ import AboutSection from "@/components/sections/aboutSection";
 import LinksSection from "@/components/sections/linksSection";
 import FooterSection from "@/components/sections/footerSection";
 
+
 export default function Home() {
   const [data, setData] = useState(def); // Initialize with default data
-  const [loading, setLoading] = useState(false); // Start with false since we have default data
-  const [error, setError] = useState(null);
+  // const [loading, setLoading] = useState(false); // Start with false since we have default data
+  // const [error, setError] = useState(null);
   const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061e";
   const READ_ACCESS_KEY =
     "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
 
-  useEffect(() => {
     const fetchData = async () => {
       try {
         // App is already rendered with default data, so we can start API fetch
-        setLoading(true);
+        // setLoading(true);
         const response = await fetch(API_URL, {
           headers: {
             "X-Access-Key": READ_ACCESS_KEY,
@@ -38,13 +38,14 @@ export default function Home() {
         // Update state with API data
         setData(jsonData.record);
       } catch (error) {
-        setError(error);
+        // setError(error);
         console.error("Error loading API data, keeping default data:", error);
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 
+  useEffect(() => {
     fetchData();
   }, []);
 
@@ -52,12 +53,12 @@ export default function Home() {
     <div className="flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
       <AccessibilityAccordion />
       <main className="animate-fadeIn flex flex-col w-full h-full max-w-6xl p-2 sm:p-6 pt-6 mx-auto relative">
-        <IntroSection def={def} data={data} />
-        <ActionsSection def={def} data={data} />
-        <QuoteSection def={def} data={data} />
-        <AboutSection def={def} data={data} />
-        <LinksSection def={def} data={data} />
-        <FooterSection def={def} data={data} />
+        <IntroSection data={data} />
+        <ActionsSection data={data} />
+        <QuoteSection data={data} />
+        <AboutSection data={data} />
+        <LinksSection data={data} />
+        <FooterSection data={data} />
       </main>
     </div>
   );

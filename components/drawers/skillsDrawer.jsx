@@ -3,8 +3,8 @@ import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import { WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 import SeparatorLine from "../utils/separatorLine";
 
-function SkillsSection({ def, data }) {
-  const skillsData = data?.skills || def?.skills;
+function SkillsSection({ data }) {
+  const skillsData = data?.skills;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
       <div className="w-full flex flex-col gap-8 items-start text-neutral-700 dark:text-neutral-200 text-left">
@@ -31,11 +31,11 @@ function SkillsSection({ def, data }) {
   );
 }
 
-export function SkillsDrawer({ label, data, def }) {
+export function SkillsDrawer({ label, data }) {
   const renderSkillsContent = () => (
     <>
       <div className="w-full h-full overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent">
-        <SkillsSection data={data} def={def} />
+        <SkillsSection data={data}/>
       </div>
     </>
   );
