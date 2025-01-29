@@ -6,7 +6,7 @@ import {
 
 export function ResearchSection({ data }) {
   return (
-    <div className="text-sm w-full flex flex-col justify-start gap-4 rounded-xl mb-16">
+    <div className="text-sm w-full flex flex-col justify-start gap-4 rounded-xl">
       {(data?.research?.values || []).map((research, index) => (
         <div
           key={index}

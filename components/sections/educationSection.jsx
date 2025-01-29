@@ -1,9 +1,8 @@
-
 import { GlobeAltIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export function EducationSection({ data }) {
   return (
-    <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl mb-16">
+    <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl">
       <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
         {(data?.education.values || []).map((education, index) => (
           <div

@@ -5,6 +5,7 @@ import HighContrastToggle from "@/components/togglers/highContrastToggler";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
 import { ArrowPathIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
+import SPAToggle from "../togglers/spaToggler";
 
 export default function AccessibilityAccordion() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,25 +56,30 @@ export default function AccessibilityAccordion() {
             <TextSizeToggle />
             <AnimationToggle />
             <HighContrastToggle />
+            <SPAToggle />
           </div>
-            <div className={`w-full grid transition-all duration-300 ${hasPreferencesSet() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-              <div className="w-full overflow-hidden">
-                <button
-                  onClick={() => {
-                    setIsResetting(true);
-                    sessionStorage.clear();
-                    resetPreferences();
-                    setTimeout(() => setIsResetting(false), 1000);
-                  }}
-                  className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
-                >
-                  <div className="w-fit flex items-center">
-                    <ArrowPathIcon className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`} />
-                    <p className="text-sm mx-2">Reset Preferences</p>
-                  </div>
-                </button>
-              </div>
+          <div
+            className={`w-full grid transition-all duration-300 ${hasPreferencesSet() ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+          >
+            <div className="w-full overflow-hidden">
+              <button
+                onClick={() => {
+                  setIsResetting(true);
+                  sessionStorage.clear();
+                  resetPreferences();
+                  setTimeout(() => setIsResetting(false), 1000);
+                }}
+                className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
+              >
+                <div className="w-fit flex items-center">
+                  <ArrowPathIcon
+                    className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`}
+                  />
+                  <p className="text-sm mx-2">Reset Preferences</p>
+                </div>
+              </button>
             </div>
+          </div>
         </div>
       </div>
     </div>
