@@ -14,16 +14,14 @@ export default function ActionsSection({ data }) {
           {data?.actions?.resume?.show && (
             <ResumeDrawer
               label={data?.actions?.resume?.label}
-              src={data?.actions?.resume?.url}
-              download_url={data?.actions?.resume?.download}
+              data={data}
             />
           )}
 
           {data?.actions?.contact?.show && (
             <ContactDrawer
               label={data?.actions?.contact?.label}
-              email={data?.actions?.contact?.address}
-              showEmail={data?.actions?.contact?.show_email}
+              data={data}
             />
           )}
 

@@ -11,7 +11,6 @@ import AboutSection from "@/components/sections/aboutSection";
 import LinksSection from "@/components/sections/linksSection";
 import FooterSection from "@/components/sections/footerSection";
 
-
 export default function Home() {
   const [data, setData] = useState(def); // Initialize with default data
   // const [loading, setLoading] = useState(false); // Start with false since we have default data

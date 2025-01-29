@@ -27,7 +27,7 @@ module.exports = {
       },
     },
     colors: {
-      primary: colors.teal,
+      primary: colors.sky,
       neutral: colors.neutral,
       white: colors.white,
       black: colors.black,

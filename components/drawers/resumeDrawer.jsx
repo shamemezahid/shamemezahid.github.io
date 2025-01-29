@@ -1,26 +1,14 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/commonDrawer";
 import ResumeIcon from "@/public/icons/ResumeIcon";
-import { ArrowDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { ResumeContent } from "../sections/resumeContent";
+import { DownloadFile } from "../utils/downloadFile";
 
-export function ResumeDrawer({ label, src, download_url }) {
+export function ResumeDrawer({ label, data }) {  
   const renderResumeContent = () => (
     <>
-      <a
-        href={download_url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="absolute -top-2 right-0 group flex items-center gap-2 w-fit text-sm text-left font-semibold text-primary-700 dark:text-primary-500 transition-all px-4 py-3 rounded-full hover:bg-primary-50 dark:hover:bg-primary-950"
-      >
-        <div className="flex flex-col">
-          <ArrowDownTrayIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
-          <ArrowDownIcon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-500 dark:stroke-neutral-400" />
-        </div>
-        Download
-      </a>
-      <div className="w-full h-full mx-auto sm:rounded-t-xl overflow-hidden">
-        <iframe className="w-full h-full rounded-t-3xl" src={src} allow="autoplay" />
-      </div>
+      <DownloadFile download_url = {data?.actions?.resume?.download} />
+      <ResumeContent src = {data?.actions?.resume?.url} />
     </>
   );
 
