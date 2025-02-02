@@ -16,7 +16,7 @@ import LinksSection from "@/components/sections/linksSection";
 import AnnouncementBanner from "@/components/utils/announcementBanner";
 
 export default function AltPage() {
-  const data = useData();
+  var data = useData();
   return (
     <div className="pt-16 flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
       <AccessibilityAccordion />
@@ -33,7 +33,6 @@ export default function AltPage() {
         <SkillsSection data={data} />
         <ResearchSection data={data} />
         <ContactFormSection />
-        <ResumeContent data={data} />
         <AnnouncementBanner
           message={
             "This page is a work in progress. Things may not look as intended."

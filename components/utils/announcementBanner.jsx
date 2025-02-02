@@ -1,24 +1,25 @@
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function AnnouncementBanner({
   message,
   action_url,
   action_text,
 }) {
-  const router = useRouter();
-
   return (
-    <div className="flex items-center gap-3 fixed top-3 left-3 right-3 w-fit mx-auto z-[9999] pr-6 p-3 bg-opacity-80 rounded-full bg-primary-100 border border-primary-300">
-      <InformationCircleIcon className="text-primary-800 w-6 h-6" />
-      <p className="text-primary-800 text-center">{message}</p>
+    <div className="text-xs flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-3 fixed top-3 left-3 right-3 w-fit mx-auto z-[9999] pr-6 p-3 bg-opacity-80 rounded-xl bg-primary-100 border border-primary-300">
+      <div className="flex gap-2 items-center">
+        <InformationCircleIcon className="text-primary-800 w-6 h-6" />
+        <p className="text-primary-800 text-left sm:text-center">{message}</p>
+      </div>
+
       {action_url && action_text && (
-        <button
-          onClick={() => router.push(action_url)}
-          className="text-primary-800 font-bold hover:text-primary-900"
+        <a
+          href={action_url}
+          className="ml-6 sm:inset-0 text-primary-800 font-bold hover:text-primary-900"
         >
           {action_text}
-        </button>
+        </a>
       )}
     </div>
   );
