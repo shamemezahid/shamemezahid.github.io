@@ -12,26 +12,26 @@ export function DataProvider({ children }) {
     "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
 
   useEffect(() => {
-    const fetchData = () => {
-      fetch(API_URL, {
-        headers: {
-          "X-Access-Key": READ_ACCESS_KEY,
-        },
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error("Network error, Failed to load data");
-          }
-          return response.json();
-        })
-        .then(jsonData => setData(jsonData.record))
-        .catch(error => {
-          console.error("Error loading API data, keeping default data:", error);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(API_URL, {
+          headers: {
+            "X-Access-Key": READ_ACCESS_KEY,
+          },
         });
+
+        if (!response.ok) {
+          throw new Error("Network error, Failed to load data");
+        }
+
+        const jsonData = await response.json();
+        setData(jsonData.record);
+      } catch (error) {
+        console.error("Error loading API data, keeping default data:", error);
+      }
     };
 
-
-    return fetchData;
+    fetchData();
   }, []);
 
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
