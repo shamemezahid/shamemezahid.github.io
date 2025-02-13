@@ -1,7 +1,7 @@
 import React from "react";
 import { DocumentArrowUpIcon } from "@heroicons/react/24/outline";
 import { Drawer } from "vaul";
-import SeparatorLine from "../utils/separatorLine";
+import SeparatorLine from "../utils/SeparatorLine";
 
 const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...props }, ref) => (
   <button

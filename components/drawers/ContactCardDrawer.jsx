@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CommonDrawer } from "@/components/drawers/commonDrawer";
+import { CommonDrawer } from "@/components/drawers/CommonDrawer";
 import { QrCodeIcon, ArrowPathIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 

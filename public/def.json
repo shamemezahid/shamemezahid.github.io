@@ -20,8 +20,7 @@
       "show": true,
       "label": "View Resume",
       "url": "https://drive.google.com/file/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview",
-      "download": "https://drive.google.com/file/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview",
-      "download_old": "https://drive.usercontent.google.com/u/0/uc?id=1IZtOuy0kajoZ72gNqMY_OsH8dCW77gLn&export=download"
+      "download": "https://docs.google.com/document/export?format=pdf&id=1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64"
     },
     "contact": {
       "show": true,

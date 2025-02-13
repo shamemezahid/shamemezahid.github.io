@@ -1,22 +1,22 @@
 "use client";
 
+import { ResumeDrawer } from "@/components/drawers/ResumeDrawer";
+import { ContactFormSection } from "@/components/sections/ContactFormSection";
+import { ExperiencesSection } from "@/components/sections/ExperiencesSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
+import { EducationSection } from "@/components/sections/EducationSection";
+import { ResearchSection } from "@/components/sections/ResearchSection";
+import IntroSection from "@/components/sections/IntroSection";
+import QuoteSection from "@/components/sections/QuoteSection";
+import AboutSection from "@/components/sections/AboutSection";
+import LinksSection from "@/components/sections/LinksSection";
+import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
+import AnnouncementBanner from "@/components/utils/AnnouncementBanner";
+import SectionWithTitle from "@/components/utils/SectionTitle";
 import { useData } from "@/components/context/DataContext";
 
-import { ResumeContent } from "@/components/sections/resumeContent";
-import { ContactFormSection } from "@/components/sections/contactFormSection";
-import { ExperiencesSection } from "@/components/sections/experiencesSection";
-import { SkillsSection } from "@/components/sections/skillsSection";
-import { EducationSection } from "@/components/sections/educationSection";
-import { ResearchSection } from "@/components/sections/researchSection";
-import AccessibilityAccordion from "@/components/utils/accessibilitySettings";
-import IntroSection from "@/components/sections/introSection";
-import QuoteSection from "@/components/sections/quoteSection";
-import AboutSection from "@/components/sections/aboutSection";
-import LinksSection from "@/components/sections/linksSection";
-import AnnouncementBanner from "@/components/utils/announcementBanner";
-
 export default function AltPage() {
-  var data = useData();
+  const data = useData();
   return (
     <div className="pt-16 flex flex-col gap-4 md:justify-center min-h-screen dark:bg-neutral-900 transition-all duration-200 ease-in">
       <AccessibilityAccordion />
@@ -24,15 +24,31 @@ export default function AltPage() {
         <div className="flex flex-col">
           <IntroSection data={data} />
           <QuoteSection data={data} />
+          <ResumeDrawer label="View Resume" data={data} />
           <AboutSection data={data} />
           <LinksSection data={data} />
         </div>
-        <ResumeContent src={data?.actions?.resume?.url} />
-        <ExperiencesSection data={data} />
-        <EducationSection data={data} />
-        <SkillsSection data={data} />
-        <ResearchSection data={data} />
-        <ContactFormSection />
+        <SectionWithTitle
+          pagetitle="Experiences"
+          content={<ExperiencesSection data={data}/>}
+        />
+        <SectionWithTitle
+          pagetitle="Skills"
+          content={<SkillsSection data={data} />}
+        />
+        <SectionWithTitle
+          pagetitle="Education"
+          content={<EducationSection data={data} />}
+        />
+        <SectionWithTitle
+          pagetitle="Research"
+          content={<ResearchSection data={data} />}
+        />
+        <SectionWithTitle
+          pagetitle="Contact"
+          content={<ContactFormSection />}
+        />
+        
         <AnnouncementBanner
           message={
             "This page is a work in progress. Things may not look as intended."
@@ -44,4 +60,3 @@ export default function AltPage() {
     </div>
   );
 }
-

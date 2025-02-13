@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import { ClickToReveal } from "../utils/clickToReveal";
-import { ContactFormSection } from "../sections/contactFormSection";
+import { CommonDrawer } from "@/components/drawers/CommonDrawer";
+import { ClickToReveal } from "../utils/ClickToReveal";
+import { ContactFormSection } from "../sections/ContactFormSection";
 
 const renderContactContent = ( data ) => (
   <>

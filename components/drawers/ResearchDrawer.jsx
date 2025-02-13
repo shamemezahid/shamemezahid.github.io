@@ -1,6 +1,6 @@
 import React from "react";
-import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import { ResearchSection } from "../sections/researchSection";
+import { CommonDrawer } from "@/components/drawers/CommonDrawer";
+import { ResearchSection } from "../sections/ResearchSection";
 import { ChartPieIcon } from "@heroicons/react/24/outline";
 
 const renderResearchContent = ( data ) => (

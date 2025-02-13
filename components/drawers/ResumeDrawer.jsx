@@ -1,8 +1,8 @@
 import React from "react";
-import { CommonDrawer } from "@/components/drawers/commonDrawer";
+import { CommonDrawer } from "@/components/drawers/CommonDrawer";
 import ResumeIcon from "@/public/icons/ResumeIcon";
-import { ResumeContent } from "../sections/resumeContent";
-import { DownloadFile } from "../utils/downloadFile";
+import { ResumeContent } from "../sections/ResumeContent";
+import { DownloadFile } from "../utils/DownloadFile";
 
 const renderResumeContent = ( data ) => (
   <>

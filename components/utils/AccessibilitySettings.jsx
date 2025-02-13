@@ -1,11 +1,11 @@
-import ThemeToggle from "@/components/togglers/themeToggler";
-import TextSizeToggle from "@/components/togglers/textsizeToggler";
-import AnimationToggle from "@/components/togglers/animationToggler";
-import HighContrastToggle from "@/components/togglers/highContrastToggler";
+import ThemeToggle from "@/components/togglers/ThemeToggler";
+import TextSizeToggle from "@/components/togglers/TextsizeToggler";
+import AnimationToggle from "@/components/togglers/AnimationToggler";
+import HighContrastToggle from "@/components/togglers/HighContrastToggler";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
 import { ArrowPathIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
-import SPAToggle from "../togglers/spaToggler";
+import SPAToggle from "../togglers/SpaToggler";
 
 export default function AccessibilityAccordion() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React from "react";
-import { CommonDrawer } from "@/components/drawers/commonDrawer";
-import { ExperiencesSection } from "../sections/experiencesSection";
+import { CommonDrawer } from "@/components/drawers/CommonDrawer";
+import { ExperiencesSection } from "../sections/ExperiencesSection";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 
 const renderExperiencesContent = ( data ) => (

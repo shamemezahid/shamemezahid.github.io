@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Merriweather_Sans } from 'next/font/google'
 import { HomeIcon } from '@heroicons/react/24/outline'
-import AccessibilityAccordion from '@/components/utils/accessibilitySettings'
+import AccessibilityAccordion from '@/components/utils/AccessibilitySettings'
 
 const merriweatherSans = Merriweather_Sans({ 
   weight: ['400', '700'],

@@ -1,9 +1,9 @@
-import { ResumeDrawer } from "@/components/drawers/resumeDrawer";
-import { ContactDrawer } from "@/components/drawers/contactDrawer";
-import { ExperiencesDrawer } from "@/components/drawers/experiencesDrawer";
-import { EducationDrawer } from "@/components/drawers/educationDrawer";
-import { SkillsDrawer } from "../drawers/skillsDrawer";
-import { ResearchDrawer } from "@/components/drawers/researchDrawer";
+import { ResumeDrawer } from "@/components/drawers/ResumeDrawer";
+import { ContactDrawer } from "@/components/drawers/ContactDrawer";
+import { ExperiencesDrawer } from "@/components/drawers/ExperiencesDrawer";
+import { EducationDrawer } from "@/components/drawers/EducationDrawer";
+import { SkillsDrawer } from "../drawers/SkillsDrawer";
+import { ResearchDrawer } from "@/components/drawers/ResearchDrawer";
 
 export default function ActionsSection({ data }) {
   return (
