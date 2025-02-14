@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { CheckCircleIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import {
+  CheckCircleIcon,
+  PaperAirplaneIcon,
+} from "@heroicons/react/24/outline";
+import { toast, Toaster } from "sonner";
 
 export function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -185,63 +189,62 @@ function LoadingBtn() {
         className="w-12 h-12"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 200"
-    >
-      <circle
-        fill="#0d9488"
-        stroke="#0d9488"
-        stroke-width="8"
-        r="15"
-        cx="40"
-        cy="100"
       >
-        <animate
-          attributeName="opacity"
-          calcMode="spline"
-          dur="0.8"
-          values="1;0;1;"
-          keySplines=".5 0 .5 1;.5 0 .5 1"
-          repeatCount="indefinite"
-          begin="-.4"
-        ></animate>
-      </circle>
-      <circle
-        fill="#0d9488"
-        stroke="#0d9488"
-        stroke-width="8"
-        r="15"
-        cx="100"
-        cy="100"
-      >
-        <animate
-          attributeName="opacity"
-          calcMode="spline"
-          dur="0.8"
-          values="1;0;1;"
-          keySplines=".5 0 .5 1;.5 0 .5 1"
-          repeatCount="indefinite"
-          begin="-.2"
-        ></animate>
-      </circle>
-      <circle
-        fill="#0d9488"
-        stroke="#0d9488"
-        stroke-width="8"
-        r="15"
-        cx="160"
-        cy="100"
-      >
-        <animate
-          attributeName="opacity"
-          calcMode="spline"
-          dur="0.8"
-          values="1;0;1;"
-          keySplines=".5 0 .5 1;.5 0 .5 1"
-          repeatCount="indefinite"
-          begin="0"
-        ></animate>
-      </circle>
+        <circle
+          fill="#0d9488"
+          stroke="#0d9488"
+          stroke-width="8"
+          r="15"
+          cx="40"
+          cy="100"
+        >
+          <animate
+            attributeName="opacity"
+            calcMode="spline"
+            dur="0.8"
+            values="1;0;1;"
+            keySplines=".5 0 .5 1;.5 0 .5 1"
+            repeatCount="indefinite"
+            begin="-.4"
+          ></animate>
+        </circle>
+        <circle
+          fill="#0d9488"
+          stroke="#0d9488"
+          stroke-width="8"
+          r="15"
+          cx="100"
+          cy="100"
+        >
+          <animate
+            attributeName="opacity"
+            calcMode="spline"
+            dur="0.8"
+            values="1;0;1;"
+            keySplines=".5 0 .5 1;.5 0 .5 1"
+            repeatCount="indefinite"
+            begin="-.2"
+          ></animate>
+        </circle>
+        <circle
+          fill="#0d9488"
+          stroke="#0d9488"
+          stroke-width="8"
+          r="15"
+          cx="160"
+          cy="100"
+        >
+          <animate
+            attributeName="opacity"
+            calcMode="spline"
+            dur="0.8"
+            values="1;0;1;"
+            keySplines=".5 0 .5 1;.5 0 .5 1"
+            repeatCount="indefinite"
+            begin="0"
+          ></animate>
+        </circle>
       </svg>
     </div>
   );
 }
-

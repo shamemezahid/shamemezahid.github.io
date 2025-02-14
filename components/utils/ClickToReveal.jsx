@@ -5,6 +5,7 @@ import {
   CheckCircleIcon,
   DocumentDuplicateIcon,
 } from "@heroicons/react/24/outline";
+import { toast, Toaster } from "sonner";
 
 export function ClickToReveal({ content }) {
   const [isRevealed, setIsRevealed] = useState(false);
@@ -13,7 +14,10 @@ export function ClickToReveal({ content }) {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
         setIsRevealed(false);
         setIsCopied(false);
       }
@@ -26,13 +30,24 @@ export function ClickToReveal({ content }) {
   }, []);
 
   return (
-    <div ref={containerRef} className="text-sm w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden">
+    <div
+      ref={containerRef}
+      className="text-sm w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden"
+    >
+      <Toaster
+        position="top-center"
+        richColors={true}
+        theme={
+          document.documentElement.classList.contains("dark") ? "dark" : "light"
+        }
+      />
       <a
         onClick={() => {
           setIsRevealed(!isRevealed);
           setIsCopied(false);
         }}
-        className="w-full flex items-center px-4 py-3 font-normal dark:text-primary-400 text-primary-700 hover:text-primary-500"
+        title="Click to hide email"
+        className="cursor-pointer w-full flex items-center px-4 py-3 font-normal dark:text-primary-400 text-primary-700 hover:text-primary-500"
       >
         <EyeIcon
           className={
@@ -50,9 +65,7 @@ export function ClickToReveal({ content }) {
         />
 
         {isRevealed && (
-          <p className="ml-3 transition-all duration-500">
-            {content}
-          </p>
+          <p className="ml-3 transition-all duration-500">{content}</p>
         )}
         {!isRevealed && (
           <p className="ml-3 transition-all duration-500">
@@ -63,15 +76,18 @@ export function ClickToReveal({ content }) {
       <a
         className={
           isRevealed
-            ? "w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap transition-all duration-100"
+            ? "cursor-pointer w-full sm:w-fit flex gap-3 items-center px-4 py-3 dark:bg-neutral-600 bg-neutral-300 hover:bg-neutral-200 whitespace-nowrap transition-all duration-100"
             : "w-0 h-0 transition-all duration-100"
         }
         onClick={() =>
           navigator.clipboard
             .writeText(content)
             .then(setIsCopied(true))
+            .then(setIsRevealed(false))
+            .then(toast.success("Email copied to clipboard"))
             .catch((err) => console.error("Error copying to clipboard", err))
         }
+        title="Click to copy email"
       >
         {isCopied ? (
           <>
