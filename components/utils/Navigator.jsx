@@ -4,10 +4,14 @@ import AnimationToggle from "@/components/togglers/AnimationToggler";
 import HighContrastToggle from "@/components/togglers/HighContrastToggler";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
-import { ArrowPathIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  Cog6ToothIcon,
+} from "@heroicons/react/24/outline";
 import SPAToggle from "../togglers/SpaToggler";
 
-export default function AccessibilityAccordion() {
+export default function Navigator() {
   const [isOpen, setIsOpen] = useState(false);
   const accordionRef = useRef(null);
   const { resetPreferences, hasPreferencesSet } = useAccessibility();
@@ -34,19 +38,6 @@ export default function AccessibilityAccordion() {
       ref={accordionRef}
       className="flex flex-col items-end"
     >
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-400 ${isOpen ? "w-full" : "w-11 hover:shadow-primary-700 hover:shadow-2xl "}`}
-      >
-        <span
-          className={`text-sm text-left overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} transition-all duration-400`}
-        >
-          Accessibility Menu
-        </span>
-        <Cog6ToothIcon
-          className={`w-5 h-5 transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
-        />
-      </button>
       <div
         className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
@@ -82,6 +73,19 @@ export default function AccessibilityAccordion() {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`shadow-primary-400 shadow-xl flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-400 ${isOpen ? "w-full" : "w-11"}`}
+      >
+        <span
+          className={`text-sm text-left overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} transition-all duration-400`}
+        >
+          Navigation Menu
+        </span>
+        <Bars3Icon
+          className={`w-5 h-5 transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
     </div>
   );
 }
