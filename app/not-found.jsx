@@ -24,24 +24,29 @@ const NotFound = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    // Create a particle with random x & y positions, size, x & y speeds, and opacity
     const createParticle = (x, y) => ({
       x,
       y,
       // size between 12 and 96 (12 + [0 to 84])
       size: Math.random() * 84 + 12,
+
       // speed between -2 and 2 ([-0.5 to 0.5] * 4)
       speedX: (Math.random() - 0.5) * 8,
       speedY: (Math.random() - 0.5) * 8,
+      
       // opacity between 0.25 and 0.75 ([0 to 0.75] + 0.25)
       opacity: Math.random() * 0.75 + 0.25,
     });
+
+    // Create a new particle when the canvas is clicked
     const handleClick = (event) => {
       const newParticle = createParticle(event.clientX, event.clientY);
       setParticles((prevParticles) => [...prevParticles, newParticle]);
-    };
-
+    };     
     canvas.addEventListener("click", handleClick);
 
+    // 
     const animate = () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -50,16 +55,23 @@ const NotFound = () => {
         context.font = `${particle.size}px ${merriweatherSans.style.fontFamily}`;
         context.fillText("404", particle.x, particle.y);
 
+        // Update the position of the particle
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
+        // Measure the width of the text to check if the particle is out of the canvas
         const particleWidth = context.measureText("404").width;
         const particleHeight = particle.size;
 
-        if (particle.x < 0 || particle.x > canvas.width - particleWidth)
+        // If the particle is out of the canvas, reverse the speed and set the position to the edge
+        if (particle.x < 0 || particle.x > canvas.width - particleWidth){
           particle.speedX *= -1;
-        if (particle.y < particleHeight || particle.y > canvas.height)
+          particle.x = particle.x < 0 ? 0 : canvas.width - particleWidth;
+        }
+        if (particle.y < particleHeight || particle.y > canvas.height){
           particle.speedY *= -1;
+          particle.y = particle.y < particleHeight ? particleHeight : canvas.height;
+        }
       });
 
       animationFrameId = requestAnimationFrame(animate);
@@ -95,7 +107,7 @@ const NotFound = () => {
           href="/"
           className="group flex items-center justify-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
         >
-          <HomeIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-200" />
+          <HomeIcon className="w-5 h-5 transition-all duration-200" />
           <span className="ml-2 texl-sm sm:text-base transition-all duration-500">
             Return to Home
           </span>
