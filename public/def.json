@@ -168,11 +168,28 @@
     "label": "Experiences",
     "values": [
       {
+        "workplace": "Airwork AI",
+        "website": "https://airwork.ai",
+        "designation": "UX Designer",
+        "start": "March 2025",
+        "end": "Ongoing",
+        "duration": "",
+        "responsibilities": [
+          "Collaborate to define and prioritize the product roadmap based on business and user needs.",
+          "Conduct user research to identify pain points and preferences, Analyze user feedback to inform product decisions.",
+          "Create user-friendly designs that align with product goals.",
+          "Work with developers to ensure smooth design implementation and conduct QA processes to ensure product quality."
+        ],
+        "shift": "Full Time",
+        "nature": "Remote",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
         "workplace": "REPLIQ Limited",
         "website": "https://repliq.dev",
         "designation": "Software Designer (Junior Plus UI/UX Designer)",
         "start": "Jan 2023",
-        "end": "Ongoing (1yr 8mo)",
+        "end": "Feb 2025 (2yr 2mo)",
         "duration": "1 yrs 8 mos as of Sep 2024",
         "responsibilities": [
           "Led, managed & trained the UI/UX design team, taking ownership of the design process from concept to execution.",
