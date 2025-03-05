@@ -35,6 +35,20 @@ const GoogleAnalytics = () => {
   );
 };
 
+const Clarity = () => {
+  return (
+    <Script id="clarity-script" strategy="afterInteractive">
+      {`
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "qjcincfdle");
+      `}
+    </Script>
+  )
+}
+
 export const Head = () => {
   return (
     <head>
@@ -43,6 +57,8 @@ export const Head = () => {
         name="google-site-verification"
         content="LBVaADvhEAQ71RT5noFGfqymwq9No4ZYCQNRUMZ-KcA"
       />
+      <GoogleAnalytics />
+      <Clarity />
     </head>
   );
 };
@@ -54,7 +70,6 @@ export default function RootLayout({ children }) {
       className="bg-gradient-to-br from-primary-50/25 via-lime-50/25 to-neutral-50 dark:from-primary-950/30 dark:via-primary-950/20 dark:to-neutral-950"
     >
       <Head />
-      <GoogleAnalytics />
       <AccessibilityProvider>
         <DataProvider>
           <body className={font.className}>{children}</body>
