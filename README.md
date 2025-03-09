@@ -2,7 +2,8 @@
 
 This website showcases my personal & professional details. Built with Next.js, React, TailwindCSS, it emphasizes accessibility, user experience, and performance. 
 
-![image](https://github.com/user-attachments/assets/b2679f11-ee82-421f-bf44-76ed7e0939fd)
+![image](https://github.com/user-attachments/assets/2b69ee5d-7676-4675-95f5-df380344bc85)
+> Screenshot Last Updated: Mar 10, 2025
 
 #### Key Features
 - **Accessibility-First Design**: Customizable accessibility menu with dark/light mode, text size, and reduced motion toggles
@@ -31,7 +32,6 @@ This website showcases my personal & professional details. Built with Next.js, R
 - **Accessibility Patterns**: ARIA labels, keyboard navigation support, and semantic HTML
 - **Performance Optimization**: Next.js Image component, SVG icons, and WebP format for images
 
-
 ## License
 
 This project is dual-licensed:
@@ -57,6 +57,6 @@ For more details on the code license, see:
 
 All personal data, including but not limited to biography, work history, and contact information, are proprietary and confidential. 
 
-© [2024] Shamim Bin Zahid . All rights reserved.
+© [2025] Shamim Bin Zahid . All rights reserved.
 
 No license is granted to use, copy, modify, or distribute my personal information for any purpose without my explicit written permission. Unauthorized use, reproduction, or distribution of this personal information may violate applicable laws and could be subject to legal action.
