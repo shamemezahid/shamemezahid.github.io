@@ -1,5 +1,4 @@
-import { InformationCircleIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import { InfoIcon } from "lucide-react";
 
 export default function AnnouncementBanner({
   message,
@@ -9,7 +8,7 @@ export default function AnnouncementBanner({
   return (
     <div className="text-xs flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-3 fixed top-3 left-3 right-3 w-fit mx-auto z-[9999] pr-6 p-3 bg-opacity-80 rounded-xl bg-primary-100 border border-primary-300">
       <div className="flex gap-2 items-center">
-        <InformationCircleIcon className="text-primary-800 w-6 h-6" />
+        <InfoIcon strokeWidth={1.5} className="text-primary-800 w-6 h-6" />
         <p className="text-primary-800 text-left sm:text-center">{message}</p>
       </div>
 

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import { MapPin } from "lucide-react";
 
 export default function IntroSection({ data }) {
   return (
@@ -29,8 +28,8 @@ export default function IntroSection({ data }) {
         <span className="text-base font-normal text-neutral-700 dark:text-neutral-200">
           {data?.intro?.tagline}
         </span>
-        <span className="flex gap-1">
-          <MapPinIcon className="w-4 text-neutral-500 dark:text-neutral-400" />
+        <span className="flex items-center gap-2">
+          <MapPin className="w-4 text-neutral-500 dark:text-neutral-400" strokeWidth={1.5} />
           <span className="text-sm font-light text-neutral-500 dark:text-neutral-400">
             {data?.intro?.location}
           </span>

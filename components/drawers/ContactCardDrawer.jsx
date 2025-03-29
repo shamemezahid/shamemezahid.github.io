@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CommonDrawer } from "@/components/drawers/CommonDrawer";
-import { QrCodeIcon, ArrowPathIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { QrCodeIcon, DownloadIcon, RefreshCcwIcon } from "lucide-react";
 
 function ContactCard() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -41,14 +41,14 @@ function ContactCard() {
           onClick={flipCard}
           className="flex items-center px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
         >
-          <ArrowPathIcon className="w-5 h-5 mr-2" />
+          <RefreshCcwIcon className="w-5 h-5 mr-2" strokeWidth={1.5}/>
           Flip Card
         </button>
         <button
           onClick={downloadCard}
           className="flex items-center px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
         >
-          <ArrowDownTrayIcon className="w-5 h-5 mr-2" />
+          <DownloadIcon className="w-5 h-5 mr-2" strokeWidth={1.5}/>
           Download
         </button>
       </div>

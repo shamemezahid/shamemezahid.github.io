@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
+  CheckCheckIcon,
+  CopyIcon,
   EyeIcon,
-  EyeSlashIcon,
-  CheckCircleIcon,
-  DocumentDuplicateIcon,
-} from "@heroicons/react/24/outline";
+  EyeOffIcon,
+
+} from "lucide-react";
 import { toast, Toaster } from "sonner";
 
 export function ClickToReveal({ content }) {
@@ -50,13 +51,15 @@ export function ClickToReveal({ content }) {
         className="cursor-pointer w-full flex items-center px-4 py-3 font-normal dark:text-primary-400 text-primary-700 hover:text-primary-500"
       >
         <EyeIcon
+          strokeWidth={1.5}
           className={
             isRevealed
               ? "w-0 h-0 transition-all"
               : "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"
           }
         />
-        <EyeSlashIcon
+        <EyeOffIcon
+          strokeWidth={1.5}
           className={
             isRevealed
               ? "w-5 h-5 dark:text-neutral-400 text-neutral-500 transition-all"
@@ -91,12 +94,12 @@ export function ClickToReveal({ content }) {
       >
         {isCopied ? (
           <>
-            <CheckCircleIcon className="w-5 h-5 text-neutral-400" />
+            <CheckCheckIcon strokeWidth={1.5} className="w-5 h-5 text-neutral-400" />
             <p>Copied</p>
           </>
         ) : (
           <>
-            <DocumentDuplicateIcon className="w-5 h-5 text-neutral-400" />
+            <CopyIcon strokeWidth={1.5} className="w-5 h-5 text-neutral-400" />
             <p>Click to Copy</p>
           </>
         )}

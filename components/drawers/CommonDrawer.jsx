@@ -1,7 +1,7 @@
 import React from "react";
-import { DocumentArrowUpIcon } from "@heroicons/react/24/outline";
 import { Drawer } from "vaul";
 import SeparatorLine from "../utils/SeparatorLine";
+import { SquareArrowUpIcon } from "lucide-react";
 
 const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...props }, ref) => (
   <button
@@ -11,8 +11,8 @@ const TriggerButton = React.forwardRef(({ icon: Icon, label, title, styles, ...p
     {...props}
   >
     <div className="flex flex-col">
-      <Icon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-500 dark:stroke-neutral-400" />
-      <DocumentArrowUpIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" />
+      <Icon className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-500 dark:stroke-neutral-400" strokeWidth={1.5}/>
+      <SquareArrowUpIcon className="w-5 h-0 transition-all duration-500 group-hover:w-5 group-hover:h-5" strokeWidth={1.5}/>
     </div>
     {label}
   </button>

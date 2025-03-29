@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  CheckCircleIcon,
-  PaperAirplaneIcon,
-} from "@heroicons/react/24/outline";
-import { toast, Toaster } from "sonner";
+import { CheckCheckIcon, SendIcon } from "lucide-react";
 
 export function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -114,7 +110,7 @@ export function ContactFormSection() {
         />
         {success ? (
           <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-primary-400 text-primary-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
-            <CheckCircleIcon className="w-5 h-5 mr-2" />
+            <CheckCheckIcon className="w-5 h-5 mr-2" strokeWidth={1.5}/>
             {success}
           </p>
         ) : loading ? (
@@ -124,7 +120,7 @@ export function ContactFormSection() {
             type="submit"
             className="w-full sm:w-fit flex items-center justify-center my-4 bg-primary-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
           >
-            <PaperAirplaneIcon className="w-5 h-5 mr-2" />
+            <SendIcon className="w-5 h-5 mr-2" strokeWidth={1.5}/>
             Submit
           </button>
         )}

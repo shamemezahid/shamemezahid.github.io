@@ -1,4 +1,4 @@
-import { GlobeAltIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { GlobeIcon, MoveUpRightIcon } from "lucide-react";
 
 export function EducationSection({ data }) {
   return (
@@ -22,8 +22,8 @@ export function EducationSection({ data }) {
                     className="group flex items-center h-8 font-medium text-primary-700 dark:text-primary-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
                     title={`Open ${education.institute} website`}
                   >
-                    <ArrowUpRightIcon className="w-0 h-0 group-hover:w-4 group-hover:h-4 transition-all duration-500" />
-                    <GlobeAltIcon className="w-4 h-4 group-hover:w-0 group-hover:h-0 transition-all duration-500" />
+                    <MoveUpRightIcon className="w-0 h-0 group-hover:w-4 group-hover:h-4 transition-all duration-500" strokeWidth={1.5}/>
+                    <GlobeIcon className="w-4 h-4 group-hover:w-0 group-hover:h-0 transition-all duration-500" strokeWidth={1.5}/>
                     <p className="ml-2 transition-all duration-500 overflow-hidden whitespace-nowrap">
                       {education.website
                         .replace(/^https?:\/\/(www\.)?/, "")

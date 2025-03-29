@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="bg-gradient-to-br from-primary-50/25 via-lime-50/25 to-neutral-50 dark:from-primary-950/30 dark:via-primary-950/20 dark:to-neutral-950"
+      className="scroll-smooth bg-gradient-to-br from-primary-50/25 via-lime-50/25 to-neutral-50 dark:from-primary-950/30 dark:via-primary-950/20 dark:to-neutral-950"
     >
       <Head />
       <AccessibilityProvider>

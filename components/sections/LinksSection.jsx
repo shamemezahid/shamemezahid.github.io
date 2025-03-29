@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { MoveUpRightIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function LinksSection({ data }) {
@@ -18,7 +18,7 @@ export default function LinksSection({ data }) {
             rel="noopener noreferrer"
             title={"Open " + link.label}
           >
-            <ArrowUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" />
+            <MoveUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" strokeWidth={1.5}/>
             <Image
               width={20}
               height={20}

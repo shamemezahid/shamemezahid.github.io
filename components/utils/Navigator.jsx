@@ -4,12 +4,8 @@ import AnimationToggle from "@/components/togglers/AnimationToggler";
 import HighContrastToggle from "@/components/togglers/HighContrastToggler";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  Cog6ToothIcon,
-} from "@heroicons/react/24/outline";
 import SPAToggle from "../togglers/SpaToggler";
+import { MenuIcon, RefreshCcwIcon } from "lucide-react";
 
 export default function Navigator() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,10 +30,7 @@ export default function Navigator() {
   }, []);
 
   return (
-    <div
-      ref={accordionRef}
-      className="flex flex-col items-end"
-    >
+    <div ref={accordionRef} className="flex flex-col items-end">
       <div
         className={`w-full grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
@@ -63,7 +56,8 @@ export default function Navigator() {
                 className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
               >
                 <div className="w-fit flex items-center">
-                  <ArrowPathIcon
+                  <RefreshCcwIcon
+                    strokeWidth={1.5}
                     className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`}
                   />
                   <p className="text-sm mx-2">Reset Preferences</p>
@@ -82,7 +76,8 @@ export default function Navigator() {
         >
           Navigation Menu
         </span>
-        <Bars3Icon
+        <MenuIcon
+          strokeWidth={1.5}
           className={`w-5 h-5 transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>

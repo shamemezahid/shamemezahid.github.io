@@ -1,7 +1,7 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/CommonDrawer";
 import { ExperiencesSection } from "../sections/ExperiencesSection";
-import { BriefcaseIcon } from "@heroicons/react/24/outline";
+import { BriefcaseBusinessIcon } from "lucide-react";
 
 const renderExperiencesContent = ( data ) => (
   <div className="w-full h-full overflow-y-auto scrollbar-hide scrollbar-none scrollbar-thumb-rounded-full border-x-0 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-200 scrollbar-track-transparent pb-16">
@@ -12,7 +12,7 @@ const renderExperiencesContent = ( data ) => (
 export function ExperiencesDrawer({ label, data }) {
   return (
     <CommonDrawer
-      triggerIcon={BriefcaseIcon}
+      triggerIcon={BriefcaseBusinessIcon}
       triggerLabel={label || "Experiences"}
       triggerTitle="Click to view experiences"
       renderContent={() => renderExperiencesContent(data)}

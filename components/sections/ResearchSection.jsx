@@ -1,8 +1,4 @@
-import {
-  DocumentTextIcon,
-  VideoCameraIcon,
-  ArrowUpRightIcon,
-} from "@heroicons/react/24/outline";
+import { FileTextIcon, MoveUpRightIcon, VideoIcon } from "lucide-react";
 
 export function ResearchSection({ data }) {
   return (
@@ -33,8 +29,8 @@ export function ResearchSection({ data }) {
                 className="group flex items-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
                 title={`Open ${research.URL_label}`}
               >
-                <ArrowUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" />
-                <DocumentTextIcon className="w-6 h-6 group-hover:w-0 group-hover:h-0 transition-all duration-500" />
+                <MoveUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" strokeWidth={1.5}/>
+                <FileTextIcon className="w-6 h-6 group-hover:w-0 group-hover:h-0 transition-all duration-500" strokeWidth={1.5}/>
                 <p className="ml-2 transition-all duration-500 overflow-hidden whitespace-nowrap">
                   {research.URL_label}
                 </p>
@@ -48,8 +44,8 @@ export function ResearchSection({ data }) {
                 className="group flex items-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
                 title="Open Presentation"
               >
-                <ArrowUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" />
-                <VideoCameraIcon className="w-6 h-6 group-hover:w-0 group-hover:h-0 transition-all duration-500" />
+                <MoveUpRightIcon className="w-0 h-0 group-hover:w-6 group-hover:h-6 transition-all duration-500" strokeWidth={1.5}/>
+                <VideoIcon className="w-6 h-6 group-hover:w-0 group-hover:h-0 transition-all duration-500" strokeWidth={1.5}/>
                 <p className="ml-2 transition-all duration-500 overflow-hidden whitespace-nowrap">
                   View Presentation
                 </p>

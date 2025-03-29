@@ -1,6 +1,6 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useAccessibility } from "../context/AccessibilityContext";
+import { MoonIcon, SunIcon } from "lucide-react";
 
 export default function ThemeToggle({className}) {
   const { theme, setTheme } = useAccessibility();
@@ -43,15 +43,15 @@ export default function ThemeToggle({className}) {
     >
       {theme === "dark" ? (
         <div className="flex items-center">
-          <MoonIcon className="transition-all duration-700 w-0 h-0" />
-          <SunIcon className="transition-all duration-700 w-6 h-6" />
+          <MoonIcon className="transition-all duration-700 w-0 h-0" strokeWidth={1.5}/>
+          <SunIcon className="transition-all duration-700 w-6 h-6" strokeWidth={1.5}/>
           <p className="text-sm mx-2">Light Mode</p>
           
         </div>
       ) : (
         <div className="flex items-center">
-          <MoonIcon className="transition-all duration-700 w-6 h-6" />
-          <SunIcon className="transition-all duration-700 w-0 h-0" />
+          <MoonIcon className="transition-all duration-700 w-6 h-6" strokeWidth={1.5}/>
+          <SunIcon className="transition-all duration-700 w-0 h-0" strokeWidth={1.5}/>
           <p className="text-sm mx-2">Dark Mode</p>
         </div>
       )}

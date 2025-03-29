@@ -4,8 +4,7 @@ import AnimationToggle from "@/components/togglers/AnimationToggler";
 import HighContrastToggle from "@/components/togglers/HighContrastToggler";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
-import { ArrowPathIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
-import SPAToggle from "../togglers/SpaToggler";
+import { PersonStandingIcon, RefreshCcwIcon } from "lucide-react";
 
 export default function AccessibilityAccordion() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +29,7 @@ export default function AccessibilityAccordion() {
   }, []);
 
   return (
-    <div
-      ref={accordionRef}
-      className="flex flex-col items-end"
-    >
+    <div ref={accordionRef} className="flex flex-col items-end">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 shadow-none duration-300 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${isOpen ? "w-full" : "w-11 hover:shadow-700 hover:shadow-2xl delay-200"}`}
@@ -43,7 +39,8 @@ export default function AccessibilityAccordion() {
         >
           Accessibility Menu
         </span>
-        <Cog6ToothIcon
+        <PersonStandingIcon
+          strokeWidth={1.5}
           className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
@@ -71,7 +68,8 @@ export default function AccessibilityAccordion() {
                 className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
               >
                 <div className="w-fit flex items-center">
-                  <ArrowPathIcon
+                  <RefreshCcwIcon
+                    strokeWidth={1.5}
                     className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`}
                   />
                   <p className="text-sm mx-2">Reset Preferences</p>

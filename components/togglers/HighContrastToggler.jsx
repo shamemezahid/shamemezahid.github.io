@@ -1,5 +1,5 @@
 import { useAccessibility } from "../context/AccessibilityContext";
-import { ViewfinderCircleIcon } from "@heroicons/react/24/outline";
+import { ContrastIcon } from "lucide-react";
 
 export default function HighContrastToggle({ className }) {
   const { isHighContrast, setIsHighContrast } = useAccessibility();
@@ -24,8 +24,8 @@ export default function HighContrastToggle({ className }) {
     >
       <div className="relative flex items-center">
         <div className="relative w-6 h-6">
-          <ViewfinderCircleIcon className={`absolute inset-0 transition-all ease-in duration-500 transform ${isHighContrast ? 'scale-0' : 'scale-100'} origin-center`} />
-          <ViewfinderCircleIcon className={`absolute inset-0 transition-all ease-out duration-500 transform ${isHighContrast ? 'scale-100' : 'scale-0'} origin-center`} />
+          <ContrastIcon className={`absolute inset-0 transition-all ease-in duration-500 transform ${isHighContrast ? 'scale-0' : 'scale-100'} origin-center`} strokeWidth={1.5}/>
+          <ContrastIcon className={`absolute inset-0 transition-all ease-out duration-500 transform ${isHighContrast ? 'scale-100' : 'scale-0'} origin-center`} strokeWidth={1.5}/>
         </div>
         <p className="text-sm mx-2">{isHighContrast ? "Normal Contrast" : "High Contrast"}</p>
       </div>

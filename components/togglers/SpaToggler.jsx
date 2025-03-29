@@ -1,8 +1,5 @@
 import { useRouter, usePathname } from "next/navigation";
-import {
-  RectangleStackIcon,
-  Square2StackIcon,
-} from "@heroicons/react/24/outline";
+import { CopyIcon, GalleryVerticalEndIcon } from "lucide-react";
 
 export default function SPAToggle({ className }) {
   const router = useRouter();
@@ -18,12 +15,12 @@ export default function SPAToggle({ className }) {
     >
       {isAltView ? (
         <div className="flex items-center">
-          <Square2StackIcon className="w-6 h-6" />
+          <CopyIcon className="w-6 h-6" strokeWidth={1.5}/>
           <p className="text-sm mx-2">Default View</p>
         </div>
       ) : (
         <div className="flex items-center">
-          <RectangleStackIcon className="w-6 h-6" />
+          <GalleryVerticalEndIcon className="w-6 h-6" strokeWidth={1.5}/>
           <p className="text-sm mx-2">Single-Page View</p>
         </div>
       )}

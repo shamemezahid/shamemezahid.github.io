@@ -1,8 +1,5 @@
+import { ZoomInIcon, ZoomOutIcon } from "lucide-react";
 import { useAccessibility } from "../context/AccessibilityContext";
-import {
-  MagnifyingGlassMinusIcon,
-  MagnifyingGlassPlusIcon,
-} from "@heroicons/react/24/outline";
 
 export default function TextSizeToggle({ className }) {
   const { isLargeText, setIsLargeText } = useAccessibility();
@@ -28,16 +25,16 @@ export default function TextSizeToggle({ className }) {
       {isLargeText ? (
         <div className="relative flex items-center">
           <div className="relative w-6 h-6">
-            <MagnifyingGlassPlusIcon className="absolute inset-0 transition-all ease-in duration-500 transform scale-0 origin-center" />
-            <MagnifyingGlassMinusIcon className="absolute inset-0 transition-all ease-out duration-500 transform scale-100 origin-center" />
+            <ZoomInIcon className="absolute inset-0 transition-all ease-in duration-500 transform scale-0 origin-center" strokeWidth={1.5}/>
+            <ZoomOutIcon className="absolute inset-0 transition-all ease-out duration-500 transform scale-100 origin-center" strokeWidth={1.5}/>
           </div>
           <p className="text-sm mx-2">Regular Text</p>
         </div>
       ) : (
         <div className="relative flex items-center">
           <div className="relative w-6 h-6">
-            <MagnifyingGlassPlusIcon className="absolute inset-0 transition-all ease-in duration-500 transform scale-100 origin-center" />
-            <MagnifyingGlassMinusIcon className="absolute inset-0 transition-all ease-out duration-500 transform scale-0 origin-center" />
+            <ZoomInIcon className="absolute inset-0 transition-all ease-in duration-500 transform scale-100 origin-center" strokeWidth={1.5}/>
+            <ZoomOutIcon className="absolute inset-0 transition-all ease-out duration-500 transform scale-0 origin-center" strokeWidth={1.5}/>
           </div>
           <p className="text-sm mx-2">Large Text</p>
         </div>

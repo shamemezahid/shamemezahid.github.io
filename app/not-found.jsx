@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Merriweather_Sans } from "next/font/google";
-import { HomeIcon } from "@heroicons/react/24/outline";
 import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
+import { HomeIcon } from "lucide-react";
 
 const merriweatherSans = Merriweather_Sans({
   weight: ["400", "700"],
@@ -107,7 +107,7 @@ const NotFound = () => {
           href="/"
           className="group flex items-center justify-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
         >
-          <HomeIcon className="w-5 h-5 transition-all duration-200" />
+          <HomeIcon className="w-5 h-5 transition-all duration-200" strokeWidth={1.5}/>
           <span className="ml-2 texl-sm sm:text-base transition-all duration-500">
             Return to Home
           </span>

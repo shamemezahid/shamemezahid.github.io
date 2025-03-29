@@ -1,5 +1,5 @@
+import { PauseIcon, PlayIcon } from "lucide-react";
 import { useAccessibility } from "../context/AccessibilityContext";
-import { PauseCircleIcon, PlayCircleIcon } from "@heroicons/react/24/outline";
 
 export default function AnimationToggle({ className }) {
   const { isAnimated, setIsAnimated } = useAccessibility();
@@ -25,12 +25,12 @@ export default function AnimationToggle({ className }) {
       <div className="flex items-center">
         {isAnimated ? (
           <>
-            <PauseCircleIcon className="w-6 h-6" />
+            <PauseIcon className="w-6 h-6" strokeWidth={1.5}/>
             <p className="text-sm mx-2">Reduce Motion</p>
           </>
         ) : (
           <>
-            <PlayCircleIcon className="w-6 h-6" />
+            <PlayIcon className="w-6 h-6" strokeWidth={1.5}/>
             <p className="text-sm mx-2">Enable Motion</p>
           </>
         )}
