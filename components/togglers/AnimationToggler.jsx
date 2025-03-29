@@ -7,10 +7,10 @@ export default function AnimationToggle({ className }) {
   const toggleAnimation = () => {
     setIsAnimated(!isAnimated);
     if (isAnimated) {
-      document.documentElement.classList.add("reduce-animation");
+      document.body.classList.add("reduce-animation");
       sessionStorage.setItem("isAnimated", "false");
     } else {
-      document.documentElement.classList.remove("reduce-animation");
+      document.body.classList.remove("reduce-animation");
       sessionStorage.removeItem("isAnimated");
     }
   };
@@ -18,7 +18,7 @@ export default function AnimationToggle({ className }) {
   return (
     <button
       onClick={toggleAnimation}
-      className={`${className} w-full h-fit p-2 grid bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
+      className={`${className} w-full h-fit p-2 grid bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-neutral-100/50 dark:hover:bg-neutral-600/50 backdrop-blur text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
       aria-label={isAnimated ? "Reduce animations" : "Enable animations"}
       title={isAnimated ? "Reduce animations" : "Enable animations"}
     >

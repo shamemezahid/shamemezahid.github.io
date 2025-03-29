@@ -1,8 +1,8 @@
 import React from "react";
 import { CommonDrawer } from "@/components/drawers/CommonDrawer";
-import ResumeIcon from "@/public/icons/ResumeIcon";
 import { ResumeContent } from "../sections/ResumeContent";
 import { DownloadFile } from "../utils/DownloadFile";
+import { FileTextIcon } from "lucide-react";
 
 const renderResumeContent = ( data ) => (
   <>
@@ -14,7 +14,7 @@ const renderResumeContent = ( data ) => (
 export function ResumeDrawer({ label, data }) {  
   return (
     <CommonDrawer
-      triggerIcon={ResumeIcon}
+      triggerIcon={FileTextIcon}
       triggerLabel={label}
       triggerTitle="Click to open resume"
       renderContent={() => renderResumeContent(data)}

@@ -7,10 +7,10 @@ export default function HighContrastToggle({ className }) {
   const toggleHighContrast = () => {
     setIsHighContrast(!isHighContrast);
     if (!isHighContrast) {
-      document.documentElement.classList.add("high-contrast");
+      document.body.classList.add("high-contrast");
       sessionStorage.setItem("highContrast", "true");
     } else {
-      document.documentElement.classList.remove("high-contrast");
+      document.body.classList.remove("high-contrast");
       sessionStorage.removeItem("highContrast");
     }
   };
@@ -18,7 +18,7 @@ export default function HighContrastToggle({ className }) {
   return (
     <button
       onClick={toggleHighContrast}
-      className={`${className} w-full h-fit p-2 grid bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
+      className={`${className} w-full h-fit p-2 grid bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-neutral-100/50 dark:hover:bg-neutral-600/50 backdrop-blur text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
       aria-label={isHighContrast ? "Disable high contrast" : "Enable high contrast"}
       title={isHighContrast ? "Disable high contrast" : "Enable high contrast"}
     >

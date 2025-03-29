@@ -6,7 +6,7 @@ export function ResearchSection({ data }) {
       {(data?.research?.values || []).map((research, index) => (
         <div
           key={index}
-          className="w-full p-5 border dark:border-neutral-600/50 border-neutral-400/25 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
+          className="w-full p-5 border dark:border-neutral-600/50 border-neutral-400/50 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
         >
           <h3 className="font-bold text-base text-neutral-900 dark:text-white mb-2">
             {research.title}

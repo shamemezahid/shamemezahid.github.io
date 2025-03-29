@@ -32,7 +32,7 @@ export default function AccessibilityAccordion() {
     <div ref={accordionRef} className="flex flex-col items-end">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex justify-between items-center p-3 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 shadow-none duration-300 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${isOpen ? "w-full" : "w-11 hover:shadow-700 hover:shadow-2xl delay-200"}`}
+        className={`flex justify-between items-center p-3 rounded-3xl bg-neutral-100/50 dark:bg-neutral-800/50 backdrop-blur text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 shadow-none duration-300 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] border dark:border-neutral-600/50 border-neutral-400/50 ${isOpen ? "w-full" : "w-11 hover:shadow-700 hover:shadow-2xl delay-200"}`}
       >
         <span
           className={`text-sm text-left overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} duration-500`}
@@ -48,16 +48,12 @@ export default function AccessibilityAccordion() {
         className={`w-full grid duration-300 transition-all ease-in ${isOpen ? "delay-200 grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
-          <div className="w-60 p-2 mt-1 bg-white/95 dark:bg-neutral-900/95 rounded-3xl flex flex-col gap-2">
+          <div className="w-60 p-2 mt-1 bg-white/50 dark:bg-neutral-900/50 backdrop-blur border border-neutral-600/10 dark:border-neutral-400/10 rounded-3xl flex flex-col gap-2">
             <ThemeToggle />
             <TextSizeToggle />
             <AnimationToggle />
             <HighContrastToggle />
-          </div>
-          <div
-            className={`w-full grid duration-300 ${hasPreferencesSet() ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
-          >
-            <div className="w-full overflow-hidden">
+            {hasPreferencesSet() && (
               <button
                 onClick={() => {
                   setIsResetting(true);
@@ -65,17 +61,15 @@ export default function AccessibilityAccordion() {
                   resetPreferences();
                   setTimeout(() => setIsResetting(false), 1000);
                 }}
-                className="w-[calc(100%-1rem)] p-2 mx-2 my-1 bg-neutral-100 dark:bg-neutral-800 text-sm text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer rounded-full"
+                className="flex w-full gap-3 items-center p-2 rounded-full bg-neutral-100 dark:bg-neutral-800 text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700"
               >
-                <div className="w-fit flex items-center">
-                  <RefreshCcwIcon
-                    strokeWidth={1.5}
-                    className={`w-6 h-6 ${isResetting ? "animate-spin" : ""}`}
-                  />
-                  <p className="text-sm mx-2">Reset Preferences</p>
-                </div>
+                <RefreshCcwIcon
+                  strokeWidth={1.5}
+                  className={`w-5 h-5 ${isResetting ? "animate-spin" : ""}`}
+                />
+                <span className="text-sm text-left">Reset Preferences</span>
               </button>
-            </div>
+            )}
           </div>
         </div>
       </div>

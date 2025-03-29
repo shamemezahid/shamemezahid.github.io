@@ -17,7 +17,7 @@ export function AccessibilityProvider({ children }) {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (prefersDark) {
       setTheme('dark');
-      document.documentElement.classList.add("dark");
+      document.body.classList.add("dark");
     } else {
       setTheme('light');
     }
@@ -32,23 +32,23 @@ export function AccessibilityProvider({ children }) {
     const savedAnimationState = sessionStorage.getItem("isAnimated");
     if (savedAnimationState === "false") {
       setIsAnimated(false);
-      document.documentElement.classList.add("reduce-animation");
+      document.body.classList.add("reduce-animation");
     }
 
     const savedHighContrast = sessionStorage.getItem("highContrast");
     if (savedHighContrast === "true") {
       setIsHighContrast(true);
-      document.documentElement.classList.add("high-contrast");
+      document.body.classList.add("high-contrast");
     }
 
     // Add system theme change listener
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e) => {
       if (e.matches) {
-        document.documentElement.classList.add("dark");
+        document.body.classList.add("dark");
         setTheme("dark");
       } else {
-        document.documentElement.classList.remove("dark");
+        document.body.classList.remove("dark");
         setTheme("light");
       }
     };
@@ -70,8 +70,8 @@ export function AccessibilityProvider({ children }) {
       
       // Remove all classes except theme
       document.documentElement.classList.remove("large-text");
-      document.documentElement.classList.remove("high-contrast");
-      document.documentElement.classList.remove("reduce-animation");
+      document.body.classList.remove("high-contrast");
+      document.body.classList.remove("reduce-animation");
       
       // Update states
       setIsLargeText(false);

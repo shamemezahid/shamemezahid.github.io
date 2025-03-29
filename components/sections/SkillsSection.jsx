@@ -12,7 +12,7 @@ export function SkillsSection({ data }) {
               {category.skills.map((skill, skillIndex) => (
                 <span
                   key={skillIndex}
-                  className="px-4 py-2 text-xs font-medium border dark:border-neutral-600/50 border-neutral-400/25 bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4] text-neutral-600 dark:text-neutral-300 rounded-full"
+                  className="px-4 py-2 text-xs font-medium border dark:border-neutral-600/50 border-neutral-400/50 bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4] text-neutral-600 dark:text-neutral-300 rounded-full"
                 >
                   {skill}
                 </span>

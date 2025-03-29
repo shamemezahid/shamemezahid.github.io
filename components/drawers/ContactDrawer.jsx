@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { CommonDrawer } from "@/components/drawers/CommonDrawer";
 import { ClickToReveal } from "../utils/ClickToReveal";
 import { ContactFormSection } from "../sections/ContactFormSection";
+import { MailCheckIcon } from "lucide-react";
 
 const renderContactContent = ( data ) => (
   <>
@@ -18,24 +19,9 @@ const renderContactContent = ( data ) => (
 );
 
 export function ContactDrawer({ label, data }) {
-
-  const ContactIcon = React.forwardRef((props, ref) => (
-    <Image
-      ref={ref}
-      width={20}
-      height={20}
-      alt="Contact Icon"
-      src={`/icons/em.svg`}
-      className="w-5 h-5 transition-all duration-500 group-hover:h-0 stroke-neutral-400"
-      {...props}
-    />
-  ));
-
-  ContactIcon.displayName = "ContactIcon";
-  
   return (
     <CommonDrawer
-      triggerIcon={ContactIcon}
+      triggerIcon={MailCheckIcon}
       triggerLabel={label}
       triggerTitle="Click to open contact form"
       renderContent={() => renderContactContent(data)}

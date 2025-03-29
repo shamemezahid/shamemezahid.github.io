@@ -33,13 +33,13 @@ export function ClickToReveal({ content }) {
   return (
     <div
       ref={containerRef}
-      className="text-sm w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-2xl overflow-hidden"
+      className="text-sm w-full sm:w-fit flex flex-col sm:flex-row sm:justify-between dark:bg-neutral-700 bg-neutral-200/50 rounded-3xl overflow-hidden"
     >
       <Toaster
         position="top-center"
         richColors={true}
         theme={
-          document.documentElement.classList.contains("dark") ? "dark" : "light"
+          document.body.classList.contains("dark") ? "dark" : "light"
         }
       />
       <a

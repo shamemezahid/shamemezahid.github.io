@@ -109,7 +109,7 @@ export function ContactFormSection() {
           textarea
         />
         {success ? (
-          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-primary-400 text-primary-600 my-4 p-4 pr-8 pl-6 rounded-xl text-center">
+          <p className="flex items-center justify-center w-full sm:w-fit bg-neutral-200 dark:bg-neutral-700 dark:text-primary-400 text-primary-600 my-4 p-4 pr-8 pl-6 rounded-3xl text-center">
             <CheckCheckIcon className="w-5 h-5 mr-2" strokeWidth={1.5}/>
             {success}
           </p>
@@ -118,7 +118,7 @@ export function ContactFormSection() {
         ) : (
           <button
             type="submit"
-            className="w-full sm:w-fit flex items-center justify-center my-4 bg-primary-600 text-white p-4 pr-8 pl-6 rounded-xl cursor-pointer"
+            className="w-full sm:w-fit flex items-center justify-center my-4 bg-primary-600 text-white p-4 pr-5 rounded-3xl cursor-pointer"
           >
             <SendIcon className="w-5 h-5 mr-2" strokeWidth={1.5}/>
             Submit
@@ -151,7 +151,7 @@ export function InputField({
             type={type}
             name={name}
             placeholder={placeholder}
-            className="px-3 py-3 rounded-xl border dark:border-neutral-600 border-neutral-400/50 dark:bg-neutral-700 bg-neutral-200/50 w-full"
+            className="px-3 py-3 rounded-2xl border dark:border-neutral-600 border-neutral-400/50 dark:bg-neutral-700 bg-neutral-200/50 w-full"
             rows="3"
             value={value}
             onChange={onChange}
@@ -168,7 +168,7 @@ export function InputField({
           type={type}
           name={name}
           placeholder={placeholder}
-          className="px-4 py-3 rounded-xl border dark:border-neutral-600 border-neutral-400/50 dark:bg-neutral-700 bg-neutral-200/50 w-full"
+          className="px-4 py-3 rounded-3xl border dark:border-neutral-600 border-neutral-400/50 dark:bg-neutral-700 bg-neutral-200/50 w-full"
           value={value}
           onChange={onChange}
           required={required}
