@@ -5,8 +5,8 @@
   "intro": {
     "label": "Intro",
     "name": "Shamim Bin Zahid",
-    "greetings": "Hi I'm Shameme Bin Zahid 👋",
-    "tagline": "UI/UX Designer, Product Manager & Software Engineer",
+    "greetings": "Hi I'm Shamim Bin Zahid 👋",
+    "tagline": "UI/UX Designer, Software Product Manager & Engineer",
     "location": "Based in Dhaka, Bangladesh",
     "quote": "Making the world slightly better with better designed \"Things\""
   },
@@ -50,7 +50,7 @@
     }
   },
   "links": {
-    "label": "Social & Portfolio Links",
+    "label": "Social Links",
     "values": [
       {
         "label": "LinkedIn",
@@ -97,7 +97,7 @@
         "skills": [
           "Figma",
           "Interaction design",
-          "Wireframing",
+          "Wire-framing",
           "Prototyping",
           "Design systems",
           "Responsive design",
@@ -127,7 +127,7 @@
         ]
       },
       {
-        "category": "Programming Languages",
+        "category": "Programming / Languages",
         "skills": [
           "C++",
           "Python",
@@ -138,7 +138,7 @@
         ]
       },
       {
-        "category": "Frameworks & Tools",
+        "category": "Frameworks / Tools",
         "skills": [
           "ReactJs",
           "NextJs",

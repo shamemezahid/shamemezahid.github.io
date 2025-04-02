@@ -32,7 +32,7 @@ export default function AccessibilityAccordion() {
     <div ref={accordionRef} className="flex flex-col items-end">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex justify-between items-center p-3 rounded-3xl bg-neutral-100/50 dark:bg-neutral-800/50 backdrop-blur text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 shadow-none duration-300 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] border dark:border-neutral-600/50 border-neutral-400/50 ${isOpen ? "w-full" : "w-11 hover:shadow-700 hover:shadow-2xl delay-200"}`}
+        className={`flex justify-between items-center p-3 rounded-3xl bg-neutral-100/50 dark:bg-neutral-800/50 backdrop-blur text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 shadow-none duration-300 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] border dark:border-neutral-600/50 border-neutral-400/50 ${isOpen ? "w-full" : "w-[46px] hover:shadow-700 hover:shadow-2xl delay-200"}`}
       >
         <span
           className={`text-sm text-left overflow-hidden whitespace-nowrap ${isOpen ? "w-32 opacity-100 mx-2" : "w-0 opacity-0 mx-0"} duration-500`}

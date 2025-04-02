@@ -18,7 +18,7 @@ export default function TextSizeToggle({ className }) {
   return (
     <button
       onClick={toggleTextSize}
-      className={`${className} w-full h-fit p-2 grid bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-neutral-100/50 dark:hover:bg-neutral-600/50 backdrop-blur text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
+      className={`${className} w-full h-fit p-2 grid bg-neutral-200/25 dark:bg-neutral-700/25 hover:bg-neutral-100/25 dark:hover:bg-neutral-600/25 backdrop-blur text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
       aria-label={isLargeText ? "Decrease text size" : "Increase text size"}
       title={isLargeText ? "Decrease text size" : "Increase text size"}
     >

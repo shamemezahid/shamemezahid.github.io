@@ -7,7 +7,7 @@ const DataContext = createContext();
 
 export function DataProvider({ children }) {
   const [data, setData] = useState(def); // Initialize with default data
-  const API_URL = "https://api.jsonbin.io/v3/b/66fd5bf8acd3cb34a890061e";
+  const API_URL = "https://api.jsonbin.io/v3/b/67ed82da8a456b79668155fb";
   const READ_ACCESS_KEY =
     "$2a$10$fFkcgBhr07FjK.iW/E3dO.6A6EGmCTpw8EpKcNqYlJHfyk4AzOOh6";
 
