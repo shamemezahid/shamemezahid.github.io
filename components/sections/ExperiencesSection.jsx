@@ -4,7 +4,7 @@ export function ExperiencesSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl">
       {/* <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">{data?.experiences?.label || data?.experiences?.label}</h2> */}
-      <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
+      <div className="w-full flex flex-col gap-4 items-start text-colors text-left">
         {(data?.experiences.values || []).map((experience, index) => (
           <div
             key={index}
@@ -33,7 +33,7 @@ export function ExperiencesSection({ data }) {
               )}
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-              <p className="font-medium text-neutral-700 dark:text-neutral-200">
+              <p className="font-medium text-colors">
                 {experience.designation}
               </p>
               <p className="text-sm text-neutral-600 dark:text-neutral-400">

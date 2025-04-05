@@ -18,7 +18,7 @@ export default function AnimationToggle({ className }) {
   return (
     <button
       onClick={toggleAnimation}
-      className={`${className} w-full h-fit p-2 grid bg-neutral-200/25 dark:bg-neutral-700/25 hover:bg-neutral-100/25 dark:hover:bg-neutral-600/25 backdrop-blur text-neutral-600 dark:text-neutral-300 rounded-full transition-all`}
+      className={`${className} w-full h-fit p-2 grid bg-neutral-200/25 dark:bg-neutral-700/25 hover:bg-neutral-100/25 dark:hover:bg-neutral-600/25 backdrop-blur text-neutral-600 dark:text-neutral-300 rounded-lg transition-all`}
       aria-label={isAnimated ? "Reduce animations" : "Enable animations"}
       title={isAnimated ? "Reduce animations" : "Enable animations"}
     >

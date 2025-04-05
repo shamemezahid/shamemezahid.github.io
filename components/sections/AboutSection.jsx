@@ -4,7 +4,7 @@ export default function AboutSection({ data }) {
       <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">
         {data?.about?.label}
       </h2>
-      <p className="text-neutral-700 dark:text-neutral-200 text text-left sm:text-justify">
+      <p className="text-colors text-left sm:text-justify">
         {data?.about?.value}
       </p>
     </div>

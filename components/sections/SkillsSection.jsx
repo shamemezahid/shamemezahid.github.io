@@ -2,7 +2,7 @@ export function SkillsSection({ data }) {
   const skillsData = data?.skills;
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl">
-      <div className="w-full flex flex-col gap-8 items-start text-neutral-700 dark:text-neutral-200 text-left">
+      <div className="w-full flex flex-col gap-8 items-start text-colors text-left">
         {(skillsData?.values || []).map((category, index) => (
           <div key={index} className="w-full">
             <h3 className="font-bold text-base text-neutral-900 dark:text-white mb-2">

@@ -3,7 +3,7 @@ import { GlobeIcon, MoveUpRightIcon } from "lucide-react";
 export function EducationSection({ data }) {
   return (
     <div className="text-sm w-full flex flex-col justify-start gap-2 rounded-xl">
-      <div className="w-full flex flex-col gap-4 items-start text-neutral-700 dark:text-neutral-200 text-left">
+      <div className="w-full flex flex-col gap-4 items-start text-colors text-left">
         {(data?.education.values || []).map((education, index) => (
           <div
             key={index}
@@ -37,14 +37,14 @@ export function EducationSection({ data }) {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-              <p className="font-medium text-neutral-700 dark:text-neutral-200">
+              <p className="font-medium text-colors">
                 {education.degree}
               </p>
               <p className="text-sm text-neutral-600 dark:text-neutral-400">
                 {education.year}
               </p>
             </div>
-            <p className="text-sm text-neutral-700 dark:text-neutral-200 mb-2">
+            <p className="text-sm text-colors mb-2">
               {education.result}
             </p>
             {education.activities &&

@@ -25,7 +25,7 @@ export default function IntroSection({ data }) {
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
           {data?.intro?.greetings}
         </h1>
-        <span className="text-base font-normal text-neutral-700 dark:text-neutral-200">
+        <span className="text-base font-normal text-colors">
           {data?.intro?.tagline}
         </span>
         <span className="flex items-center gap-2">

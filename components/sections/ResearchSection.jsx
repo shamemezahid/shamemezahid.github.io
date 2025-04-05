@@ -14,7 +14,7 @@ export function ResearchSection({ data }) {
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
             {research.conference} ({research.year})
           </p>
-          <p className="text-sm text-neutral-700 dark:text-neutral-200 mb-2">
+          <p className="text-sm text-colors mb-2">
             {research.authors}
           </p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">

@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-colors {
+  @apply text-neutral-700 dark:text-neutral-200;
+}
+
 html.large-text {
   font-size: 115%; 
 }
 
 .reduce-animation * {
-  transition-duration: 75ms !important;
-  animation-duration: 75ms !important;
+  transition-duration: 1ms !important;
+  animation-duration: 1ms !important;
   animation-iteration-count: 1 !important;
 }
 
@@ -21,7 +25,8 @@ html.large-text {
 }
 
 .high-contrast a, .high-contrast button {
-  outline: 2px solid #808080;
+  /* outline: 1px solid #808080; */
+  box-shadow: 0 0 2px 1px #808080 inset;
 }
 
 .preserve-3d {
@@ -34,5 +39,16 @@ html.large-text {
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+@keyframes siteLoadAnimation {
+  0% {
+    transform: skew(-13deg) translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(-13deg) translateX(100%);
+    opacity: 1;
+  }
 }
 
