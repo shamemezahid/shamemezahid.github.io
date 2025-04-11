@@ -18,7 +18,7 @@ export function NavItem({ label, isActive, onClick }) {
       className={`text-sm font-light transition-all duration-300 ${
         isActive
           ? "font-normal text-primary-700/75 dark:text-primary-400/75 [text-shadow:0_0_24px_currentColor]"
-          : "animate-pulse text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_24px_currentColor] hover:animate-none"
+          : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_24px_currentColor] hover:animate-none"
       }`}
     >
       {label}
@@ -59,7 +59,7 @@ export function ContentWrapper({ activeTab, showNav }) {
         flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
         ${
           showNav
-            ? "m-2 rounded-xl lg:rounded-3xl shadow-sm  border border-neutral-300 dark:border-neutral-700"
+            ? "m-2 rounded-3xl shadow-sm  border border-neutral-300 dark:border-neutral-700"
             : "m-0 rounded-none shadow-none border-0"
         }
       `}
