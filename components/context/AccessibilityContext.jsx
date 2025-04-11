@@ -84,8 +84,8 @@ export function AccessibilityProvider({ children }) {
 
   const hasPreferencesSet = () => {
     return (
-      isLargeText ||
-      !isAnimated ||
+      isLargeText || 
+      !isAnimated || 
       isHighContrast
     );
   };

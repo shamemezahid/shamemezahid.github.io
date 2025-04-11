@@ -1,45 +1,17 @@
 "use client";
 
-import { useData } from "@/components/context/DataContext";
 import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
 import { useState } from "react";
 import { ChevronsUp, ChevronsDown } from "lucide-react";
-
-import IntroSection from "@/components/sections/IntroSection";
-import QuoteSection from "@/components/sections/QuoteSection";
-import ActionsSection from "@/components/sections/ActionsSection";
-import AboutSection from "@/components/sections/AboutSection";
-import LinksSection from "@/components/sections/LinksSection";
-import FooterSection from "@/components/sections/FooterSection";
+import ProfileContent from "@/components/home/ProfileContent";
+import CraftContent from "@/components/home/CraftContent"
 
 const TABS = {
   PROFILE: "profile",
   CRAFTS: "crafts",
 };
 
-export function ProfileContent() {
-  const data = useData();
-  return (
-    <main className="animate-fadeIn flex flex-col lg:justify-center w-full h-full max-w-6xl p-2 sm:p-6 pt-6 mx-auto relative">
-      <IntroSection data={data} />
-      <ActionsSection data={data} />
-      <QuoteSection data={data} />
-      <AboutSection data={data} />
-      <LinksSection data={data} />
-      <FooterSection data={data} />
-    </main>
-  );
-}
-
-export function CraftContent() {
-  return (
-    <main className="animate-fadeIn flex flex-col lg:justify-center w-full h-full max-w-6xl p-2 sm:p-6 pt-6 mx-auto relative">
-      <h1 className="text-colors">Content coming soon</h1>
-    </main>
-  );
-}
-
-function NavItem({ label, isActive, onClick }) {
+export function NavItem({ label, isActive, onClick }) {
   return (
     <button
       onClick={onClick}
@@ -54,9 +26,9 @@ function NavItem({ label, isActive, onClick }) {
   );
 }
 
-function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
+export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
   return (
-    <nav className="h-full flex items-center justify-end gap-8 px-4 pt-1 lg:pt-2 lg: relative">
+    <nav className="h-full flex items-center justify-end gap-12 px-4 pt-2 relative">
       <NavItem
         label="Profile"
         isActive={activeTab === TABS.PROFILE}
@@ -80,18 +52,15 @@ function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
   );
 }
 
-function ContentWrapper({ activeTab, showNav }) {
+export function ContentWrapper({ activeTab, showNav }) {
   return (
     <div
       className={`
-        flex-1 min-h-0 h-full overflow-scroll flex flex-col gap-4 
-        bg-white dark:bg-neutral-900 
-        border border-neutral-300 dark:border-neutral-700 
-        transition-all duration-300 ease-in-out
+        flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
         ${
           showNav
-            ? "m-1 lg:m-2 rounded-xl lg:rounded-3xl shadow-sm"
-            : "m-0 rounded-none shadow-none border-x-0"
+            ? "m-2 rounded-xl lg:rounded-3xl shadow-sm  border border-neutral-300 dark:border-neutral-700"
+            : "m-0 rounded-none shadow-none border-0"
         }
       `}
     >
@@ -142,7 +111,7 @@ export default function Home() {
 
       <ContentWrapper activeTab={activeTab} showNav={showNav} />
 
-      <div className="fixed bottom-6 right-6 animate-fadeToLow hover:opacity-100 hover:animate-none">
+      <div className="fixed bottom-6 right-6">
         <AccessibilityAccordion />
       </div>
     </div>

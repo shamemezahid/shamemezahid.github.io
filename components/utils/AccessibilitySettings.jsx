@@ -15,9 +15,10 @@ import SeparatorLine from "./SeparatorLine";
 export default function AccessibilityAccordion() {
   const [isOpen, setIsOpen] = useState(false);
   const accordionRef = useRef(null);
+  const timeoutRef = useRef(null);
   const { resetPreferences, hasPreferencesSet } = useAccessibility();
   const [isResetting, setIsResetting] = useState(false);
-
+  
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -35,35 +36,35 @@ export default function AccessibilityAccordion() {
   }, []);
 
   return (
-    <div ref={accordionRef} className="flex flex-col items-end">
+    <div
+      ref={accordionRef}
+      className="flex flex-col items-end"
+    >
       <div
-        className={`w-full grid duration-300 transition-all ease-in ${isOpen ? "delay-300 grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+        className={`mb-2 w-full grid duration-300 transition-all ease-in ${isOpen ? "delay-300 grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
           <div className="w-60 p-2 mt-1 bg-white/50 dark:bg-neutral-900/50 backdrop-blur border border-neutral-600/25 dark:border-neutral-400/25 rounded-3xl flex flex-col gap-1">
-            <div className="overflow-hidden rounded-2xl flex flex-col gap-1">
-              {/* <SeparatorLine className="!my-0 min-h-[1px]"/> */}
+            <div className="overflow-hidden rounded-2xl flex flex-col transition gap-1">
               <ThemeToggle />
               <TextSizeToggle />
               <AnimationToggle />
               <HighContrastToggle />
-              {hasPreferencesSet() && (
-                <button
-                  onClick={() => {
-                    setIsResetting(true);
-                    sessionStorage.clear();
-                    resetPreferences();
-                    setTimeout(() => setIsResetting(false), 1000);
-                  }}
-                  className="flex w-full gap-3 items-center p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700"
-                >
-                  <RefreshCcwIcon
-                    strokeWidth={1.5}
-                    className={`w-5 h-5 ${isResetting ? "animate-spin" : ""}`}
-                  />
-                  <span className="text-sm text-left">Reset Preferences</span>
-                </button>
-              )}
+              <button
+                onClick={() => {
+                  setIsResetting(true);
+                  sessionStorage.clear();
+                  resetPreferences();
+                  setTimeout(() => setIsResetting(false), 1000);
+                }}
+                className={`flex w-full gap-3 items-center p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 ease-in-out overflow-hidden ${hasPreferencesSet() ? `h-9 ` : ` h-0 py-0 -my-[2px] `}`}
+              >
+                <RefreshCcwIcon
+                  strokeWidth={1.5}
+                  className={`w-5 h-5 ${isResetting ? "animate-spin" : ""}`}
+                />
+                <span className="text-sm text-left">Reset Preferences</span>
+              </button>
             </div>
           </div>
         </div>

@@ -41,14 +41,3 @@ html.large-text {
   transform: rotateY(180deg);
 }
 
-@keyframes siteLoadAnimation {
-  0% {
-    transform: skew(-13deg) translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: skew(-13deg) translateX(100%);
-    opacity: 1;
-  }
-}
-
