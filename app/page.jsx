@@ -4,7 +4,7 @@ import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
 import { useState } from "react";
 import { ChevronsUp, ChevronsDown } from "lucide-react";
 import ProfileContent from "@/components/home/ProfileContent";
-import CraftContent from "@/components/home/CraftContent"
+import CraftContent from "@/components/home/CraftContent";
 
 const TABS = {
   PROFILE: "profile",
@@ -17,7 +17,7 @@ export function NavItem({ label, isActive, onClick }) {
       onClick={onClick}
       className={`text-sm font-light transition-all duration-300 ${
         isActive
-          ? "font-normal text-primary-700/75 dark:text-primary-400/75 [text-shadow:0_0_24px_currentColor]"
+          ? "font-normal text-primary-500 dark:text-primary-400/75 [text-shadow:0_0_24px_currentColor]"
           : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_24px_currentColor] hover:animate-none"
       }`}
     >
@@ -56,7 +56,7 @@ export function ContentWrapper({ activeTab, showNav }) {
   return (
     <div
       className={`
-        flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
+        flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
         ${
           showNav
             ? "m-2 rounded-3xl shadow-sm  border border-neutral-300 dark:border-neutral-700"
@@ -95,7 +95,7 @@ export default function Home() {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className="flex flex-col h-[100svh] bg-neutral-200 dark:bg-neutral-800">
+    <div className="flex flex-col h-[100svh] bg-neutral-100 dark:bg-neutral-800">
       <div
         className={`transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}
       >

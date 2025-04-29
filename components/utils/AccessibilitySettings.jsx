@@ -2,6 +2,7 @@ import ThemeToggle from "@/components/togglers/ThemeToggler";
 import TextSizeToggle from "@/components/togglers/TextsizeToggler";
 import AnimationToggle from "@/components/togglers/AnimationToggler";
 import HighContrastToggle from "@/components/togglers/HighContrastToggler";
+import ColorThemeSelect from "./ColorThemeSelect";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -47,6 +48,7 @@ export default function AccessibilityAccordion() {
           <div className="w-60 p-2 mt-1 bg-white/50 dark:bg-neutral-900/50 backdrop-blur border border-neutral-600/25 dark:border-neutral-400/25 rounded-3xl flex flex-col gap-1">
             <div className="overflow-hidden rounded-2xl flex flex-col transition gap-1">
               <ThemeToggle />
+              <ColorThemeSelect />
               <TextSizeToggle />
               <AnimationToggle />
               <HighContrastToggle />

@@ -23,10 +23,14 @@ html.large-text {
 .high-contrast img, .high-contrast svg {
   filter: contrast(50%);
 }
-
-.high-contrast a, .high-contrast button {
-  /* outline: 1px solid #808080; */
+high-contrast a:not([class*="/"]), 
+.high-contrast button:not([class*="/"]) {
   box-shadow: 0 0 2px 1px #808080 inset;
+}
+
+/* Preserve Tailwind opacity utilities */
+.high-contrast [class*="/"] {
+  opacity: 100%;
 }
 
 .preserve-3d {

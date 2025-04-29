@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import ColorThemeSelect from "../utils/ColorThemeSelect";
 
 export default function IntroSection({ data }) {
   return (
@@ -29,7 +30,10 @@ export default function IntroSection({ data }) {
           {data?.intro?.tagline}
         </span>
         <span className="flex items-center gap-2">
-          <MapPin className="w-4 text-neutral-500 dark:text-neutral-400" strokeWidth={1.5} />
+          <MapPin
+            className="w-4 text-neutral-500 dark:text-neutral-400"
+            strokeWidth={1.5}
+          />
           <span className="text-sm font-light text-neutral-500 dark:text-neutral-400">
             {data?.intro?.location}
           </span>
