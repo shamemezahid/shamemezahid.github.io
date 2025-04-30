@@ -56,7 +56,7 @@ export function ContentWrapper({ activeTab, showNav }) {
   return (
     <div
       className={`
-        flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
+        scroll-smooth flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
         ${
           showNav
             ? "m-2 rounded-3xl shadow-sm  border border-neutral-300 dark:border-neutral-700"
@@ -95,10 +95,8 @@ export default function Home() {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className={`flex flex-col bg-neutral-100 dark:bg-neutral-800 ${showNav ? "h-[100dvh]" : "h-full"}`}>
-      <div
-        className={`transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}
-      >
+    <div className="flex flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh]">
+      <div className={`transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}>
         <NavBar
           activeTab={activeTab}
           setActiveTab={setActiveTab}
