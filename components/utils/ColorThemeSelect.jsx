@@ -12,8 +12,8 @@ const colorOptions = {
   fuchsia: colors.fuchsia,
   gray: colors.gray,
   amber: colors.amber,
-  red: colors.teal,
-  yellow: colors.violet,
+  teal: colors.teal,
+  violet: colors.violet,
   green: colors.green,
 };
 
