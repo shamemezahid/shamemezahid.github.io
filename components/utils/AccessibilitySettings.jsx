@@ -1,5 +1,3 @@
-"use client";
-
 import ThemeToggle from "@/components/togglers/ThemeToggler";
 import TextSizeToggle from "@/components/togglers/TextsizeToggler";
 import AnimationToggle from "@/components/togglers/AnimationToggler";

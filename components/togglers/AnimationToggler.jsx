@@ -1,5 +1,3 @@
-"use client"
-
 import { PauseIcon, PlayIcon } from "lucide-react";
 import { useAccessibility } from "../context/AccessibilityContext";
 

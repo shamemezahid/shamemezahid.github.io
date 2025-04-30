@@ -1,5 +1,3 @@
-"use client"
-
 import { useAccessibility } from "../context/AccessibilityContext";
 import { ContrastIcon } from "lucide-react";
 
