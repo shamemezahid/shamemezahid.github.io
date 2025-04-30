@@ -10,7 +10,7 @@ import FooterSection from "@/components/sections/FooterSection";
 export default function ProfileContent() {
   const data = useData();
   return (
-    <main className="animate-fadeIn flex flex-col xl:justify-center w-full h-full max-w-6xl p-3 pt-5 sm:p-6 sm:pt-8 mx-auto relative">
+    <main className="animate-fadeIn flex flex-col xl:justify-center w-full h-full max-w-6xl p-2 pt-5 sm:p-6 sm:pt-8 mx-auto relative">
       <IntroSection data={data} />
       <ActionsSection data={data} />
       <QuoteSection data={data} />
