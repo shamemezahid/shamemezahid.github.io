@@ -18,7 +18,7 @@ const renderContactContent = ( data ) => (
   </>
 );
 
-export function ContactDrawer({ label, data }) {
+export function ContactDrawer({ label, subtitle, data }) {
   return (
     <CommonDrawer
       triggerIcon={MailCheckIcon}
@@ -26,7 +26,7 @@ export function ContactDrawer({ label, data }) {
       triggerTitle="Click to open contact form"
       renderContent={() => renderContactContent(data)}
       drawerTitle={label}
-      drawerSubtitle="Feel free to reach out using the form below."
+      drawerSubtitle={subtitle}
     />
   );
 }

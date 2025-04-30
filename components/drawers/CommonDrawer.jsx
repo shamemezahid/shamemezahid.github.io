@@ -48,7 +48,7 @@ export function CommonDrawer({
             title="Drag down to close drawer"
           />
           <div className="cursor-default relative w-full h-full flex flex-col gap-4 dark:text-neutral-50 text-neutral-700">
-            <div className={`${drawerSubtitle ? 'w-fit' : 'w-full text-center'}`}>
+            <div className={`${drawerSubtitle ? 'w-fit ml-2' : 'w-full text-center'}`}>
               <p className="dark:text-neutral-50 text-neutral-700 text-xl font-semibold">{drawerTitle}</p>
               {drawerSubtitle && <p className="dark:text-neutral-400 text-neutral-500 text-sm mt-1">{drawerSubtitle}</p>}
             </div>

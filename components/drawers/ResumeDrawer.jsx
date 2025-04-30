@@ -11,12 +11,13 @@ const renderResumeContent = ( data ) => (
   </>
 );
 
-export function ResumeDrawer({ label, data }) {  
+export function ResumeDrawer({ label, subtitle, data }) {  
   return (
     <CommonDrawer
       triggerIcon={FileTextIcon}
       triggerLabel={label}
       triggerTitle="Click to open resume"
+      drawerSubtitle={subtitle}
       renderContent={() => renderResumeContent(data)}
       drawerTitle={label || "Resume"}
       contentStyles="bg-neutral-50 dark:bg-[#313131]"

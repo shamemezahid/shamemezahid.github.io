@@ -14,6 +14,7 @@ export default function ActionsSection({ data }) {
           {data?.actions?.resume?.show && (
             <ResumeDrawer
               label={data?.actions?.resume?.label}
+              subtitle={data?.actions?.resume?.subtitle}
               data={data}
             />
           )}
@@ -21,6 +22,7 @@ export default function ActionsSection({ data }) {
           {data?.actions?.contact?.show && (
             <ContactDrawer
               label={data?.actions?.contact?.label}
+              subtitle={data?.actions?.contact?.subtitle}
               data={data}
             />
           )}

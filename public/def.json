@@ -18,13 +18,15 @@
     "show": true,
     "resume": {
       "show": true,
-      "label": "View Resume",
+      "label": "View CV",
+      "subtitle": "Usually updated every month, Reach out if out of date.",
       "url": "https://drive.google.com/file/d/1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64/preview",
       "download": "https://docs.google.com/document/export?format=pdf&id=1DuNZqDUuYysZGSCUUP0FCWuHVcoqPjurP_Wefh22Z64"
     },
     "contact": {
       "show": true,
       "label": "Contact Me",
+      "subtitle": "Feel free to reach out using the form or thru email",
       "address": "shameme.design@gmail.com",
       "url": "mailto:shameme.design@gmail.com"
     },
@@ -128,14 +130,7 @@
       },
       {
         "category": "Programming / Languages",
-        "skills": [
-          "C++",
-          "Python",
-          "Java",
-          "JavaScript",
-          "HTML",
-          "CSS"
-        ]
+        "skills": ["Python", "C++", "Java", "JavaScript", "HTML", "CSS"]
       },
       {
         "category": "Frameworks / Tools",
@@ -187,7 +182,7 @@
       {
         "workplace": "REPLIQ Limited",
         "website": "https://repliq.dev",
-        "designation": "Software Designer (Junior Plus UI/UX Designer)",
+        "designation": "Lead UI/UX Designer & Product Manager",
         "start": "Jan 2023",
         "end": "Feb 2025 (2yr 2mo)",
         "duration": "1 yrs 8 mos as of Sep 2024",
