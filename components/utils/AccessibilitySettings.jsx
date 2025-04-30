@@ -59,7 +59,7 @@ export default function AccessibilityAccordion() {
                   resetPreferences();
                   setTimeout(() => setIsResetting(false), 1000);
                 }}
-                className={`flex w-full gap-3 items-center p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 ease-in-out overflow-hidden ${hasPreferencesSet() ? `h-9 ` : ` h-0 py-0 -my-[2px] `}`}
+                className={`flex w-full gap-3 items-center p-2 rounded-t-lg rounded-b-2xl bg-neutral-100 dark:bg-neutral-800 text-primary-700 dark:text-primary-500 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 ease-in-out overflow-hidden ${hasPreferencesSet() ? `h-9 ` : ` h-0 py-0 -my-[2px] `}`}
               >
                 <RefreshCcwIcon
                   strokeWidth={1.5}

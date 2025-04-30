@@ -95,7 +95,7 @@ export default function Home() {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className="flex flex-col h-[100svh] bg-neutral-100 dark:bg-neutral-800">
+    <div className="flex flex-col h-[100dvh] bg-neutral-100 dark:bg-neutral-800">
       <div
         className={`transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}
       >

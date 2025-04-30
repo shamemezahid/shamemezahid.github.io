@@ -7,7 +7,7 @@ import { MailCheckIcon } from "lucide-react";
 
 const renderContactContent = ( data ) => (
   <>
-    {data?.actions?.contact?.show_email && (
+    {data?.actions?.contact?.show && (
       <div className="flex flex-row w-full sm:w-fit whitespace-nowrap gap-3 sm:absolute sm:top-1 right-0">
         <ClickToReveal content={data?.actions?.contact?.address} />
       </div>
