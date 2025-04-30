@@ -87,7 +87,7 @@ const NotFound = () => {
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center min-h-[100dvh] bg-neutral-100 dark:bg-neutral-900 overflow-hidden ${merriweatherSans.className}`}
+      className={`relative flex flex-col items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900 overflow-hidden ${merriweatherSans.className}`}
     >
       <div className="fixed z-50 top-8 right-8">
         <AccessibilityAccordion />
