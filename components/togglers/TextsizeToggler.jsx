@@ -1,3 +1,5 @@
+"use client"
+
 import { ZoomInIcon, ZoomOutIcon } from "lucide-react";
 import { useAccessibility } from "../context/AccessibilityContext";
 

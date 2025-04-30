@@ -20,7 +20,7 @@ const colorOptions = {
 export default function ColorThemeSelect() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentColor, setCurrentColor] = useState(() => 
-    sessionStorage.getItem("themeColor") || "blue"
+    "blue"
   );
 
   const setThemeColor = (colorName) => {

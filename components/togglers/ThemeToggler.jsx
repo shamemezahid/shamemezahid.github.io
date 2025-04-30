@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect } from "react";
 import { useAccessibility } from "../context/AccessibilityContext";
 import { MoonIcon, SunIcon } from "lucide-react";
@@ -20,7 +22,7 @@ export default function ThemeToggle({className}) {
       setTheme("light");
       sessionStorage.setItem("theme", "light");
     }
-  }, []);
+  }, [setTheme]);
 
   const toggleTheme = () => {
     if (theme === "dark") {
