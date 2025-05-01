@@ -17,11 +17,12 @@ const colorOptions = {
   green: colors.green,
 };
 
+const defaultColor = Object.keys(colorOptions)[6];
+
+
 export default function ColorThemeSelect() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentColor, setCurrentColor] = useState(() => 
-    "blue"
-  );
+  const [currentColor, setCurrentColor] = useState(() => defaultColor);
 
   const setThemeColor = (colorName) => {
     const color = colorOptions[colorName];
@@ -36,11 +37,11 @@ export default function ColorThemeSelect() {
     
     sessionStorage.setItem("themeColor", colorName);
     setCurrentColor(colorName);
-    setIsOpen(false);
+    // setIsOpen(false);
   };
 
   useEffect(() => {
-    const savedColor = sessionStorage.getItem("themeColor") || "blue";
+    const savedColor = sessionStorage.getItem("themeColor") || defaultColor;
     setThemeColor(savedColor);
   }, []);
 

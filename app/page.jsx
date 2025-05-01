@@ -92,7 +92,7 @@ export function ShowNavFloatingActionButton({ showNav, setShowNav }) {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(TABS.PROFILE);
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
   return (
     <div className="flex flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh]">
