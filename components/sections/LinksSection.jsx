@@ -8,7 +8,7 @@ export default function LinksSection({ data }) {
       <h2 className="font-semibold text-neutral-500 dark:text-neutral-400">
         {data?.links?.label}
       </h2>
-      <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(180px,_1fr))] sm:flex sm:flex-wrap gap-1 sm:gap-2 items-start -mx-4 transition-all duration-200">
+      <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(140px,_1fr))] sm:flex sm:flex-wrap gap-1 sm:gap-2 items-start -mx-4 transition-all duration-200">
         {links.map((link, index) => (
           <a
             key={index}

@@ -9,7 +9,7 @@ export default function ActionsSection({ data }) {
   return (
     data?.actions?.show && (
       <div className="text-sm w-full flex flex-col justify-start gap-2 p-4 rounded-xl">
-        <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(180px,_1fr))] sm:flex sm:flex-wrap gap-1 sm:gap-2 items-start -mx-4 transition-all">
+        <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(140px,_1fr))] sm:flex sm:flex-wrap gap-1 sm:gap-2 items-start -mx-4 transition-all">
           
           {data?.actions?.resume?.show && (
             <ResumeDrawer

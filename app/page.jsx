@@ -15,10 +15,10 @@ export function NavItem({ label, isActive, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`text-sm font-light transition-all duration-300 ${
+      className={`text-sm font-light transition-all duration-300 px-3 py-2 rounded-md ${
         isActive
-          ? "font-normal text-primary-500 dark:text-primary-400/75 [text-shadow:0_0_24px_currentColor]"
-          : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_24px_currentColor] hover:animate-none"
+          ? "font-normal text-primary-700 dark:text-primary-400/75 [text-shadow:0_0_32px_currentColor]"
+          : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_32px_currentColor] hover:animate-none"
       }`}
     >
       {label}
@@ -28,7 +28,7 @@ export function NavItem({ label, isActive, onClick }) {
 
 export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
   return (
-    <nav className="h-full flex items-center justify-end gap-12 px-4 pt-2 relative">
+    <nav className="h-full flex items-center justify-end gap-2 sm:gap-6 md:gap-10 px-4 pt-2">
       <NavItem
         label="Profile"
         isActive={activeTab === TABS.PROFILE}
@@ -92,11 +92,18 @@ export function ShowNavFloatingActionButton({ showNav, setShowNav }) {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(TABS.PROFILE);
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
   return (
     <div className="flex flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh]">
-      <div className={`transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}>
+      <div className={`flex flex-wrap justify-between transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}>
+        <span 
+          className="text-sm sm:text-base flex h-full items-end justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-25 font-black cursor-pointer"
+          onClick={() => setActiveTab(TABS.PROFILE)}
+        >
+          {" "}
+          SHAMEME{" "}
+        </span>
         <NavBar
           activeTab={activeTab}
           setActiveTab={setActiveTab}
