@@ -46,12 +46,18 @@ const NotFound = () => {
     };     
     canvas.addEventListener("click", handleClick);
 
-    // 
     const animate = () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle) => {
-        context.fillStyle = `rgba(24, 93, 56, ${particle.opacity})`;
+        // Get the primary color from CSS variable
+        const primaryColor = getComputedStyle(document.documentElement)
+          .getPropertyValue('--primary-color-400')
+          .trim()
+          .split(' ')
+          .join(', ');
+        
+        context.fillStyle = `rgba(${primaryColor}, ${particle.opacity})`;
         context.font = `${particle.size}px ${merriweatherSans.style.fontFamily}`;
         context.fillText("404", particle.x, particle.y);
 
@@ -89,18 +95,18 @@ const NotFound = () => {
     <div
       className={`relative flex flex-col items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900 overflow-hidden ${merriweatherSans.className}`}
     >
-      <div className="fixed z-50 top-8 right-8">
+      <div className="fixed z-50 bottom-6 right-6">
         <AccessibilityAccordion />
       </div>
       <canvas ref={canvasRef} className="absolute inset-0" />
-      <div className="relative z-10 text-center bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-neutral-200 dark:border-neutral-800">
-        <p className="text-xs sm:text-sm text-primary-800 dark:text-primary-200 mb-2 px-3 py-1 bg-primary-100 dark:bg-primary-900 border border-primary-300 dark:border-primary-700 rounded-full inline-block">
+      <div className="relative z-10 text-center bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-[32px] p-4 sm:p-5 border border-neutral-200 dark:border-neutral-800">
+        <p className="text-xs text-primary-800 dark:text-primary-200 mb-2 px-3 py-1 bg-primary-50 dark:bg-primary-900/50 border border-primary-300 dark:border-primary-700 rounded-full inline-block">
           404
         </p>
-        <h2 className="text-lg sm:text-2xl font-bold text-neutral-600 dark:text-neutral-400 mb-2">
+        <h2 className="text-xl font-bold text-neutral-600 dark:text-neutral-400 mb-2">
           There are no easter eggs here
         </h2>
-        <h4 className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mb-8">
+        <h4 className="text-sm text-neutral-600 dark:text-neutral-400 mb-8">
           No need to click around
         </h4>
         <Link
@@ -108,7 +114,7 @@ const NotFound = () => {
           className="group flex items-center justify-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
         >
           <HomeIcon className="w-5 h-5 transition-all duration-200" strokeWidth={1.5}/>
-          <span className="ml-2 texl-sm sm:text-base transition-all duration-500">
+          <span className="ml-2 text-sm transition-all duration-500">
             Return to Home
           </span>
         </Link>

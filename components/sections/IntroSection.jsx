@@ -3,25 +3,19 @@ import ColorThemeSelect from "../utils/ColorThemeSelect";
 
 export default function IntroSection({ data }) {
   return (
-    <div className="relative flex flex-col justify-start sm:flex-row sm:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
-      <div className="flex w-full sm:w-fit justify-between items-start">
-        <div
-          className="relative w-32 rounded-full overflow-hidden"
-          onContextMenu={(e) => e.preventDefault()}
-        >
-          <img
-            alt="Shamim Bin Zahid"
-            src="/images/shameme.webp"
-            id="shamemezahid"
-            aria-label="Picture of Shamim Bin Zahid"
-            height={512}
-            width={512}
-            className="w-32 aspect-1 rounded-full border-2 border-primary-700 dark:border-primary-500"
-            draggable="false"
-            preload="true"
-          />
-        </div>
-      </div>
+    <div className="relative flex flex-col justify-start md:flex-row md:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
+      <img
+        alt="Shamim Bin Zahid"
+        src="/images/shameme.webp"
+        id="shamemezahid"
+        aria-label="Picture of Shamim Bin Zahid"
+        height={512}
+        width={512}
+        className="w-32 aspect-1 rounded-full border-2 border-primary-700 dark:border-primary-500"
+        draggable="false"
+        preload="true"
+        onContextMenu={(e) => e.preventDefault()}
+      />
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
           {data?.intro?.greetings}
