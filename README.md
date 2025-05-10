@@ -2,11 +2,20 @@
 
 This website showcases my personal & professional details. Built with Next.js, React, TailwindCSS, it emphasizes accessibility, user experience, and performance. 
 
-![image](https://github.com/user-attachments/assets/2b69ee5d-7676-4675-95f5-df380344bc85)
-> Screenshot Last Updated: Mar 10, 2025
+---
 
+![image](https://github.com/user-attachments/assets/2b69ee5d-7676-4675-95f5-df380344bc85)
+*Screenshot: Mar 10, 2025*
+
+---
+
+![image](https://github.com/user-attachments/assets/db0b127a-c743-4cae-b566-05c9ed641d1a)
+*Screenshot: May 10, 2025* 
+
+---
 #### Key Features
 - **Accessibility-First Design**: Customizable accessibility menu with dark/light mode, text size, and reduced motion toggles
+- **Color themes**: Customizable color themes implemented with global CSS variables with simple tailwind configuration ensuring high performance
 - **Responsive Layout**: Adapts seamlessly to various screen sizes
 - **Dynamic Content**: Fetched from external API with fallback for data integrity
 - **Interactive UI**: Smooth transitions, hover effects, and animated icon transitions
