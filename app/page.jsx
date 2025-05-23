@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ChevronsUp, ChevronsDown } from "lucide-react";
 import ProfileContent from "@/components/home/ProfileContent";
 import CraftContent from "@/components/home/CraftContent";
+import { useData } from "@/components/context/DataContext";
 
 const TABS = {
   PROFILE: "profile",
@@ -53,6 +54,7 @@ export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
 }
 
 export function ContentWrapper({ activeTab, showNav }) {
+  const data = useData();
   return (
     <div
       className={`
@@ -64,7 +66,7 @@ export function ContentWrapper({ activeTab, showNav }) {
         }
       `}
     >
-      {activeTab === TABS.PROFILE ? <ProfileContent /> : <CraftContent />}
+      {activeTab === TABS.PROFILE ? <ProfileContent data={data} /> : <CraftContent data={data} />}
     </div>
   );
 }
@@ -92,7 +94,7 @@ export function ShowNavFloatingActionButton({ showNav, setShowNav }) {
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(TABS.PROFILE);
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
   return (
     <div className="flex flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh]">
