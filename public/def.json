@@ -65,18 +65,18 @@
         "icon": "be"
       },
       {
-        "label": "Notion Blogs",
+        "label": "Notion",
         "url": "https://shamemezahid.notion.site/Written-by-Shamim-1bfb02c82e3241e49f14e85dc466bf75",
         "icon": "no"
       },
       {
-        "label": "GitHub",
+        "label": "GitHub 🤪",
         "url": "https://github.com/shamemezahid",
         "icon": "gh"
       },
       {
-        "label": "GitHub (Work)",
-        "url": "https://github.com/shamimbinzahid-repliq",
+        "label": "GitHub 🥸",
+        "url": "https://github.com/shamimbinzahid",
         "icon": "gh"
       },
       {
@@ -130,7 +130,14 @@
       },
       {
         "category": "Programming / Languages",
-        "skills": ["Python", "C++", "Java", "JavaScript", "HTML", "CSS"]
+        "skills": [
+          "C++",
+          "Python",
+          "Java",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
       },
       {
         "category": "Frameworks / Tools",
@@ -303,7 +310,8 @@
         "conference": "6th International Conference on Imaging, Vision & Pattern Recognition (IVPR) & the 11th International Conference on Informatics, Electronics & Vision (ICIEV)",
         "year": "2023",
         "abstract": "Abstract on Page 24",
-        "URL": "https://ahadvisionlab.com/cennser/ICIEV23/proceedingsV23.pdf",
+        "URL_old": "https://ahadvisionlab.com/cennser/ICIEV23/proceedingsV23.pdf",
+        "URL": "https://cennser.org/ICIEV23/proceedingsV23.pdf",
         "URL_label": "Proceedings",
         "presentation": "https://www.youtube.com/watch?v=wE7H8KZ98G4"
       },
@@ -335,9 +343,11 @@
     ]
   },
   "crafts": {
-    "label": "Helping businesses craft their digital experiences and online presence since 2020",
+    "label": "My Crafts",
+    "description": "Helping businesses craft their digital experience and online presence",
     "projects": {
       "label": "Projects",
+      "show_tags": false,
       "values": [
         {
           "name": "Airwork AI",
@@ -350,16 +360,23 @@
           "link": "airwork.ai"
         },
         {
-          "name": "Robi Bangladesh & Airtel Bangladesh",
-          "summary": "Redesigning the Robi Bangladesh and Airtel Bangladesh websites under Axiata Group, unifying app-level functionalities (from My Robi & My Airtel apps) into a seamless web experience for both guest and logged-in users. Worked with a 5-member design team, focusing on telecom service flows, UX research, and accessibility.",
+          "name": "Robi & Airtel",
+          "summary": "Redesigning the Robi Bangladesh and Airtel Bangladesh websites under Axiata Group, unifying app-level functionalities from the My Robi & My Airtel apps into a seamless web experience for both guest and logged-in users. Worked with a 5-member design team, focusing on telecom service flows, UX research, and accessibility.",
           "descriptions": [
             "Worked with a team of 5 designers to revamp both Robi and Airtel websites.",
             "The goal was to unify app-level functionalities (from My Robi & My Airtel apps) into a seamless web experience, both logged-in and guest users.",
             "Focused heavily on UX research, telecom service flows, and accessibility."
           ],
-          "tags": ["telecom", "corporate", "ux redesign"],
-          "tech_stack": ["Figma", "HTML/CSS", "React"],
-          "roles": ["UX Designer", "Team Collaborator"],
+          "tags": [
+            "telecom",
+            "corporate",
+            "ux redesign"
+          ],
+          "tech_stack": [],
+          "roles": [
+            "UX Designer",
+            "Team Collaborator"
+          ],
           "current_status": "live",
           "link": "robi.com.bd"
         },
@@ -386,15 +403,37 @@
           "link": "supplers.com"
         },
         {
+          "name": "HealthOS",
+          "summary": "One of the largest B2B medicine distributions platform in Bangladesh, with supporting ecommerce, delivery and inventory management systems.",
+          "descriptions": [],
+          "tags": [],
+          "tech_stack": [],
+          "roles": [],
+          "current_status": "Live",
+          "date": "June 2023",
+          "link": "healthos.io"
+        },
+        {
           "name": "Exam Batch",
           "summary": "A web app for students and teachers to create, take, and evaluate exams using a dynamic question bank. Focused on personalization, custom tests, practice exams, and real-time results feedback for effective exam preparation.",
           "descriptions": [
             "Exam Batch was designed for students and teachers to create, take, and evaluate exams using a dynamic question bank.",
             "Focused on personalization, practice exams, and real-time results feedback."
           ],
-          "tags": ["edtech", "exam platform", "question bank"],
-          "tech_stack": ["Figma", "Laravel", "Vue.js"],
-          "roles": ["UX Designer", "Product Owner"],
+          "tags": [
+            "edtech",
+            "exam platform",
+            "question bank"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Laravel",
+            "Vue.js"
+          ],
+          "roles": [
+            "UX Designer",
+            "Product Owner"
+          ],
           "current_status": "in_progress",
           "link": "exambatch.app"
         },
@@ -405,9 +444,20 @@
             "1Class is a web app aimed at providing bite-sized, live academic sessions for quick learning in the Bangladeshi education context.",
             "The interface was optimized for video delivery, class scheduling, and fast interactions."
           ],
-          "tags": ["edtech", "live classes", "microlearning"],
-          "tech_stack": ["Figma", "Next.js", "Agora SDK"],
-          "roles": ["Product Designer", "UX Strategist"],
+          "tags": [
+            "edtech",
+            "live classes",
+            "microlearning"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Next.js",
+            "Agora SDK"
+          ],
+          "roles": [
+            "Product Designer",
+            "UX Strategist"
+          ],
           "current_status": "in_progress",
           "link": "1class.app"
         },
@@ -418,9 +468,20 @@
             "Precise Mentorship is a scalable education platform designed to help students prepare for competitive university entrance exams.",
             "Focused on seamless UX for high-traffic course access, video playback, and progress tracking."
           ],
-          "tags": ["edtech", "university prep", "online learning"],
-          "tech_stack": ["Figma", "Laravel", "Vue.js"],
-          "roles": ["Lead Designer", "Product Coordinator"],
+          "tags": [
+            "edtech",
+            "university prep",
+            "online learning"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Laravel",
+            "Vue.js"
+          ],
+          "roles": [
+            "Lead Designer",
+            "Product Coordinator"
+          ],
           "current_status": "live",
           "link": "precisementorship.com"
         },
@@ -431,9 +492,20 @@
             "Designed and structured Genweb2’s website to highlight services, case studies, and client onboarding.",
             "Emphasized corporate trust and development credibility through visual storytelling."
           ],
-          "tags": ["software", "corporate site", "development company"],
-          "tech_stack": ["Figma", "React", "Tailwind CSS"],
-          "roles": ["UI Designer", "Content Strategist"],
+          "tags": [
+            "software",
+            "corporate site",
+            "development company"
+          ],
+          "tech_stack": [
+            "Figma",
+            "React",
+            "Tailwind CSS"
+          ],
+          "roles": [
+            "UI Designer",
+            "Content Strategist"
+          ],
           "current_status": "live",
           "link": "genweb2.com"
         },
@@ -444,9 +516,19 @@
             "Somadha is a freelancer-client matching platform focused on localizing the freelance experience for Bangladesh.",
             "The system is built to support custom pricing, skill filters, and rapid service onboarding."
           ],
-          "tags": ["freelance", "marketplace"],
-          "tech_stack": ["Figma", "Next.js", "Node.js"],
-          "roles": ["Lead Designer", "Product Strategist"],
+          "tags": [
+            "freelance",
+            "marketplace"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Next.js",
+            "Node.js"
+          ],
+          "roles": [
+            "Lead Designer",
+            "Product Strategist"
+          ],
           "current_status": "in_progress",
           "link": "somadha.com"
         },
@@ -457,9 +539,21 @@
             "Pharmik enables businesses to manage sales, inventory, staff, and ledgers through a unified dashboard.",
             "Targeted to improve operational efficiency in the Bangladeshi pharmaceutical sector."
           ],
-          "tags": ["saas", "pharma", "b2b", "erp"],
-          "tech_stack": ["Figma", "Laravel", "React"],
-          "roles": ["UI Designer", "Workflow Analyst"],
+          "tags": [
+            "saas",
+            "pharma",
+            "b2b",
+            "erp"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Laravel",
+            "React"
+          ],
+          "roles": [
+            "UI Designer",
+            "Workflow Analyst"
+          ],
           "current_status": "in_progress",
           "link": "pharmik.co"
         },
@@ -471,9 +565,20 @@
             "It focused heavily on UX, real-time delivery tracking, and driver-client coordination.",
             "Ran briefly before being shelved."
           ],
-          "tags": ["delivery", "saas", "logistics", "ux"],
-          "tech_stack": ["Figma", "Firebase", "React Native"],
-          "roles": ["Lead Designer"],
+          "tags": [
+            "delivery",
+            "saas",
+            "logistics",
+            "ux"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Firebase",
+            "React Native"
+          ],
+          "roles": [
+            "Lead Designer"
+          ],
           "current_status": "closed",
           "link": "beeboxbd.com"
         },
@@ -484,9 +589,22 @@
             "1Menu is a digital signage and content control system developed for stores to showcase menus on Android TVs.",
             "Paired with a central admin panel to manage content and schedule changes remotely."
           ],
-          "tags": ["iot", "android", "tv app", "menu"],
-          "tech_stack": ["Figma", "Android", "Firebase", "React"],
-          "roles": ["UI/UX Designer", "PM"],
+          "tags": [
+            "iot",
+            "android",
+            "tv app",
+            "menu"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Android",
+            "Firebase",
+            "React"
+          ],
+          "roles": [
+            "UI/UX Designer",
+            "PM"
+          ],
           "current_status": "live",
           "link": "1cminc.com"
         },
@@ -497,9 +615,19 @@
             "Designed a visually striking landing page for Latitude23, a creative agency specializing in digital branding and strategy.",
             "Focused on strong brand identity, visual hierarchy, and responsive layout."
           ],
-          "tags": ["landing page", "branding", "agency"],
-          "tech_stack": ["Figma", "HTML/CSS", "GSAP"],
-          "roles": ["UI Designer"],
+          "tags": [
+            "landing page",
+            "branding",
+            "agency"
+          ],
+          "tech_stack": [
+            "Figma",
+            "HTML/CSS",
+            "GSAP"
+          ],
+          "roles": [
+            "UI Designer"
+          ],
           "current_status": "live",
           "link": "latitude23.ca"
         },
@@ -520,9 +648,20 @@
             "Worked on UI/UX optimization for the Sumash Tech website, a top electronics retail brand in Bangladesh.",
             "Focused on product discoverability, fast checkout, and seamless mobile responsiveness."
           ],
-          "tags": ["ecommerce", "electronics", "retail"],
-          "tech_stack": ["Figma", "Shopify", "HTML/CSS"],
-          "roles": ["UX Designer", "E-commerce Consultant"],
+          "tags": [
+            "ecommerce",
+            "electronics",
+            "retail"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Shopify",
+            "HTML/CSS"
+          ],
+          "roles": [
+            "UX Designer",
+            "E-commerce Consultant"
+          ],
           "current_status": "live",
           "link": "sumashtech.com"
         },
@@ -533,9 +672,19 @@
             "Sobar Daktar was built to enable remote consultations, appointment booking, and medical record access.",
             "Design focused on accessibility, especially for rural users, with multilingual UI support."
           ],
-          "tags": ["telehealth", "healthtech", "remote care"],
-          "tech_stack": ["Figma", "Flutter", "Firebase"],
-          "roles": ["UI/UX Designer"],
+          "tags": [
+            "telehealth",
+            "healthtech",
+            "remote care"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Flutter",
+            "Firebase"
+          ],
+          "roles": [
+            "UI/UX Designer"
+          ],
           "current_status": "closed",
           "link": "sobardaktar.com"
         },
@@ -546,9 +695,20 @@
             "Teezarat was built for a niche B2B market, allowing businesses to browse, inquire, and purchase construction tools and equipment.",
             "The design prioritized clarity, product categorization, and usability on mid-range Android devices."
           ],
-          "tags": ["ecommerce", "b2b", "android app", "construction"],
-          "tech_stack": ["Figma", "Android", "Firebase"],
-          "roles": ["UI Designer"],
+          "tags": [
+            "ecommerce",
+            "b2b",
+            "android app",
+            "construction"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Android",
+            "Firebase"
+          ],
+          "roles": [
+            "UI Designer"
+          ],
           "current_status": "in_progress",
           "link": "teezarat.com"
         },
@@ -559,9 +719,20 @@
             "This landing page showcased Crantech's evolution from Quix, the first AI delivery platform in Bangladesh.",
             "The site presents Crantech's services, product modules, and contact flow with modern design aesthetics."
           ],
-          "tags": ["landing page", "saas", "ai delivery"],
-          "tech_stack": ["Figma", "Next.js", "Framer"],
-          "roles": ["UI Designer", "Brand Consultant"],
+          "tags": [
+            "landing page",
+            "saas",
+            "ai delivery"
+          ],
+          "tech_stack": [
+            "Figma",
+            "Next.js",
+            "Framer"
+          ],
+          "roles": [
+            "UI Designer",
+            "Brand Consultant"
+          ],
           "current_status": "live",
           "link": "quixxprojects.com"
         },
@@ -572,9 +743,19 @@
             "QBSkool was designed to serve as a two-sided marketplace enabling students to find the right tutor and schedule lessons online.",
             "The platform aimed to streamline the tutoring process with an intuitive interface and personalized learning experience."
           ],
-          "tags": ["edtech", "marketplace"],
-          "tech_stack": ["Figma", "React", "Firebase"],
-          "roles": ["UI/UX Designer", "Product Manager"],
+          "tags": [
+            "edtech",
+            "marketplace"
+          ],
+          "tech_stack": [
+            "Figma",
+            "React",
+            "Firebase"
+          ],
+          "roles": [
+            "UI/UX Designer",
+            "Product Manager"
+          ],
           "current_status": "closed",
           "link": "qbskool.com"
         }
