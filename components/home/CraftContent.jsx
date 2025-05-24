@@ -31,15 +31,19 @@ function ProjectsContent({ data }) {
             key={index}
             className="animate-fade-in-up cursor-pointer group/card w-full rounded-2xl hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 pb-6 sm:p-6 sm:pb-8 -my-[2px]"
           >
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-wrap items-end justify-between gap-3">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center gap-2">
                   <FaviconImage link={craft.link} />
                   <h3 className="group-hover/card:brightness-150 transition-all duration-200 font-bold text-base text-neutral-900 dark:text-white">
                     {craft.name}
                   </h3>
                 </div>
-                <a
+              </div>
+              <p className="group-hover/card:brightness-150 transition-all duration-200 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+                {craft.summary}
+              </p>
+              <a
                   href={`https://${craft.link}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -57,10 +61,6 @@ function ProjectsContent({ data }) {
                     {craft.link}
                   </p>
                 </a>
-              </div>
-              <p className="group-hover/card:brightness-150 transition-all duration-200 text-sm font-normal text-neutral-600 dark:text-neutral-400">
-                {craft.summary}
-              </p>
               {data?.crafts?.projects?.show_tags && craft?.tags && craft?.tags?.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-2">
                   {craft.tags.map((tag, tagIndex) => (
