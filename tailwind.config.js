@@ -11,6 +11,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'xs': '320px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -18,8 +21,12 @@ module.exports = {
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { 
+            opacity: '0',
+          },
+          '100%': { 
+            opacity: '1',
+          },
         },
         fadeToLow: {
           '0%': { opacity: '1' },
@@ -27,7 +34,7 @@ module.exports = {
         }
       },
       animation: {
-        fadeIn: 'fadeIn 0.5s ease-in forwards',
+        fadeIn: 'fadeIn 0.5s cubic-bezier(0.1, 0.5, 0.3, 1) forwards',
         fadeToLow: 'fadeToLow 3s ease-in 1s forwards'
       },
     },

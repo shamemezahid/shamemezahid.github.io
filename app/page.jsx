@@ -1,11 +1,13 @@
 "use client";
 
-import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
 import { useState } from "react";
+import { useData } from "@/components/context/DataContext";
+
 import { ChevronsUp, ChevronsDown } from "lucide-react";
+
 import ProfileContent from "@/components/home/ProfileContent";
 import CraftContent from "@/components/home/CraftContent";
-import { useData } from "@/components/context/DataContext";
+import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
 
 const TABS = {
   PROFILE: "profile",
@@ -29,7 +31,7 @@ export function NavItem({ label, isActive, onClick }) {
 
 export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
   return (
-    <nav className="h-full flex items-center justify-end gap-2 sm:gap-6 md:gap-10 px-4 pt-2">
+    <nav className="w-full xs:w-fit h-full flex items-center justify-end gap-4 sm:gap-6 md:gap-10 px-4 pt-2">
       <NavItem
         label="Profile"
         isActive={activeTab === TABS.PROFILE}
@@ -42,6 +44,7 @@ export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
       />
       <button
         onClick={() => setShowNav(!showNav)}
+        aria-label="Hide navigation"
         className="text-sm font-light transition-all duration-300 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_24px_currentColor]"
       >
         <ChevronsUp
@@ -61,8 +64,8 @@ export function ContentWrapper({ activeTab, showNav }) {
         scroll-smooth flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
         ${
           showNav
-            ? "m-2 rounded-3xl shadow-sm  border border-neutral-300 dark:border-neutral-700"
-            : "m-0 rounded-none shadow-none border-0"
+            ? "m-2 rounded-3xl border border-neutral-300 dark:border-neutral-700"
+            : "m-0 rounded-none border-0"
         }
       `}
     >
@@ -84,6 +87,7 @@ export function ShowNavFloatingActionButton({ showNav, setShowNav }) {
     >
       <button
         onClick={() => setShowNav(true)}
+        aria-label="Show Navigation"
         className="p-3 rounded-3xl bg-neutral-100/50 dark:bg-neutral-800/50 backdrop-blur text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 border dark:border-neutral-600/50 border-neutral-400/50 flex items-center justify-center hover:shadow-700 hover:shadow-2xl"
       >
         <ChevronsDown strokeWidth={1.5} className="w-5 h-5" />
@@ -100,11 +104,9 @@ export default function Home() {
     <div className="flex flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh]">
       <div className={`flex flex-wrap justify-between transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}>
         <span 
-          className="text-sm sm:text-base flex h-full items-end justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-25 font-black cursor-pointer"
-          onClick={() => setActiveTab(TABS.PROFILE)}
-        >
-          {" "}
-          SHAMEME{" "}
+          className="hidden xs:visible xs:flex text-sm sm:text-base h-full items-end justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-25 font-black cursor-pointer"
+          onClick={() => setActiveTab(TABS.PROFILE)}>
+          SHAMEME
         </span>
         <NavBar
           activeTab={activeTab}

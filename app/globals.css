@@ -49,7 +49,7 @@ html.large-text {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -62,5 +62,5 @@ html.large-text {
   view-timeline-name: --section;
   view-timeline-axis: block;
   animation-timeline: --section;
-  animation-range: entry 0% cover 25%;
+  animation-range: entry 0% cover 15%;
 }

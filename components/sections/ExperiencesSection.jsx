@@ -1,4 +1,6 @@
 import { Globe, ArrowUpRight } from "lucide-react";
+import FaviconImage from "../utils/FaviconImage";
+import Tag from "../utils/Tag";
 
 export function ExperiencesSection({ data }) {
   return (
@@ -11,9 +13,12 @@ export function ExperiencesSection({ data }) {
             className="w-full p-5 border dark:border-neutral-600/50 border-neutral-400/50 rounded-3xl bg-neutral-200/[0.4] dark:bg-neutral-700/[0.4]"
           >
             <div className="flex justify-between items-center mb-2">
+              <div className="flex items-center gap-2">
+                <FaviconImage link={experience?.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "")} />
               <h3 className="font-bold text-base text-neutral-900 dark:text-white">
                 {experience.workplace}
               </h3>
+              </div>
               {experience.website && (
                 <a
                   href={experience.website}
@@ -41,15 +46,9 @@ export function ExperiencesSection({ data }) {
               </p>
             </div>
             <div className="flex gap-2 mb-2">
-              <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
-                {experience.shift}
-              </span>
-              <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
-                {experience.nature}
-              </span>
-              <span className="bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-1 rounded text-xs">
-                {experience.location}
-              </span>
+              <Tag>{experience.shift}</Tag>
+              <Tag>{experience.nature}</Tag>
+              <Tag>{experience.location}</Tag>
             </div>
             <ul className="list-disc pl-5 text-neutral-600 dark:text-neutral-300">
               {Array.isArray(experience.responsibilities) ? (
