@@ -61,7 +61,11 @@ export function ContentWrapper({ activeTab, showNav }) {
   return (
     <div
       className={`
-        scroll-smooth flex-1 min-h-0 h-full bg-white dark:bg-neutral-900 bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
+        scroll-smooth flex-1 min-h-0 h-full 
+        bg-white dark:bg-neutral-900 
+        bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 
+        dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 
+        overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
         ${
           showNav
             ? "m-2 rounded-[32px] border border-neutral-300 dark:border-neutral-700"
@@ -92,7 +96,7 @@ export function ShowNavFloatingActionButton({ showNav, setShowNav }) {
       <button
         onClick={() => setShowNav(true)}
         aria-label="Show Navigation"
-        className="p-3 rounded-3xl bg-neutral-100/50 dark:bg-neutral-800/50 backdrop-blur text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 border dark:border-neutral-600/50 border-neutral-400/50 flex items-center justify-center hover:shadow-700 hover:shadow-2xl"
+        className="h-12 w-12 p-3 rounded-3xl bg-neutral-100/50 dark:bg-neutral-800/50 backdrop-blur text-neutral-800 dark:text-neutral-100 hover:bg-neutral-200/50 dark:hover:bg-neutral-700/50 border dark:border-neutral-600/50 border-neutral-400/50 flex items-center justify-center hover:shadow-700 hover:shadow-2xl"
       >
         <ShrinkIcon strokeWidth={1} className="w-5 h-5" />
       </button>
@@ -107,13 +111,13 @@ export default function Home() {
   return (
     <>
       <div
-        className={`flex flex-col-reverse sm:flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh] ${showNav ? "py-2" : "py-0"}`}
+        className={`flex flex-col-reverse sm:flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh] ${showNav ? "pb-2 sm:pt-2" : "py-0"}`}
       >
         <div
           className={`flex flex-wrap justify-between transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}
         >
           <span
-            className="hidden xs:visible xs:flex text-sm sm:text-base h-full items-end justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-75 font-black cursor-pointer"
+            className="hidden xs:visible xs:flex text-sm sm:text-base h-full items-center justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-75 font-black cursor-pointer"
             onClick={() => setActiveTab(TABS.PROFILE)}
           >
             SHAMEME

@@ -29,7 +29,7 @@ function ProjectsContent({ data }) {
           <SeparatorLine className=" !my-0 mx-4 sm:mx-4 !w-[calc(100%-32px)] !sm:w-[calc(100%-48px)] opacity-25" />
           <a
             key={index}
-            className="animate-fade-in-up cursor-pointer group/card w-full rounded-2xl hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
+            className="animate-fade-in-up cursor-pointer group/card w-full rounded-[28px] hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
           >
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-4">
@@ -47,7 +47,7 @@ function ProjectsContent({ data }) {
                   href={`https://${craft.link}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-fit group/link flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/75 hover:bg-primary-100 dark:hover:bg-primary-900"
+                  className="w-fit group/link flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-primary-100 dark:hover:bg-primary-900"
                 >
                   <MoveUpRightIcon
                     className="w-0 h-0 group-hover/link:w-4 group-hover/link:h-4 transition-all duration-500"
@@ -121,7 +121,7 @@ export default function CraftContent({ data }) {
   return (
     <main className="overflow-x-hidden animate-fadeIn flex flex-col items-center w-full h-full mx-auto">
       <div className="flex flex-col items-center w-full max-w-6xl p-2 pt-4 pb-8 sm:p-4 sm:pt-8 sm:pb-12">
-        <div className="px-4 sm:px-6 py-8 sm:py-12 md:py-20 w-full flex flex-col items-center gap-4">
+        <div className="p-4 pb-8 sm:px-6 sm:py-12 md:py-20 w-full flex flex-col items-center gap-4">
           <h1 className="w-full text-left md:text-center max-w-2xl text-2xl font-bold text-neutral-800 dark:text-neutral-100">
             {data?.crafts?.label}
           </h1>

@@ -54,7 +54,7 @@ export default function ColorThemeSelect() {
         <Palette strokeWidth={1.5} className={`w-6 h-6 duration-400 ${isOpen ? 'rotate-180' : 'rotate-0'}`} />
         <span className="text-sm text-neutral-700 dark:text-neutral-300">Color Theme</span>
         <div 
-          className={`ml-auto w-4 h-4 rounded-full transition-all duration-300 ring-2 ring-offset-2 dark:ring-offset-neutral-800/25 ring-neutral-600/25`}
+          className={`ml-auto w-4 h-4 mr-1 rounded-full transition-all duration-300 ring-2 ring-offset-2 dark:ring-offset-neutral-800/25 ring-neutral-600/25`}
           style={{ backgroundColor: colorOptions[currentColor][500] }}
         />
       </button>
