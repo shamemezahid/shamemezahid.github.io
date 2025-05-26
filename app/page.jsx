@@ -113,7 +113,7 @@ export default function Home() {
           className={`flex flex-wrap justify-between transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}
         >
           <span
-            className="hidden xs:visible xs:flex text-sm sm:text-base h-full items-end justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-25 font-black cursor-pointer"
+            className="hidden xs:visible xs:flex text-sm sm:text-base h-full items-end justify-end px-4 [text-shadow:0_0_32px_var(--primary-color-500)] text-colors opacity-75 font-black cursor-pointer"
             onClick={() => setActiveTab(TABS.PROFILE)}
           >
             SHAMEME

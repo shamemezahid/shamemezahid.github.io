@@ -9,11 +9,12 @@ export default function IntroSection({ data }) {
         src="/images/shameme.webp"
         id="shamemezahid"
         aria-label="Picture of Shamim Bin Zahid"
-        height={512}
-        width={512}
+        height={128}
+        width={128}
         className="w-32 aspect-1 rounded-full border-2 border-primary-700 dark:border-primary-500"
         draggable="false"
         preload="true"
+        loading="lazy"
         onContextMenu={(e) => e.preventDefault()}
       />
       <div className="flex flex-col gap-2">
