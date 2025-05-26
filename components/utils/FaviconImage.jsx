@@ -24,6 +24,9 @@ export default function FaviconImage({ link }) {
       src={faviconUrl}
       alt="Favicon"
       className="w-5 h-5"
+      loading="lazy"
+      draggable="false"
+      preload="true"
       onError={(e) => {
         e.target.onerror = null; 
       }}

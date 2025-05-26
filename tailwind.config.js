@@ -34,7 +34,7 @@ module.exports = {
         }
       },
       animation: {
-        fadeIn: 'fadeIn 0.5s cubic-bezier(0.1, 0.5, 0.3, 1) forwards',
+        fadeIn: 'fadeIn 1s cubic-bezier(0.1, 0.5, 0.3, 1) forwards',
         fadeToLow: 'fadeToLow 3s ease-in 1s forwards'
       },
     },
