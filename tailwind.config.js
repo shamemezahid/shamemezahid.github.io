@@ -30,7 +30,7 @@ module.exports = {
         },
         fadeToLow: {
           '0%': { opacity: '1' },
-          '100%': { opacity: '0.35' }
+          '100%': { opacity: '0.25' }
         }
       },
       animation: {
