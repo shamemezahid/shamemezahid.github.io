@@ -13,6 +13,11 @@ This website showcases my personal & professional details. Built with Next.js, R
 *Screenshot: May 10, 2025* 
 
 ---
+![image](https://github.com/user-attachments/assets/44ebb708-6dd3-4e54-9a48-295cb6e88651)
+*Lighthouse Audit as of May 27, 2025*
+- The only reason for the 78% best practices is the Microsoft Clarity script. 🙂
+
+---
 #### Key Features
 - **Accessibility-First Design**: Customizable accessibility menu with dark/light mode, text size, and reduced motion toggles
 - **Color themes**: Customizable color themes implemented with global CSS variables with simple tailwind configuration ensuring high performance
