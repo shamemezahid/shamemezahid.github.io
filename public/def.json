@@ -25,7 +25,7 @@
     },
     "contact": {
       "show": true,
-      "label": "Contact Me",
+      "label": "Contact",
       "subtitle": "Feel free to reach out using the form or thru email",
       "address": "shameme.design@gmail.com",
       "url": "mailto:shameme.design@gmail.com"

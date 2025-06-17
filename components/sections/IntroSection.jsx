@@ -3,7 +3,7 @@ import ColorThemeSelect from "../utils/ColorThemeSelect";
 
 export default function IntroSection({ data }) {
   return (
-    <div className="relative flex flex-col justify-start md:flex-row md:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
+    <div className="w-full relative flex flex-col justify-start md:flex-row md:items-center gap-4 p-4 rounded-tr-[64px] rounded-br-[64px] rounded-tl-[100px] rounded-bl-[100px]">
       <img
         alt="Shamim Bin Zahid"
         src="/images/shameme.webp"

@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`flex flex-col-reverse sm:flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh] ${showNav ? "pb-2 sm:pt-2" : "py-0"}`}
+        className={`flex flex-col-reverse sm:flex-col bg-neutral-100 dark:bg-neutral-800 h-[100dvh] ${showNav ? "pb-2 sm:py-0 sm:pt-2" : "py-0"}`}
       >
         <div
           className={`flex flex-wrap justify-between transition-all duration-300 ${showNav ? "h-8" : "h-0 overflow-hidden"}`}
@@ -138,7 +138,7 @@ export default function Home() {
         />
         
         
-        <div className={`fixed right-6 transition-all duration-500 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${showNav ? "bottom-16 sm:bottom-8" : "-bottom-16"}`}>
+        <div className={`fixed right-6 transition-all duration-500 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${showNav ? "bottom-16 sm:bottom-6" : "-bottom-16"}`}>
           <AccessibilityAccordion />
         </div>
 
