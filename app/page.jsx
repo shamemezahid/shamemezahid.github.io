@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useData } from "@/components/context/DataContext";
 
-import { ChevronsUp, ChevronsDown, ChevronsUpIcon, ExpandIcon, ShrinkIcon } from "lucide-react";
+import { ExpandIcon, ShrinkIcon } from "lucide-react";
 
 import ProfileContent from "@/components/home/ProfileContent";
 import CraftContent from "@/components/home/CraftContent";
@@ -58,6 +58,7 @@ export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
 
 export function ContentWrapper({ activeTab, showNav }) {
   const data = useData();
+  
   return (
     <div
       className={`
@@ -130,7 +131,10 @@ export default function Home() {
           />
         </div>
         
-        <ContentWrapper activeTab={activeTab} showNav={showNav} />
+        <ContentWrapper 
+          activeTab={activeTab} 
+          showNav={showNav}
+        />
 
         <ShowNavFloatingActionButton
           showNav={showNav}
