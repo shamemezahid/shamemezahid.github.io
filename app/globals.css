@@ -7,7 +7,7 @@
 }
 
 html.large-text {
-  font-size: 120%; 
+  font-size: 120%;
 }
 
 .reduce-animation * {
@@ -21,11 +21,12 @@ html.large-text {
   filter: contrast(110%);
 }
 
-.high-contrast img, .high-contrast svg {
+.high-contrast img,
+.high-contrast svg {
   filter: contrast(50%);
 }
 
-.high-contrast a, 
+.high-contrast a,
 .high-contrast button {
   box-shadow: 0 0 2px 1px #808080 inset;
 }
@@ -52,6 +53,7 @@ html.large-text {
     opacity: 0;
     transform: translateY(16px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -64,4 +66,16 @@ html.large-text {
   view-timeline-axis: block;
   animation-timeline: --section;
   animation-range: entry 0% cover 15%;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

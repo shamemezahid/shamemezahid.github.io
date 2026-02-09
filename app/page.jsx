@@ -66,7 +66,8 @@ export function ContentWrapper({ activeTab, showNav }) {
         bg-white dark:bg-neutral-900 
         bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 
         dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 
-        overflow-scroll flex flex-col gap-4 transition-all duration-300 ease-in-out
+        overflow-hidden flex flex-col gap-4 transition-all duration-300 ease-in-out
+        scrollbar-none scrollbar-hidden scrollbar-hide no-scrollbar
         ${
           showNav
             ? "m-2 rounded-[32px] border border-neutral-300 dark:border-neutral-700"
