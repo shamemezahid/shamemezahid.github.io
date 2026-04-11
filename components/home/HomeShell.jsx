@@ -159,7 +159,7 @@ export default function HomeShell() {
         />
 
 
-        <div className={`fixed right-6 transition-all duration-500 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${showNav ? "bottom-16 sm:bottom-6" : "-bottom-16"}`}>
+        <div className={`fixed right-6 transition-all duration-500 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${showNav ? "bottom-16 sm:bottom-6" : "-bottom-32"}`}>
           <div className="flex flex-col items-end gap-2">
             <DisclaimerAccordion />
             <AccessibilityAccordion />
