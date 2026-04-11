@@ -27,8 +27,8 @@
       "show": true,
       "label": "Contact",
       "subtitle": "Feel free to reach out using the form or thru email",
-      "address": "shameme.design@gmail.com",
-      "url": "mailto:shameme.design@gmail.com"
+      "address": "[EMAIL_ADDRESS]",
+      "url": "mailto:[EMAIL_ADDRESS]"
     },
     "experiences": {
       "show": true
