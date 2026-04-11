@@ -5,7 +5,7 @@ import { Merriweather_Sans } from "next/font/google";
 import { AccessibilityProvider } from "@/components/context/AccessibilityContext";
 import { DataProvider } from "@/components/context/DataContext";
 
-const font = Merriweather_Sans({ 
+const font = Merriweather_Sans({
   subsets: ["latin", "latin-ext"],
   display: 'swap',
 });
@@ -13,7 +13,7 @@ const font = Merriweather_Sans({
 export const metadata = {
   title: "Shamim Bin Zahid",
   description:
-    "I'm Shamim Bin Zahid, A UI/UX Designer from Bangladesh with over 4 years of experience. I specialize in Software Product Design, UI/UX, Software Engineering and more. I am also known as shamimbinzahid & shamemezahid in other platforms.",
+    "Software Product Designer, Researcher, and UI/UX Lead with 5+ years of experience delivering scalable, intuitive, and human-centered B2B/B2C systems. I have worked with solo founders, startups, and larger companies. I specialize in end-to-end product design, from research and ideation to prototyping and execution across a wide range of industries, including HR-tech, telco, health-tech, e-commerce, marketplace, and edtech. I am also known as shamimbinzahid & shamemezahid in other platforms.",
 };
 
 const GoogleAnalytics = () => {
