@@ -50,6 +50,12 @@ export default function CraftContent({ data }) {
             onClick={() => setActiveTab(data?.crafts?.projects?.label)}
           />
           <NavItem
+            label={data?.crafts?.cool_stuff?.label}
+            tag={data?.crafts?.cool_stuff?.values?.length}
+            isActive={activeTab === data?.crafts?.cool_stuff?.label}
+            onClick={() => setActiveTab(data?.crafts?.cool_stuff?.label)}
+          />
+          <NavItem
             label={data?.crafts?.case_studies?.label}
             isActive={activeTab === data?.crafts?.case_studies?.label}
             onClick={() => setActiveTab(data?.crafts?.case_studies?.label)}
@@ -58,11 +64,6 @@ export default function CraftContent({ data }) {
             label={data?.crafts?.write_ups?.label}
             isActive={activeTab === data?.crafts?.write_ups?.label}
             onClick={() => setActiveTab(data?.crafts?.write_ups?.label)}
-          />
-          <NavItem
-            label={data?.crafts?.cool_stuff?.label}
-            isActive={activeTab === data?.crafts?.cool_stuff?.label}
-            onClick={() => setActiveTab(data?.crafts?.cool_stuff?.label)}
           />
         </ScrollableNavigation>
 

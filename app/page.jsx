@@ -8,6 +8,7 @@ import { ExpandIcon, ShrinkIcon } from "lucide-react";
 import ProfileContent from "@/components/home/ProfileContent";
 import CraftContent from "@/components/home/CraftContent";
 import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
+import DisclaimerAccordion from "@/components/utils/DisclaimerAccordion";
 
 const TABS = {
   PROFILE: "profile",
@@ -18,11 +19,10 @@ export function NavItem({ label, isActive, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`text-sm font-light transition-all duration-300 px-3 py-2 rounded-md ${
-        isActive
+      className={`text-sm font-light transition-all duration-300 px-3 py-2 rounded-md ${isActive
           ? "font-normal text-primary-700 dark:text-primary-400/75 [text-shadow:0_0_32px_currentColor]"
           : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-50 hover:[text-shadow:0_0_32px_currentColor] hover:animate-none"
-      }`}
+        }`}
     >
       {label}
     </button>
@@ -58,20 +58,19 @@ export function NavBar({ activeTab, setActiveTab, showNav, setShowNav }) {
 
 export function ContentWrapper({ activeTab, showNav }) {
   const data = useData();
-  
+
   return (
     <div
       className={`
         scroll-smooth flex-1 min-h-0 h-full 
         bg-white dark:bg-neutral-900 
-        bg-gradient-to-br from-neutral-50/10 via-primary-200/10 to-neutral-100/10 
+        bg-gradient-to-br from-neutral-50/20 via-primary-200/20 to-neutral-100/10 
         dark:from-neutral-900/10 dark:via-primary-800/10 dark:to-neutral-950/10 
         overflow-hidden flex flex-col gap-4 transition-all duration-300 ease-in-out
         scrollbar-none scrollbar-hidden scrollbar-hide no-scrollbar
-        ${
-          showNav
-            ? "m-2 rounded-[32px] border border-neutral-300 dark:border-neutral-700"
-            : "m-0 rounded-none border-0"
+        ${showNav
+          ? "m-2 rounded-[32px] border border-neutral-300 dark:border-neutral-700"
+          : "m-0 rounded-none border-0"
         }
       `}
     >
@@ -131,20 +130,23 @@ export default function Home() {
             setShowNav={setShowNav}
           />
         </div>
-        
-        <ContentWrapper 
-          activeTab={activeTab} 
+
+        <ContentWrapper
+          activeTab={activeTab}
           showNav={showNav}
         />
 
         <ShowNavFloatingActionButton
           showNav={showNav}
-          setShowNav={setShowNav} 
+          setShowNav={setShowNav}
         />
-        
-        
+
+
         <div className={`fixed right-6 transition-all duration-500 ease-[cubic-bezier(0.6,-0.4,0.5,1.5)] ${showNav ? "bottom-16 sm:bottom-6" : "-bottom-16"}`}>
-          <AccessibilityAccordion />
+          <div className="flex flex-col items-end gap-2">
+            <DisclaimerAccordion />
+            <AccessibilityAccordion />
+          </div>
         </div>
 
       </div>

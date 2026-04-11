@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Merriweather_Sans } from "next/font/google";
 import AccessibilityAccordion from "@/components/utils/AccessibilitySettings";
+import DisclaimerAccordion from "@/components/utils/DisclaimerAccordion";
 import { HomeIcon } from "lucide-react";
 
 const merriweatherSans = Merriweather_Sans({
@@ -34,7 +35,7 @@ const NotFound = () => {
       // speed between -2 and 2 ([-0.5 to 0.5] * 4)
       speedX: (Math.random() - 0.5) * 8,
       speedY: (Math.random() - 0.5) * 8,
-      
+
       // opacity between 0.25 and 0.75 ([0 to 0.75] + 0.25)
       opacity: Math.random() * 0.75 + 0.25,
     });
@@ -43,7 +44,7 @@ const NotFound = () => {
     const handleClick = (event) => {
       const newParticle = createParticle(event.clientX, event.clientY);
       setParticles((prevParticles) => [...prevParticles, newParticle]);
-    };     
+    };
     canvas.addEventListener("click", handleClick);
 
     const animate = () => {
@@ -56,7 +57,7 @@ const NotFound = () => {
           .trim()
           .split(' ')
           .join(', ');
-        
+
         context.fillStyle = `rgba(${primaryColor}, ${particle.opacity})`;
         context.font = `${particle.size}px ${merriweatherSans.style.fontFamily}`;
         context.fillText("404", particle.x, particle.y);
@@ -70,11 +71,11 @@ const NotFound = () => {
         const particleHeight = particle.size;
 
         // If the particle is out of the canvas, reverse the speed and set the position to the edge
-        if (particle.x < 0 || particle.x > canvas.width - particleWidth){
+        if (particle.x < 0 || particle.x > canvas.width - particleWidth) {
           particle.speedX *= -1;
           particle.x = particle.x < 0 ? 0 : canvas.width - particleWidth;
         }
-        if (particle.y < particleHeight || particle.y > canvas.height){
+        if (particle.y < particleHeight || particle.y > canvas.height) {
           particle.speedY *= -1;
           particle.y = particle.y < particleHeight ? particleHeight : canvas.height;
         }
@@ -96,7 +97,10 @@ const NotFound = () => {
       className={`relative flex flex-col items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900 overflow-hidden ${merriweatherSans.className}`}
     >
       <div className="fixed z-50 bottom-6 right-6">
-        <AccessibilityAccordion />
+        <div className="flex flex-col items-end gap-2">
+          <DisclaimerAccordion />
+          <AccessibilityAccordion />
+        </div>
       </div>
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="relative z-10 text-center bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-[32px] p-4 sm:p-5 border border-neutral-200 dark:border-neutral-800">
@@ -111,9 +115,9 @@ const NotFound = () => {
         </h4>
         <Link
           href="/"
-          className="group flex items-center justify-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
+          className="group flex items-center justify-center h-12 font-semibold text-primary-700 dark:text-primary-500 transition-all duration-500 px-4 py-3 rounded-xl bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
         >
-          <HomeIcon className="w-5 h-5 transition-all duration-200" strokeWidth={1.5}/>
+          <HomeIcon className="w-5 h-5 transition-all duration-200" strokeWidth={1.5} />
           <span className="ml-2 text-sm transition-all duration-500">
             Return to Home
           </span>

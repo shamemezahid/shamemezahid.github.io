@@ -1,11 +1,14 @@
 import React from "react";
 import Script from "next/script";
 import "./globals.css";
-import { Figtree, Merriweather, Merriweather_Sans, Plus_Jakarta_Sans } from "next/font/google";
+import { Merriweather_Sans } from "next/font/google";
 import { AccessibilityProvider } from "@/components/context/AccessibilityContext";
 import { DataProvider } from "@/components/context/DataContext";
 
-const font = Merriweather_Sans({ subsets: ["latin-ext"] });
+const font = Merriweather_Sans({ 
+  subsets: ["latin", "latin-ext"],
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Shamim Bin Zahid",

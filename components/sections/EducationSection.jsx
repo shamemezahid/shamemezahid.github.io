@@ -28,7 +28,7 @@ export function EducationSection({ data }) {
                     href={education.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center h-8 font-medium text-primary-700 dark:text-primary-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100 dark:hover:bg-primary-900"
+                    className="group flex items-center h-8 font-medium text-primary-700 dark:text-primary-500 transition-all duration-500 px-3 py-2 rounded-full bg-neutral-200/[0.5] dark:bg-neutral-700/[0.5] hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
                     title={`Open ${education.institute} website`}
                   >
                     <MoveUpRightIcon

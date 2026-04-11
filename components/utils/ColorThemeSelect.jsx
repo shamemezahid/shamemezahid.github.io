@@ -17,7 +17,7 @@ const colorOptions = {
   green: colors.green,
 };
 
-const defaultColor = Object.keys(colorOptions)[7];
+const defaultColor = Object.keys(colorOptions)[2];
 
 
 export default function ColorThemeSelect() {
@@ -27,14 +27,14 @@ export default function ColorThemeSelect() {
   const setThemeColor = (colorName) => {
     const color = colorOptions[colorName];
     const root = document.documentElement;
-    
+
     Object.entries(color).forEach(([shade, value]) => {
       const rgb = value.match(/\w\w/g)
         ?.map(x => parseInt(x, 16))
         .join(" ");
       root.style.setProperty(`--primary-color-${shade}`, rgb);
     });
-    
+
     sessionStorage.setItem("themeColor", colorName);
     setCurrentColor(colorName);
     // setIsOpen(false);
@@ -53,7 +53,7 @@ export default function ColorThemeSelect() {
       >
         <Palette strokeWidth={1.5} className={`w-6 h-6 duration-400 ${isOpen ? 'rotate-180' : 'rotate-0'}`} />
         <span className="text-sm text-neutral-700 dark:text-neutral-300">Color Theme</span>
-        <div 
+        <div
           className={`ml-auto w-4 h-4 mr-1 rounded-full transition-all duration-300 ring-2 ring-offset-2 dark:ring-offset-neutral-800/25 ring-neutral-600/25`}
           style={{ backgroundColor: colorOptions[currentColor][500] }}
         />
@@ -66,15 +66,13 @@ export default function ColorThemeSelect() {
               <button
                 key={name}
                 onClick={() => setThemeColor(name)}
-                className={`p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 group ${
-                  currentColor === name ? 'ring-inset ring-2 ring-primary-500' : ''
-                }`}
+                className={`p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 group ${currentColor === name ? 'ring-inset ring-2 ring-primary-500' : ''
+                  }`}
                 title={name.charAt(0).toUpperCase() + name.slice(1)}
               >
-                <div 
-                  className={`w-full aspect-square rounded-full transition-all duration-300 group-hover:scale-110 ${
-                    currentColor === name ? 'scale-110' : ''
-                  }`}
+                <div
+                  className={`w-full aspect-square rounded-full transition-all duration-300 group-hover:scale-110 ${currentColor === name ? 'scale-110' : ''
+                    }`}
                   style={{ backgroundColor: color[500] }}
                 />
               </button>

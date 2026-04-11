@@ -6,13 +6,13 @@
     "label": "Intro",
     "name": "Shamim Bin Zahid",
     "greetings": "Hi I'm Shamim Bin Zahid 👋",
-    "tagline": "UI/UX Designer, Software Product Manager & Engineer",
+    "tagline": "Designer, Engineer, Tinkerer",
     "location": "Based in Dhaka, Bangladesh",
     "quote": "Making the world slightly better with better designed \"Things\""
   },
   "about": {
     "label": "About Me",
-    "value": "I am a data-driven UI/UX designer with over 4 years of experience creating intuitive, functional, and user-focused design solutions that drive business growth. I've worked on and also led design and development teams across diverse industries, including e-commerce, recruitment, telco, telemedicine, edtech, freelancing, and logistics. I am always open to feedback and eager to learn."
+    "value": "Software Product Designer, Researcher, and UI/UX Lead with 5+ years of experience delivering scalable, intuitive, and human-centered B2B/B2C systems. I have worked with solo founders, startups, and larger companies. I specialize in end-to-end product design, from research and ideation to prototyping and execution across a wide range of industries, including HR-tech, telco, health-tech, e-commerce, marketplace, and edtech."
   },
   "actions": {
     "show": true,
@@ -70,19 +70,9 @@
         "icon": "no"
       },
       {
-        "label": "GitHub 🤪",
+        "label": "GitHub",
         "url": "https://github.com/shamemezahid",
         "icon": "gh"
-      },
-      {
-        "label": "GitHub 🥸",
-        "url": "https://github.com/shamimbinzahid",
-        "icon": "gh"
-      },
-      {
-        "label": "LeetCode",
-        "url": "https://leetcode.com/shamemezahid",
-        "icon": "lc"
       },
       {
         "label": "Instagram",
@@ -98,14 +88,23 @@
         "category": "Design & Human Computer Interaction",
         "skills": [
           "Figma",
+          "Framer",
           "Interaction design",
-          "Wire-framing",
+          "Wireframing",
           "Prototyping",
           "Design systems",
-          "Responsive design",
+          "Atomic design",
+          "IA design",
+          "Information architecture",
+          "Responsive design (Web, Android & iOS)",
+          "Accessibility (WCAG, A11y)",
+          "Material Design Guidelines",
+          "Human Interface Guidelines",
+          "Microinteractions",
+          "UX writing",
           "UX research",
           "Human-centered design",
-          "Information architecture",
+          "HCD process",
           "Journey mapping",
           "Usability testing",
           "Heuristic evaluation",
@@ -117,13 +116,16 @@
         "category": "Software Development Life Cycle",
         "skills": [
           "Requirement analysis",
-          "System architecture design",
+          "Agile/Scrum/Kanban",
+          "Dev handoff optimization",
+          "System design & architecture",
           "Front-end development",
-          "Quality assurance",
-          "REST API architecture",
-          "Product lifecycle management",
+          "RESTful APIs",
+          "CI/CD pipelines",
+          "Git/GitHub",
+          "QA & Design audits",
+          "End-to-end product lifecycle",
           "Project management",
-          "Agile methodologies",
           "Documentation",
           "Client interaction"
         ]
@@ -142,13 +144,14 @@
       {
         "category": "Frameworks / Tools",
         "skills": [
-          "ReactJs",
-          "NextJs",
+          "React",
+          "Next.js",
           "Tailwind CSS",
           "Android (Java)",
           "Firebase",
           "DevTools",
-          "Git"
+          "Git/GitHub",
+          "LLM prompting"
         ]
       },
       {
@@ -182,6 +185,12 @@
           "Create user-friendly designs that align with product goals.",
           "Work with developers to ensure smooth design implementation and conduct QA processes to ensure product quality."
         ],
+        "contributions": [
+          "Migrated the company website to Framer, with 17+ pages, 8+ dynamic code components in under 2 months.",
+          "Redesigned the entire web app end-to-end, across both recruiter and talent journeys, improving metrics— reducing incomplete profiles, unfinished evaluations, and user errors, while improving the overall vetting process.",
+          "Drive design strategy through ongoing user research, translating findings directly into product decisions.",
+          "Partner with developers through handoff and QA to close the gap between design intent and shipped products."
+        ],
         "shift": "Full Time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
@@ -203,13 +212,19 @@
           "Conducted client demonstrations and played an instrumental role in recruiting for the UI/UX and Frontend development teams.",
           "Managed and oversaw the design process of B2B and B2C systems across industries, including pharmaceuticals, healthcare, e-commerce, and recruitment management."
         ],
+        "contributions": [
+          "Owned the full product lifecycle across 6 products with a team of 2–4 designers and 15–25 developers, from research, system design, prototyping, UI design, UX evaluation, through delivery, QA, and launch.",
+          "Pushed sprint say-do ratio from ~50% to ~90% through structured sprint planning.",
+          "Cut bug reports per sprint by up to 80% via tighter QA processes, dev handoff standards, and CI/CD coordination.",
+          "Built and ran a formal mentorship program covering hiring, curriculum, evaluation for 5+ UX and 30+ frontend trainees."
+        ],
         "shift": "Full Time",
         "nature": "Hybrid",
         "location": "Dhaka, Bangladesh"
       },
       {
-        "workplace": "Crantech LLC",
-        "website": "https://crantechllc.com",
+        "workplace": "Crantech Ltd",
+        "website": "https://crantech.uk",
         "designation": "Product Designer",
         "start": "Apr 2021",
         "end": "Jun 2022 (1yr 3mo)",
@@ -222,13 +237,17 @@
           "Managed design deliverables for B2C and B2B platforms in sectors like e-commerce, telemedicine, freelancing, and education.",
           "Involved in software testing and documentation (requirement analysis, design documentation, user guides, etc.)"
         ],
+        "contributions": [
+          "Founding designer; led UI/UX of 8 apps in e-commerce, health, edtech, communication, retail & freelancing industries.",
+          "Collaborated on system and database design, defined frontend requirements, supported QA, and delivered client demos."
+        ],
         "shift": "Full Time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
       },
       {
-        "workplace": "Crantech LLC",
-        "website": "https://crantechllc.com",
+        "workplace": "Crantech Ltd",
+        "website": "https://crantech.uk",
         "designation": "UI/UX Designer",
         "start": "Aug 2020",
         "end": "Mar 2021 (8mo)",
@@ -238,6 +257,7 @@
           "Managed design decisions from system wireframes to final interface designs for various applications.",
           "Contributed to system design and collaborated on data models for client projects."
         ],
+        "contributions": [],
         "shift": "Part Time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
@@ -351,8 +371,7 @@
       "values": [
         {
           "name": "Airwork AI",
-          "summary": "Redesigning the Airwork AI website to enhance usability and clarity of information to the target audiences. The project involved a complete overhaul of the website's structure, content, and completely new design system to ensure a seamless user experience.",
-          "descriptions": [],
+          "summary": "Redesigned and migrated the company website to Framer, improving general and programmatic SEO and blog CMS management. Designed over 17 pages with 8+ dynamic code components in under 2 months.",
           "tags": [],
           "tech_stack": [],
           "roles": [],
@@ -361,12 +380,7 @@
         },
         {
           "name": "Robi & Airtel",
-          "summary": "Redesigning the Robi Bangladesh and Airtel Bangladesh websites under Axiata Group, unifying app-level functionalities from the My Robi & My Airtel apps into a seamless web experience for both guest and logged-in users. Worked with a 5-member design team, focusing on telecom service flows, UX research, and accessibility.",
-          "descriptions": [
-            "Worked with a team of 5 designers to revamp both Robi and Airtel websites.",
-            "The goal was to unify app-level functionalities (from My Robi & My Airtel apps) into a seamless web experience, both logged-in and guest users.",
-            "Focused heavily on UX research, telecom service flows, and accessibility."
-          ],
+          "summary": "Axiata engagement via Airwork, bringing My Robi and My Airtel app functionality into a seamless web experience for guests and logged-in users. With a 5-person design team, covered navigation, auth, recharge, prepaid offers, MNP, and live chat.",
           "tags": [
             "telecom",
             "corporate",
@@ -382,44 +396,37 @@
         },
         {
           "name": "ProHR",
-          "summary": "A hiring management platform featuring automated video screening tests, quizzes, assessments, and interviews — streamlining recruitment workflows for HR teams and simplifying candidate evaluation.",
-          "descriptions": [],
+          "summary": "A hiring management platform featuring automated video screening, quizzes, assessments, and structured interviews — streamlining end-to-end recruitment workflows for HR teams and simplifying candidate evaluation at scale.",
           "tags": [],
           "tech_stack": [],
           "roles": [],
-          "current_status": "Live",
+          "current_status": "live",
           "date": "Dec 2023",
           "link": "prohr.io"
         },
         {
           "name": "Supplers",
-          "summary": "An online community platform for the furniture and interior design industry, allowing manufacturers, suppliers, and stakeholders to create profiles, showcase products and projects, share news/files, and engage in professional communication — enhancing business networking in Nordic countries like Sweden, Denmark, and Finland.",
-          "descriptions": [],
+          "summary": "End-to-end design and product management for a global B2B networking platform for the furniture and interior design industry — connecting manufacturers, suppliers, and partners worldwide across a ~2-year engagement.",
           "tags": [],
           "tech_stack": [],
           "roles": [],
-          "current_status": "Live",
+          "current_status": "live",
           "date": "June 2023",
           "link": "supplers.com"
         },
         {
           "name": "HealthOS",
-          "summary": "One of the largest B2B medicine distributions platform in Bangladesh, with supporting ecommerce, delivery and inventory management systems.",
-          "descriptions": [],
+          "summary": "One of Bangladesh's largest B2B medicine distribution platforms, with integrated e-commerce, delivery logistics, and inventory management systems — designed to support high-volume pharmaceutical supply chains.",
           "tags": [],
           "tech_stack": [],
           "roles": [],
-          "current_status": "Live",
+          "current_status": "live",
           "date": "June 2023",
           "link": "healthos.io"
         },
         {
-          "name": "Exam Batch",
-          "summary": "A web app for students and teachers to create, take, and evaluate exams using a dynamic question bank. Focused on personalization, custom tests, practice exams, and real-time results feedback for effective exam preparation.",
-          "descriptions": [
-            "Exam Batch was designed for students and teachers to create, take, and evaluate exams using a dynamic question bank.",
-            "Focused on personalization, practice exams, and real-time results feedback."
-          ],
+          "name": "ExamBatch",
+          "summary": "A web app for students and teachers to create, take, and evaluate exams via a dynamic question bank. Focused on personalization, custom tests, and real-time results feedback. Designed from scratch with the founder and tech lead, iterated through user feedback and testing.",
           "tags": [
             "edtech",
             "exam platform",
@@ -439,11 +446,7 @@
         },
         {
           "name": "1Class",
-          "summary": "A short-form, live video class platform offering bite-sized academic sessions tailored for the Bangladeshi education context. The interface was optimized for video delivery, fast interactions, and class scheduling.",
-          "descriptions": [
-            "1Class is a web app aimed at providing bite-sized, live academic sessions for quick learning in the Bangladeshi education context.",
-            "The interface was optimized for video delivery, class scheduling, and fast interactions."
-          ],
+          "summary": "A live, short-form video class platform delivering bite-sized academic sessions tailored for the Bangladeshi education context. The interface was optimized for video delivery, class scheduling, and fast interactions across devices.",
           "tags": [
             "edtech",
             "live classes",
@@ -462,12 +465,8 @@
           "link": "1class.app"
         },
         {
-          "name": "Precise Mentorship",
-          "summary": "A scalable edtech platform helping students prepare for competitive university entrance exams in Bangladesh. Prioritized seamless UX for high-traffic usage, smooth course access, video playback, and progress tracking.",
-          "descriptions": [
-            "Precise Mentorship is a scalable education platform designed to help students prepare for competitive university entrance exams.",
-            "Focused on seamless UX for high-traffic course access, video playback, and progress tracking."
-          ],
+          "name": "PreciseMentorship",
+          "summary": "A scalable edtech platform for competitive university entrance exam prep in Bangladesh. Delivered a design system and component library optimized for high-traffic usage, course access, video playback, and progress tracking.",
           "tags": [
             "edtech",
             "university prep",
@@ -487,11 +486,7 @@
         },
         {
           "name": "Genweb2",
-          "summary": "Corporate website and landing page for a Bangladeshi software development firm, designed to highlight services, case studies, and the client onboarding process — using visual storytelling to build trust and showcase development credibility.",
-          "descriptions": [
-            "Designed and structured Genweb2’s website to highlight services, case studies, and client onboarding.",
-            "Emphasized corporate trust and development credibility through visual storytelling."
-          ],
+          "summary": "Corporate website for a Bangladeshi software development firm, designed to highlight services, case studies, and client onboarding — using structured visual storytelling to communicate development credibility and build trust.",
           "tags": [
             "software",
             "corporate site",
@@ -511,11 +506,7 @@
         },
         {
           "name": "Somadha",
-          "summary": "A customizable freelance marketplace tailored for the Bangladeshi market, supporting localized experiences with features like custom pricing, skill-based filtering, and quick service onboarding for both clients and freelancers.",
-          "descriptions": [
-            "Somadha is a freelancer-client matching platform focused on localizing the freelance experience for Bangladesh.",
-            "The system is built to support custom pricing, skill filters, and rapid service onboarding."
-          ],
+          "summary": "A localized freelance marketplace for the Bangladeshi market with custom pricing, skill-based filtering, and quick service onboarding for both clients and freelancers. Redesigned the entire platform from scratch and built a design system for the dev team.",
           "tags": [
             "freelance",
             "marketplace"
@@ -534,11 +525,7 @@
         },
         {
           "name": "Pharmik",
-          "summary": "A B2B SaaS platform designed for pharmaceutical suppliers and retailers in Bangladesh. Offers inventory, sales, staff, and ledger management via a unified dashboard to improve business efficiency.",
-          "descriptions": [
-            "Pharmik enables businesses to manage sales, inventory, staff, and ledgers through a unified dashboard.",
-            "Targeted to improve operational efficiency in the Bangladeshi pharmaceutical sector."
-          ],
+          "summary": "A B2B SaaS dashboard for pharmaceutical suppliers and retailers in Bangladesh, unifying inventory, sales, staff, and ledger management into a single interface to improve operational efficiency.",
           "tags": [
             "saas",
             "pharma",
@@ -559,12 +546,7 @@
         },
         {
           "name": "BeeBox",
-          "summary": "An experimental SaaS logistics platform aimed at unifying buyers, sellers, and couriers. Focused on delivery tracking, stakeholder coordination, and real-time UX — ran briefly before being shelved.",
-          "descriptions": [
-            "BeeBox was an experimental logistics product designed to unify all stakeholders in the delivery cycle.",
-            "It focused heavily on UX, real-time delivery tracking, and driver-client coordination.",
-            "Ran briefly before being shelved."
-          ],
+          "summary": "An experimental SaaS logistics platform aimed at unifying buyers, sellers, and couriers in a single delivery cycle. Focused on real-time tracking, stakeholder coordination, and UX — ran briefly before being shelved.",
           "tags": [
             "delivery",
             "saas",
@@ -583,12 +565,8 @@
           "link": "beeboxbd.com"
         },
         {
-          "name": "1Menu",
-          "summary": "An Android TV-based digital signage system for stores to display dynamic menus. Comes with a centralized admin panel to manage content and schedule changes remotely — optimized for store-level digital interaction.",
-          "descriptions": [
-            "1Menu is a digital signage and content control system developed for stores to showcase menus on Android TVs.",
-            "Paired with a central admin panel to manage content and schedule changes remotely."
-          ],
+          "name": "One CM - Digital Signage",
+          "summary": "An Android TV-based digital signage system for retail stores with a centralized admin panel for remote content and schedule management. Designed the TV app and admin panel, and contributed to Android development.",
           "tags": [
             "iot",
             "android",
@@ -610,11 +588,7 @@
         },
         {
           "name": "Latitude23",
-          "summary": "Landing page for a digital branding solutions company, built with a focus on responsive layout, strong brand identity, and modern visual hierarchy — representing the creative agency’s unique positioning.",
-          "descriptions": [
-            "Designed a visually striking landing page for Latitude23, a creative agency specializing in digital branding and strategy.",
-            "Focused on strong brand identity, visual hierarchy, and responsive layout."
-          ],
+          "summary": "Landing page for a digital branding and strategy agency, built around strong brand identity, modern visual hierarchy, and responsive layout — representing the agency's creative positioning.",
           "tags": [
             "landing page",
             "branding",
@@ -633,8 +607,7 @@
         },
         {
           "name": "CardiCheck",
-          "summary": "CardiCheck is a telehealth platform developed for a renowned cardiologist in Florida, designed to modernize her cardiology clinic's patient care. It enables remote cardiac consultations, effortless health monitoring, and delivers personalized insights to help patients manage and improve their heart health — all from the comfort of home.",
-          "descriptions": [],
+          "summary": "A telehealth platform for a cardiology clinic in Florida, enabling remote cardiac consultations, health monitoring, and personalized insights — designed to help patients manage heart health from home.",
           "tags": [],
           "tech_stack": [],
           "roles": [],
@@ -643,11 +616,7 @@
         },
         {
           "name": "Sumash Tech",
-          "summary": "UI/UX optimization for a major electronics e-commerce platform in Bangladesh. Focused on enhancing product discoverability, enabling faster checkout, and ensuring mobile responsiveness across devices.",
-          "descriptions": [
-            "Worked on UI/UX optimization for the Sumash Tech website, a top electronics retail brand in Bangladesh.",
-            "Focused on product discoverability, fast checkout, and seamless mobile responsiveness."
-          ],
+          "summary": "UI/UX optimization for a major electronics e-commerce platform in Bangladesh, focused on improving product discoverability, enabling faster checkout, and ensuring seamless mobile responsiveness across devices.",
           "tags": [
             "ecommerce",
             "electronics",
@@ -667,11 +636,7 @@
         },
         {
           "name": "Sobar Daktar",
-          "summary": "A telehealth platform enabling remote medical consultations, appointment bookings, and access to medical records — with a multilingual, accessible UI designed for users in rural and underserved areas. The platform was later closed.",
-          "descriptions": [
-            "Sobar Daktar was built to enable remote consultations, appointment booking, and medical record access.",
-            "Design focused on accessibility, especially for rural users, with multilingual UI support."
-          ],
+          "summary": "A telehealth platform enabling remote consultations, appointment bookings, and medical record access — with a multilingual, accessible UI designed for rural and underserved users in Bangladesh. Later closed.",
           "tags": [
             "telehealth",
             "healthtech",
@@ -690,11 +655,7 @@
         },
         {
           "name": "Teezarat",
-          "summary": "An e-commerce Android app built for a construction equipment business in the B2B space. Designed for usability on mid-range Android devices, emphasizing clarity, intuitive categorization, and inquiry-based purchases.",
-          "descriptions": [
-            "Teezarat was built for a niche B2B market, allowing businesses to browse, inquire, and purchase construction tools and equipment.",
-            "The design prioritized clarity, product categorization, and usability on mid-range Android devices."
-          ],
+          "summary": "An Android e-commerce app for a B2B construction equipment business, designed for clarity, intuitive product categorization, and inquiry-based purchasing — optimized for mid-range Android devices.",
           "tags": [
             "ecommerce",
             "b2b",
@@ -714,11 +675,7 @@
         },
         {
           "name": "Quix Projects",
-          "summary": "Landing page and service showcase site for Quixx Projects, currently Crantech LLC, formerly sister concern of Quix — Bangladesh’s first AI-powered delivery platform. Highlighted their service evolution with modern design aesthetics and a clear service/contact flow.",
-          "descriptions": [
-            "This landing page showcased Crantech's evolution from Quix, the first AI delivery platform in Bangladesh.",
-            "The site presents Crantech's services, product modules, and contact flow with modern design aesthetics."
-          ],
+          "summary": "Landing page and service showcase for Crantech Ltd (formerly Quix), Bangladesh's first AI-powered delivery platform. Presented their service evolution and product modules with modern design aesthetics and a clear contact flow.",
           "tags": [
             "landing page",
             "saas",
@@ -738,11 +695,7 @@
         },
         {
           "name": "QBSkool",
-          "summary": "A two-sided edtech marketplace connecting students with tutors, allowing them to schedule lessons online. The interface was tailored to provide a personalized and intuitive tutoring experience. Later closed.",
-          "descriptions": [
-            "QBSkool was designed to serve as a two-sided marketplace enabling students to find the right tutor and schedule lessons online.",
-            "The platform aimed to streamline the tutoring process with an intuitive interface and personalized learning experience."
-          ],
+          "summary": "A two-sided edtech marketplace connecting students with tutors for scheduled online lessons — designed to simplify the tutoring process with an intuitive interface and personalized learning experience. Later closed.",
           "tags": [
             "edtech",
             "marketplace"
@@ -774,7 +727,53 @@
     },
     "cool_stuff": {
       "label": "Cool stuff",
-      "values": [],
+      "values": [
+        {
+          "name": "quicc-note",
+          "summary": "A simple notepad app that shares your content with your local network. Functionality is intentionally kept simple. (Socket Ekhono Chole na :( )",
+          "link": "github.com/shamemezahid/quicc-note"
+        },
+        {
+          "name": "ytmusic-to-drive",
+          "summary": "Download your favorite YouTube playlist(s) to your Google Drive as highest available quality audio files.",
+          "link": "github.com/shamemezahid/ytmusic-to-drive"
+        },
+        {
+          "name": "quicc-draw",
+          "summary": "Doodle on an HTML Canvas. Customizations include Stroke Color, Width, Eraser, Object remove, Undo, Redo, PNG export :D",
+          "link": "github.com/shamemezahid/quicc-draw"
+        },
+        {
+          "name": "rexume",
+          "summary": "A modern, customizable resume website built with Next.js that you can configure entirely through a JSON file. Perfect for showcasing your work esp if you're into research or backend dev and need a quick UI for a personal site.",
+          "link": "github.com/shamemezahid/rexume"
+        },
+        {
+          "name": "cf-this-week",
+          "summary": "Forked from rahathossain690/CFThisWeek. A Google Chrome Extension that notifies when there's a CodeForces Contest. Did frontend work.",
+          "link": "github.com/shamemezahid/cf-this-week"
+        },
+        {
+          "name": "gorib-er-airdrop",
+          "summary": "Gorib er Airdrop. Just run the python file and share files locally.",
+          "link": "github.com/shamemezahid/gorib-er-airdrop"
+        },
+        {
+          "name": "guchaw",
+          "summary": "A python script to arrange files of a directory into categorized sub-folders according the file types.",
+          "link": "github.com/shamemezahid/guchaw"
+        },
+        {
+          "name": "arduino-capacitive-piano",
+          "summary": "Source code & Diagrams of a smoll Arduino project for a lab course (CSE-3113).",
+          "link": "github.com/shamemezahid/arduino-capacitive-piano"
+        },
+        {
+          "name": "diction",
+          "summary": "A simple Bangla to English Dictionary application implementing perfect hashing. Done as an assignment for Algo-II Course at DU.",
+          "link": "github.com/shamemezahid/diction"
+        }
+      ],
       "empty_state": "Cool stuff coming soon"
     }
   }
