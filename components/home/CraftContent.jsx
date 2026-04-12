@@ -27,7 +27,7 @@ export default function CraftContent({ data }) {
 
   return (
     <main className="overflow-x-hidden animate-fadeIn flex flex-col items-center w-full h-full mx-auto">
-      <div className="flex flex-col items-center w-full max-w-6xl p-2 pt-4 pb-8 sm:p-4 sm:pt-8 sm:pb-12">
+      <div className="flex flex-col items-center w-full max-w-screen-2xl p-2 pt-4 pb-8 sm:p-4 sm:pt-8 sm:pb-12">
         <div className="p-4 pb-8 sm:px-6 sm:py-12 md:py-20 w-full flex flex-col gap-4">
           <h1 className="w-full text-left text-2xl font-bold text-neutral-800 dark:text-neutral-100">
             {data?.crafts?.label}

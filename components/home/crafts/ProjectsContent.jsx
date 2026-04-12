@@ -8,18 +8,24 @@ export function ProjectCard({ data, craft, index }) {
     <>
       <div
         key={index}
-        className="animate-fade-in-up cursor-pointer group/card w-full rounded-[28px] hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
+        className="animate-fade-in-up cursor-pointer group/card w-full rounded-3xl hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-3 md:gap-4 hover:bg-black/5 dark:hover:bg-white/5 p-4 sm:p-6 lg:p-7"
       >
         <div className="flex flex-col gap-3">
+
           <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-2">
+
+            <div className="flex items-center justify-center scale-2 gap-2">
               <FaviconImage link={craft.link} />
 
               <h3 className="group-hover/card:brightness-150 transition-all duration-200 font-bold text-base text-neutral-900 dark:text-white">
                 {craft.name}
               </h3>
             </div>
+
           </div>
+
+          {/* <img src='/images/item.jpeg' alt={craft.name} className="w-full aspect-[16/9] h-auto rounded-xl" /> */}
+
           <p className="group-hover/card:brightness-150 transition-all duration-200 text-sm font-normal text-neutral-600 dark:text-neutral-400">
             {craft.summary}
           </p>
@@ -60,7 +66,7 @@ export function ProjectCard({ data, craft, index }) {
 
 export default function ProjectsContent({ data }) {
   return (
-    <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 justify-items-center gap-3">
+    <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-2">
       {data?.crafts?.projects?.values?.map((craft, index) => (
         <ProjectCard data={data} craft={craft} index={index} key={index} />
       ))}

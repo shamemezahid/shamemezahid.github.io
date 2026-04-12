@@ -18,7 +18,7 @@ const colorOptions = {
 };
 
 // default color index
-const defaultColor = Object.keys(colorOptions)[6];
+const defaultColor = Object.keys(colorOptions)[0];
 
 
 export default function ColorThemeSelect() {

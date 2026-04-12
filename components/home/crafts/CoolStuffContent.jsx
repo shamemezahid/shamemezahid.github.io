@@ -6,7 +6,7 @@ function CoolStuffCard({ craft, index }) {
     <>
       <div
         key={index}
-        className="animate-fade-in-up group/card w-full rounded-[28px] hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
+        className="animate-fade-in-up group/card w-full rounded-2xl hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
       >
         <div className="flex flex-col gap-3">
           <div className="flex flex-wrap items-center gap-4">
@@ -25,7 +25,7 @@ function CoolStuffCard({ craft, index }) {
             href={`https://${craft.link}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-fit group/link flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
+            className="w-fit group/link text-wrap flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
           >
             <MoveUpRightIcon
               className="w-0 h-0 group-hover/link:w-4 group-hover/link:h-4 transition-all duration-500"
@@ -35,9 +35,14 @@ function CoolStuffCard({ craft, index }) {
               className="w-4 h-4 group-hover/link:w-0 group-hover/link:h-0 transition-all duration-500"
               strokeWidth={1.5}
             />
-            <p className="ml-2 transition-all duration-500 overflow-hidden whitespace-nowrap">
-              {craft.link}
-            </p>
+            <span className="ml-2 relative overflow-hidden whitespace-nowrap flex align-center">
+              <span className="inline-block transition-all duration-300 opacity-100 group-hover/link:opacity-0 group-hover/link:max-w-0 max-w-[60px]">
+                Github
+              </span>
+              <span className="inline-block transition-all duration-300 opacity-0 max-w-0 group-hover/link:opacity-100 group-hover/link:max-w-[300px] overflow-hidden">
+                {craft.link}
+              </span>
+            </span>
           </a>
         </div>
       </div>
@@ -57,7 +62,7 @@ export default function CoolStuffContent({ data }) {
   }
 
   return (
-    <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 justify-items-center gap-3">
+    <div className="animate-fadeIn grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-3">
       {items.map((craft, index) => (
         <CoolStuffCard craft={craft} index={index} key={index} />
       ))}
