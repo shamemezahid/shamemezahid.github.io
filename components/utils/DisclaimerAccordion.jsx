@@ -37,7 +37,9 @@ export default function DisclaimerAccordion() {
               AI notice ✨
             </p>
             <p className="text-sm !font-normal text-left text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              No artificial intelligence was used in the design, nor in the architectural decisions of this website. Only for implementing pre-devised solutions at scale, exactly what machines are for. <br /> <br />AI is not your creative copilot, it&apos;s an efficient throughput tool. Use it wisely.
+              No artificial intelligence was used in the design, nor in the architectural decisions of this website. Only for implementing solutions at scale, exactly what machines are for. 
+ <br /> <br />
+ AI is not your creative copilot, it&apos;s an efficient throughput tool with probabilistic but massive information retrieval. Use wisely.
             </p>
           </div>
         </div>

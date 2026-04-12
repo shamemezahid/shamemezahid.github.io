@@ -8,7 +8,12 @@ export function ProjectCard({ data, craft, index }) {
     <>
       <div
         key={index}
-        className="animate-fade-in-up cursor-pointer group/card w-full rounded-3xl hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-3 md:gap-4 hover:bg-black/5 dark:hover:bg-white/5 p-4 sm:p-6 lg:p-7"
+        title="Details coming soon"
+        className="hover:bg-neutral-100 hover:dark:bg-neutral-800 hover:bg-gradient-to-br 
+        from-neutral-50/30 via-primary-200/30 to-neutral-100/20 
+        dark:from-neutral-900/20 dark:via-primary-800/20 dark:to-neutral-950/20
+        hover:outline outline-neutral-100/50 dark:outline-neutral-800/20
+        animate-fade-in-up cursor-pointer group/card w-full rounded-3xl transition-all duration-300 flex flex-col gap-3 md:gap-4 hover:bg-black/5 dark:hover:bg-white/5 p-4 sm:p-6 lg:p-7"
       >
         <div className="flex flex-col gap-3">
 
@@ -26,7 +31,7 @@ export function ProjectCard({ data, craft, index }) {
 
           {/* <img src='/images/item.jpeg' alt={craft.name} className="w-full aspect-[16/9] h-auto rounded-xl" /> */}
 
-          <p className="group-hover/card:brightness-150 transition-all duration-200 text-sm font-normal text-neutral-600 dark:text-neutral-400">
+          <p className="h-full group-hover/card:brightness-150 transition-all duration-200 text-sm font-normal text-neutral-600 dark:text-neutral-400">
             {craft.summary}
           </p>
           <a

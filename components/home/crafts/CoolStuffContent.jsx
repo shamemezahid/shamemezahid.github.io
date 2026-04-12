@@ -6,7 +6,7 @@ function CoolStuffCard({ craft, index }) {
     <>
       <div
         key={index}
-        className="animate-fade-in-up group/card w-full rounded-2xl hover:bg-transparent hover:brightness-90 transition-all duration-200 flex flex-col gap-5 hover:bg-black/5 dark:hover:bg-white/5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
+        className="animate-fade-in-up group/card w-full rounded-2xl transition-all duration-200 flex flex-col gap-5 p-4 py-6 sm:p-6 sm:py-8 -my-[2px]"
       >
         <div className="flex flex-col gap-3">
           <div className="flex flex-wrap items-center gap-4">
