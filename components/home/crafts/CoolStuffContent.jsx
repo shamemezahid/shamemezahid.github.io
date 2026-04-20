@@ -21,29 +21,56 @@ function CoolStuffCard({ craft, index }) {
           <p className="group-hover/card:brightness-150 transition-all duration-200 text-sm font-normal text-neutral-600 dark:text-neutral-400">
             {craft.summary}
           </p>
-          <a
-            href={`https://${craft.link}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit group/link text-wrap flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
-          >
-            <MoveUpRightIcon
-              className="w-0 h-0 group-hover/link:w-4 group-hover/link:h-4 transition-all duration-500"
-              strokeWidth={1.5}
-            />
-            <GlobeIcon
-              className="w-4 h-4 group-hover/link:w-0 group-hover/link:h-0 transition-all duration-500"
-              strokeWidth={1.5}
-            />
-            <span className="ml-2 relative overflow-hidden whitespace-nowrap flex align-center">
-              <span className="inline-block transition-all duration-300 opacity-100 group-hover/link:opacity-0 group-hover/link:max-w-0 max-w-[60px]">
-                Github
+          <div className="flex gap-2">
+            <a
+              href={`https://${craft.link}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit group/link text-wrap flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
+            >
+              <MoveUpRightIcon
+                className="w-0 h-0 group-hover/link:w-4 group-hover/link:h-4 transition-all duration-500"
+                strokeWidth={1.5}
+              />
+              <GlobeIcon
+                className="w-4 h-4 group-hover/link:w-0 group-hover/link:h-0 transition-all duration-500"
+                strokeWidth={1.5}
+              />
+              <span className="ml-2 relative overflow-hidden whitespace-nowrap flex align-center">
+                <span className="inline-block transition-all duration-300 opacity-100 group-hover/link:opacity-0 group-hover/link:max-w-0 max-w-[60px]">
+                  Github
+                </span>
+                <span className="inline-block transition-all duration-300 opacity-0 max-w-0 group-hover/link:opacity-100 group-hover/link:max-w-[300px] overflow-hidden">
+                  {craft.link}
+                </span>
               </span>
-              <span className="inline-block transition-all duration-300 opacity-0 max-w-0 group-hover/link:opacity-100 group-hover/link:max-w-[300px] overflow-hidden">
-                {craft.link}
-              </span>
-            </span>
-          </a>
+            </a>
+            {craft.live && (
+              <a
+                href={`https://${craft.live}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit group/link text-wrap flex items-center h-8 font-light text-sm text-primary-700 dark:text-primary-500 transition-all duration-500 pr-3 p-2 rounded-full bg-neutral-200/50 dark:bg-neutral-700/50 hover:bg-primary-100/50 dark:hover:bg-primary-500/25"
+              >
+                <MoveUpRightIcon
+                  className="w-0 h-0 group-hover/link:w-4 group-hover/link:h-4 transition-all duration-500"
+                  strokeWidth={1.5}
+                />
+                <GlobeIcon
+                  className="w-4 h-4 group-hover/link:w-0 group-hover/link:h-0 transition-all duration-500"
+                  strokeWidth={1.5}
+                />
+                <span className="ml-2 relative overflow-hidden whitespace-nowrap flex align-center">
+                  <span className="inline-block transition-all duration-300 opacity-100 group-hover/link:opacity-0 group-hover/link:max-w-0 max-w-[60px]">
+                    Live
+                  </span>
+                  <span className="inline-block transition-all duration-300 opacity-0 max-w-0 group-hover/link:opacity-100 group-hover/link:max-w-[300px] overflow-hidden">
+                    {craft.live}
+                  </span>
+                </span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </>

@@ -12,7 +12,7 @@
   },
   "about": {
     "label": "About Me",
-    "value": "Software Product Designer, Researcher, and UI/UX Lead with 5+ years of experience delivering scalable, intuitive, and human-centered B2B/B2C systems. I have worked with solo founders, startups, and larger companies. I specialize in end-to-end product design, from research and ideation to prototyping and execution across a wide range of industries, including HR-tech, telco, health-tech, e-commerce, marketplace, and edtech."
+    "value": "Software Product Designer, Researcher, and UI/UX Lead with 5+ years of experience delivering accessible, intuitive, scalable, and human-centered B2B/B2C systems, specializing in end-to-end product design of both traditional and AI-powered software, translating them into clear, trustworthy user experiences, across a wide range of industries, including HR-tech, telco, health-tech, e-commerce, marketplace, and edtech. "
   },
   "actions": {
     "show": true,
@@ -27,8 +27,8 @@
       "show": true,
       "label": "Contact",
       "subtitle": "Feel free to reach out using the form or thru email",
-      "address": "[EMAIL_ADDRESS]",
-      "url": "mailto:[EMAIL_ADDRESS]"
+      "address": "shamemezahid@proton.me",
+      "url": "mailto:shamemezahid@proton.me"
     },
     "experiences": {
       "show": true
@@ -63,6 +63,11 @@
         "label": "Behance",
         "url": "https://www.behance.net/shamemezahid",
         "icon": "be"
+      },
+      {
+        "label": "Dribbble",
+        "url": "https://dribbble.com/shamemezahid",
+        "icon": "dr"
       },
       {
         "label": "Notion",
@@ -380,7 +385,7 @@
         },
         {
           "name": "Robi & Airtel",
-          "summary": "Axiata engagement via Airwork, bringing My Robi and My Airtel app functionality into a seamless web experience for guests and logged-in users. With a 5-person design team, covered navigation, auth, recharge, prepaid offers, MNP, and live chat.",
+          "summary": "Freelance engagement via an agency, bringing 'My Robi' and 'My Airtel' app functionalities into a seamless web experience for both guests and logged-in users. With a 5-person design team, I was tasked to cover navigation, auth, recharge, prepaid offers, MNP, and live chat.",
           "tags": [
             "telecom",
             "corporate",
@@ -623,8 +628,9 @@
       "values": [
         {
           "name": "quicc-note",
-          "summary": "A simple notepad app that shares your content with your local network. Functionality is intentionally kept simple. (Socket Ekhono Chole na :( )",
-          "link": "github.com/shamemezahid/quicc-note"
+          "summary": "A simple multi-page notepad. Content is stored in your local storage. Functionality is intentionally kept simple.",
+          "link": "github.com/shamemezahid/quicc-note",
+          "live": "shamemezahid.github.io/quicc-note"
         },
         {
           "name": "ytmusic-to-drive",
@@ -633,13 +639,15 @@
         },
         {
           "name": "quicc-draw",
-          "summary": "Doodle on an HTML Canvas. Customizations include Stroke Color, Width, Eraser, Object remove, Undo, Redo, PNG export :D",
-          "link": "github.com/shamemezahid/quicc-draw"
+          "summary": "Doodle on an HTML Canvas. Customizations include Stroke Color, Width, Eraser, Object remove, Undo, Redo, PNG export.",
+          "link": "github.com/shamemezahid/quicc-draw",
+          "live": "shamemezahid.github.io/quicc-draw"
         },
         {
           "name": "rexume",
           "summary": "A modern, customizable resume website built with Next.js that you can configure entirely through a JSON file. Perfect for showcasing your work esp if you're into research or backend dev and need a quick UI for a personal site.",
-          "link": "github.com/shamemezahid/rexume"
+          "link": "github.com/shamemezahid/rexume",
+          "live": "shamemezahid.github.io/rexume"
         },
         {
           "name": "cf-this-week",
@@ -664,7 +672,8 @@
         {
           "name": "diction",
           "summary": "A simple Bangla to English Dictionary application implementing perfect hashing. Done as an assignment for Algo-II Course at DU.",
-          "link": "github.com/shamemezahid/diction"
+          "link": "github.com/shamemezahid/diction",
+          "live": "shamemezahid.github.io/diction"
         }
       ],
       "empty_state": "Cool stuff coming soon"

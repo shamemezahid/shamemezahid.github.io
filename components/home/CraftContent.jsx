@@ -37,7 +37,7 @@ export default function CraftContent({ data }) {
           </span>
           <AnnouncementBanner
             message={
-              "This page is a work in progress. Some items may be inaccurate, incomplete or broken. Feel free to reach out if any questions, complains or suggestions."
+              "This page is a work in progress. Some items may be incomplete. Feel free to reach out if any questions, complains or suggestions."
             }
           />
         </div>
