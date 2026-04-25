@@ -32,7 +32,7 @@ export default function DisclaimerAccordion() {
         className={`mb-2 w-full grid duration-300 transition-all ease-in ${isOpen ? "delay-300 grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
-          <div className="w-60 p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur border border-neutral-600/25 dark:border-neutral-400/25 rounded-3xl flex flex-col gap-3">
+          <div className={` ${isOpen ? "w-60" : "w-12 delay-1000"} p-4 bg-white/50 dark:bg-neutral-900/50 backdrop-blur border border-neutral-600/25 dark:border-neutral-400/25 rounded-3xl flex flex-col gap-3`}>
             <p className="text-xs font-semibold text-neutral-500 dark:text-neutral-400">
               AI notice ✨
             </p>
