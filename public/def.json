@@ -90,7 +90,7 @@
     "label": "Skills",
     "values": [
       {
-        "category": "Design & Human Computer Interaction",
+        "category": "Design / Human Computer Interaction",
         "skills": [
           "Figma",
           "Framer",
@@ -178,12 +178,33 @@
     "label": "Experiences",
     "values": [
       {
+        "workplace": "Ajentica",
+        "website": "https://ajentica.ai",
+        "designation": "Senior Product Designer",
+        "start": "May 2025",
+        "end": "Ongoing",
+        "duration": "1yr 2mos",
+        "responsibilities": [ 
+          "Owning end-to-end UX across products, from early evaluation to final handoff", 
+          "Conducts UX audits to identify usability and flow issues before they reach production",
+          "Contribute to design and architecture discussions and decisions with stakeholders" 
+        ],
+        "contributions": [
+          "Owning end-to-end UX across products, from early evaluation to final handoff", 
+          "Conducts UX audits to identify usability and flow issues before they reach production",
+          "Contribute to design and architecture discussions and decisions with stakeholders" 
+        ],
+        "shift": "Full-time",
+        "nature": "Hybrid",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
         "workplace": "Airwork AI",
         "website": "https://airwork.ai",
         "designation": "UX Designer",
-        "start": "March 2025",
-        "end": "Ongoing",
-        "duration": "",
+        "start": "Mar 2025",
+        "end": "May 2026 (1yr 2mos)",
+        "duration": "1yr 2mos",
         "responsibilities": [
           "Collaborate to define and prioritize the product roadmap based on business and user needs.",
           "Conduct user research to identify pain points and preferences, Analyze user feedback to inform product decisions.",
@@ -196,7 +217,7 @@
           "Drive design strategy through ongoing user research, translating findings directly into product decisions.",
           "Partner with developers through handoff and QA to close the gap between design intent and shipped products."
         ],
-        "shift": "Full Time",
+        "shift": "Full-time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
       },
@@ -223,7 +244,7 @@
           "Cut bug reports per sprint by up to 80% via tighter QA processes, dev handoff standards, and CI/CD coordination.",
           "Built and ran a formal mentorship program covering hiring, curriculum, evaluation for 5+ UX and 30+ frontend trainees."
         ],
-        "shift": "Full Time",
+        "shift": "Full-time",
         "nature": "Hybrid",
         "location": "Dhaka, Bangladesh"
       },
@@ -246,7 +267,7 @@
           "Founding designer; led UI/UX of 8 apps in e-commerce, health, edtech, communication, retail & freelancing industries.",
           "Collaborated on system and database design, defined frontend requirements, supported QA, and delivered client demos."
         ],
-        "shift": "Full Time",
+        "shift": "Full-time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
       },
@@ -263,7 +284,7 @@
           "Contributed to system design and collaborated on data models for client projects."
         ],
         "contributions": [],
-        "shift": "Part Time",
+        "shift": "Part-time",
         "nature": "Remote",
         "location": "Dhaka, Bangladesh"
       }
